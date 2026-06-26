@@ -101,6 +101,7 @@ export default function LiveTradingApp() {
   // Load static feed replay when the live websocket backend is not running.
   useEffect(() => {
     let cancelled = false;
+    let replayTimer = null;
 
     fetch('/demo_feed.json', { cache: 'no-store' })
       .then(response => {
@@ -119,17 +120,35 @@ export default function LiveTradingApp() {
           return;
         }
 
-        processHistoricalFeed(events);
-        setLastDayHistory(events);
+        // 立即填充榜单/日期，避免回放期间面板空白
+        if (Array.isArray(data.leaderboard)) {
+          setLeaderboard(data.leaderboard);
+        }
         if (data.days?.length) {
           setCurrentDate(data.days[data.days.length - 1]);
           setProgress({ current: data.days.length, total: data.days.length });
         }
-        if (Array.isArray(data.leaderboard)) {
-          setLeaderboard(data.leaderboard);
-        }
-        setSystemStatus('completed');
-        console.log(`✅ Loaded ${events.length} offline feed replay events`);
+        setLastDayHistory(events);
+        setSystemStatus('running');
+
+        // 逐条回放：按时间间隔把事件喂给 processFeedEvent，营造"会议消息一条条出现"的效果，
+        // 而非一次性全渲染。结构事件(day_start/conference_start/end)与发言共用同一节奏。
+        let i = 0;
+        const STEP_MS = 350;
+        replayTimer = setInterval(() => {
+          if (cancelled || liveFeedLoadedRef.current || i >= events.length) {
+            clearInterval(replayTimer);
+            replayTimer = null;
+            if (!cancelled && !liveFeedLoadedRef.current) {
+              setSystemStatus('completed');
+            }
+            return;
+          }
+          processFeedEvent(events[i]);
+          i += 1;
+        }, STEP_MS);
+
+        console.log(`▶️ Replaying ${events.length} offline feed events one-by-one`);
       })
       .catch(error => {
         console.info('[Offline Feed] No static replay loaded:', error.message);
@@ -175,8 +194,11 @@ export default function LiveTradingApp() {
 
     return () => {
       cancelled = true;
+      if (replayTimer) {
+        clearInterval(replayTimer);
+      }
     };
-  }, [processHistoricalFeed]);
+  }, [processFeedEvent]);
 
   // Determine if LIVE tab should be enabled
   const isLiveEnabled = useMemo(() => {
