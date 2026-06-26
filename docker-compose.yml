@@ -25,9 +25,14 @@ services:
       - "8000"
     command: uvicorn api.main:app --host 0.0.0.0 --port 8000
 
-  # ── WebSocket 网关（前端实时数据来源；默认 mock 模式，开箱即用无需 key）────────
+  # ── WebSocket 网关（实时模式，可选）──────────────────────────────────────────
+  # 默认不启动：演示用前端内置的离线回放(真实 Q1 结果)，零成本、零 LLM 调用。
+  # 网关一旦运行会用 live 数据覆盖前端状态，故仅在需要"实时跑 agent"时才起：
+  #     docker compose --profile live up -d        # 启动含网关的实时模式
+  # mock 模式用模拟行情、不需真实 key，但仍会调 DeepSeek 跑 agent(持续小额烧钱)。
   gateway:
     build: .
+    profiles: ["live"]
     depends_on:
       - db
     env_file:
@@ -36,8 +41,6 @@ services:
       DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-evotraders}:${POSTGRES_PASSWORD:-evotraders}@db:5432/${POSTGRES_DB:-evotraders}
     expose:
       - "8765"
-    # mock 模式：用模拟行情驱动，不需要真实 API key、不动真钱，适合演示。
-    # 切真实数据：去掉 --mock，改 --mode backtest/live 并在 .env 配齐 key。
     command: python -m backend.main --mode live --mock --host 0.0.0.0 --port 8765
 
   # ── Nginx：单一入口（静态前端 + /api 反代 + /ws 反代）───────────────────────
@@ -45,7 +48,6 @@ services:
     build: ./frontend
     depends_on:
       - api
-      - gateway
     ports:
       - "${WEB_PORT:-80}:80"
 

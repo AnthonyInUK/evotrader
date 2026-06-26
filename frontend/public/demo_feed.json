@@ -1,8 +1,17 @@
 {
   "source": "evo2025_q1/team_dashboard",
-  "generated_at": "2026-06-26T08:49:22.740708+00:00",
-  "event_count": 36,
+  "generated_at": "2026-06-26T09:04:13.209627+00:00",
+  "event_count": 117,
   "days": [
+    "2025-03-12",
+    "2025-03-13",
+    "2025-03-14",
+    "2025-03-17",
+    "2025-03-18",
+    "2025-03-19",
+    "2025-03-20",
+    "2025-03-24",
+    "2025-03-25",
     "2025-03-26",
     "2025-03-27",
     "2025-03-28",
@@ -15350,60 +15359,15 @@
   ],
   "events": [
     {
-      "type": "day_complete",
-      "date": "2025-03-31",
-      "content": "离线回放完成 · 2025-03-31",
-      "timestamp": 1743379391000
-    },
-    {
-      "type": "conference_end",
-      "conferenceId": "offline-2025-03-31",
-      "timestamp": 1743379390000
-    },
-    {
-      "type": "conference_message",
-      "conferenceId": "offline-2025-03-31",
-      "agentId": "portfolio_manager",
-      "agentName": "组合经理",
-      "content": "【组合经理综合决策】看空：东鹏饮料、申能股份；中性：奥马电器(TCL智家)、盐津铺子、浙江鼎力、宁沪高速、浙江荣泰、登康口腔",
-      "timestamp": 1743379387000
-    },
-    {
-      "type": "conference_message",
-      "conferenceId": "offline-2025-03-31",
-      "agentId": "valuation_analyst",
-      "agentName": "估值分析师",
-      "content": "看多：盐津铺子、登康口腔；看空：奥马电器(TCL智家)、东鹏饮料、浙江鼎力、宁沪高速、浙江荣泰、申能股份",
-      "timestamp": 1743379385000
-    },
-    {
-      "type": "conference_message",
-      "conferenceId": "offline-2025-03-31",
-      "agentId": "sentiment_analyst",
-      "agentName": "情绪面分析师",
-      "content": "看多：东鹏饮料、浙江鼎力、登康口腔；看空：奥马电器(TCL智家)、盐津铺子、浙江荣泰、申能股份；中性：宁沪高速",
-      "timestamp": 1743379384000
-    },
-    {
-      "type": "conference_message",
-      "conferenceId": "offline-2025-03-31",
-      "agentId": "technical_analyst",
-      "agentName": "技术面分析师",
-      "content": "看多：东鹏饮料、盐津铺子、宁沪高速、登康口腔；看空：奥马电器(TCL智家)、浙江鼎力、浙江荣泰、申能股份",
-      "timestamp": 1743379383000
-    },
-    {
-      "type": "conference_message",
-      "conferenceId": "offline-2025-03-31",
-      "agentId": "fundamentals_analyst",
-      "agentName": "基本面分析师",
-      "content": "看空：浙江荣泰；中性：奥马电器(TCL智家)、东鹏饮料、盐津铺子、浙江鼎力、宁沪高速、申能股份、登康口腔",
-      "timestamp": 1743379382000
+      "type": "day_start",
+      "date": "2025-03-12",
+      "content": "离线回放 · 2025-03-12",
+      "timestamp": 1741737600000
     },
     {
       "type": "conference_start",
-      "conferenceId": "offline-2025-03-31",
-      "title": "A股每日决策会议 · 2025-03-31",
+      "conferenceId": "offline-2025-03-12",
+      "title": "A股每日决策会议 · 2025-03-12",
       "participants": [
         "fundamentals_analyst",
         "technical_analyst",
@@ -15412,69 +15376,69 @@
         "risk_manager",
         "portfolio_manager"
       ],
-      "timestamp": 1743379381000
+      "timestamp": 1741737601000
     },
     {
-      "type": "day_start",
-      "date": "2025-03-31",
-      "content": "离线回放 · 2025-03-31",
-      "timestamp": 1743379380000
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-12",
+      "agentId": "fundamentals_analyst",
+      "agentName": "基本面分析师",
+      "content": "看多：宁沪高速、登康口腔；看空：浙江荣泰；中性：申能股份",
+      "timestamp": 1741737602000
     },
     {
-      "type": "day_complete",
-      "date": "2025-03-28",
-      "content": "离线回放完成 · 2025-03-28",
-      "timestamp": 1743120131000
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-12",
+      "agentId": "technical_analyst",
+      "agentName": "技术面分析师",
+      "content": "看多：申能股份、登康口腔；中性：宁沪高速、浙江荣泰",
+      "timestamp": 1741737603000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-12",
+      "agentId": "sentiment_analyst",
+      "agentName": "情绪面分析师",
+      "content": "看多：浙江荣泰；看空：宁沪高速；中性：申能股份、登康口腔",
+      "timestamp": 1741737604000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-12",
+      "agentId": "valuation_analyst",
+      "agentName": "估值分析师",
+      "content": "看多：浙江荣泰、申能股份、登康口腔；中性：宁沪高速",
+      "timestamp": 1741737605000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-12",
+      "agentId": "portfolio_manager",
+      "agentName": "组合经理",
+      "content": "【组合经理综合决策】中性：宁沪高速、浙江荣泰、申能股份、登康口腔",
+      "timestamp": 1741737607000
     },
     {
       "type": "conference_end",
-      "conferenceId": "offline-2025-03-28",
-      "timestamp": 1743120130000
+      "conferenceId": "offline-2025-03-12",
+      "timestamp": 1741737610000
     },
     {
-      "type": "conference_message",
-      "conferenceId": "offline-2025-03-28",
-      "agentId": "portfolio_manager",
-      "agentName": "组合经理",
-      "content": "【组合经理综合决策】中性：奥马电器(TCL智家)、东鹏饮料、盐津铺子、浙江鼎力、宁沪高速、浙江荣泰、申能股份、登康口腔",
-      "timestamp": 1743120127000
+      "type": "day_complete",
+      "date": "2025-03-12",
+      "content": "离线回放完成 · 2025-03-12",
+      "timestamp": 1741737611000
     },
     {
-      "type": "conference_message",
-      "conferenceId": "offline-2025-03-28",
-      "agentId": "valuation_analyst",
-      "agentName": "估值分析师",
-      "content": "看多：东鹏饮料、盐津铺子、浙江鼎力、申能股份、登康口腔；看空：奥马电器(TCL智家)、浙江荣泰；中性：宁沪高速",
-      "timestamp": 1743120125000
-    },
-    {
-      "type": "conference_message",
-      "conferenceId": "offline-2025-03-28",
-      "agentId": "sentiment_analyst",
-      "agentName": "情绪面分析师",
-      "content": "看多：东鹏饮料、盐津铺子、浙江荣泰、登康口腔；看空：奥马电器(TCL智家)、浙江鼎力、宁沪高速、申能股份",
-      "timestamp": 1743120124000
-    },
-    {
-      "type": "conference_message",
-      "conferenceId": "offline-2025-03-28",
-      "agentId": "technical_analyst",
-      "agentName": "技术面分析师",
-      "content": "看多：盐津铺子、浙江鼎力、浙江荣泰；看空：奥马电器(TCL智家)、申能股份、登康口腔；中性：东鹏饮料、宁沪高速",
-      "timestamp": 1743120123000
-    },
-    {
-      "type": "conference_message",
-      "conferenceId": "offline-2025-03-28",
-      "agentId": "fundamentals_analyst",
-      "agentName": "基本面分析师",
-      "content": "看多：浙江鼎力；中性：奥马电器(TCL智家)、东鹏饮料、盐津铺子、宁沪高速、浙江荣泰、申能股份、登康口腔",
-      "timestamp": 1743120122000
+      "type": "day_start",
+      "date": "2025-03-13",
+      "content": "离线回放 · 2025-03-13",
+      "timestamp": 1741824060000
     },
     {
       "type": "conference_start",
-      "conferenceId": "offline-2025-03-28",
-      "title": "A股每日决策会议 · 2025-03-28",
+      "conferenceId": "offline-2025-03-13",
+      "title": "A股每日决策会议 · 2025-03-13",
       "participants": [
         "fundamentals_analyst",
         "technical_analyst",
@@ -15483,69 +15447,140 @@
         "risk_manager",
         "portfolio_manager"
       ],
-      "timestamp": 1743120121000
+      "timestamp": 1741824061000
     },
     {
-      "type": "day_start",
-      "date": "2025-03-28",
-      "content": "离线回放 · 2025-03-28",
-      "timestamp": 1743120120000
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-13",
+      "agentId": "fundamentals_analyst",
+      "agentName": "基本面分析师",
+      "content": "看多：登康口腔；中性：奥马电器(TCL智家)、东鹏饮料、盐津铺子、浙江鼎力、宁沪高速、浙江荣泰、申能股份",
+      "timestamp": 1741824062000
     },
     {
-      "type": "day_complete",
-      "date": "2025-03-27",
-      "content": "离线回放完成 · 2025-03-27",
-      "timestamp": 1743033671000
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-13",
+      "agentId": "technical_analyst",
+      "agentName": "技术面分析师",
+      "content": "看空：奥马电器(TCL智家)、东鹏饮料、盐津铺子、浙江鼎力、宁沪高速、浙江荣泰；中性：申能股份、登康口腔",
+      "timestamp": 1741824063000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-13",
+      "agentId": "sentiment_analyst",
+      "agentName": "情绪面分析师",
+      "content": "看多：东鹏饮料、宁沪高速、申能股份；看空：奥马电器(TCL智家)、盐津铺子、浙江鼎力、浙江荣泰、登康口腔",
+      "timestamp": 1741824064000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-13",
+      "agentId": "valuation_analyst",
+      "agentName": "估值分析师",
+      "content": "看多：奥马电器(TCL智家)、东鹏饮料、申能股份；看空：宁沪高速、浙江荣泰、登康口腔；中性：盐津铺子、浙江鼎力",
+      "timestamp": 1741824065000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-13",
+      "agentId": "portfolio_manager",
+      "agentName": "组合经理",
+      "content": "【组合经理综合决策】看空：盐津铺子；中性：奥马电器(TCL智家)、东鹏饮料、浙江鼎力、宁沪高速、浙江荣泰、申能股份、登康口腔",
+      "timestamp": 1741824067000
     },
     {
       "type": "conference_end",
-      "conferenceId": "offline-2025-03-27",
-      "timestamp": 1743033670000
+      "conferenceId": "offline-2025-03-13",
+      "timestamp": 1741824070000
+    },
+    {
+      "type": "day_complete",
+      "date": "2025-03-13",
+      "content": "离线回放完成 · 2025-03-13",
+      "timestamp": 1741824071000
+    },
+    {
+      "type": "day_start",
+      "date": "2025-03-14",
+      "content": "离线回放 · 2025-03-14",
+      "timestamp": 1741910520000
+    },
+    {
+      "type": "conference_start",
+      "conferenceId": "offline-2025-03-14",
+      "title": "A股每日决策会议 · 2025-03-14",
+      "participants": [
+        "fundamentals_analyst",
+        "technical_analyst",
+        "sentiment_analyst",
+        "valuation_analyst",
+        "risk_manager",
+        "portfolio_manager"
+      ],
+      "timestamp": 1741910521000
     },
     {
       "type": "conference_message",
-      "conferenceId": "offline-2025-03-27",
-      "agentId": "portfolio_manager",
-      "agentName": "组合经理",
-      "content": "【组合经理综合决策】中性：奥马电器(TCL智家)、东鹏饮料、盐津铺子、浙江鼎力、宁沪高速、浙江荣泰、申能股份、登康口腔",
-      "timestamp": 1743033667000
-    },
-    {
-      "type": "conference_message",
-      "conferenceId": "offline-2025-03-27",
-      "agentId": "valuation_analyst",
-      "agentName": "估值分析师",
-      "content": "看多：浙江鼎力；看空：奥马电器(TCL智家)；中性：东鹏饮料、盐津铺子、宁沪高速、浙江荣泰、申能股份、登康口腔",
-      "timestamp": 1743033665000
-    },
-    {
-      "type": "conference_message",
-      "conferenceId": "offline-2025-03-27",
-      "agentId": "sentiment_analyst",
-      "agentName": "情绪面分析师",
-      "content": "看多：浙江鼎力、宁沪高速、浙江荣泰、登康口腔；看空：申能股份；中性：奥马电器(TCL智家)、东鹏饮料、盐津铺子",
-      "timestamp": 1743033664000
-    },
-    {
-      "type": "conference_message",
-      "conferenceId": "offline-2025-03-27",
-      "agentId": "technical_analyst",
-      "agentName": "技术面分析师",
-      "content": "看多：东鹏饮料、盐津铺子、浙江鼎力、浙江荣泰；看空：奥马电器(TCL智家)、宁沪高速、申能股份；中性：登康口腔",
-      "timestamp": 1743033663000
-    },
-    {
-      "type": "conference_message",
-      "conferenceId": "offline-2025-03-27",
+      "conferenceId": "offline-2025-03-14",
       "agentId": "fundamentals_analyst",
       "agentName": "基本面分析师",
+      "content": "看多：奥马电器(TCL智家)、东鹏饮料、盐津铺子、浙江鼎力、宁沪高速、申能股份；看空：浙江荣泰、登康口腔",
+      "timestamp": 1741910522000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-14",
+      "agentId": "technical_analyst",
+      "agentName": "技术面分析师",
+      "content": "看多：奥马电器(TCL智家)、东鹏饮料、申能股份；看空：盐津铺子、浙江鼎力、宁沪高速、浙江荣泰、登康口腔",
+      "timestamp": 1741910523000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-14",
+      "agentId": "sentiment_analyst",
+      "agentName": "情绪面分析师",
+      "content": "看多：奥马电器(TCL智家)、东鹏饮料、盐津铺子、浙江鼎力、浙江荣泰、登康口腔；看空：宁沪高速；中性：申能股份",
+      "timestamp": 1741910524000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-14",
+      "agentId": "valuation_analyst",
+      "agentName": "估值分析师",
       "content": "看多：奥马电器(TCL智家)、东鹏饮料、盐津铺子、申能股份；看空：浙江鼎力、浙江荣泰、登康口腔；中性：宁沪高速",
-      "timestamp": 1743033662000
+      "timestamp": 1741910525000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-14",
+      "agentId": "portfolio_manager",
+      "agentName": "组合经理",
+      "content": "【组合经理综合决策】看多：奥马电器(TCL智家)；中性：东鹏饮料、盐津铺子、浙江鼎力、宁沪高速、浙江荣泰、申能股份、登康口腔",
+      "timestamp": 1741910527000
+    },
+    {
+      "type": "conference_end",
+      "conferenceId": "offline-2025-03-14",
+      "timestamp": 1741910530000
+    },
+    {
+      "type": "day_complete",
+      "date": "2025-03-14",
+      "content": "离线回放完成 · 2025-03-14",
+      "timestamp": 1741910531000
+    },
+    {
+      "type": "day_start",
+      "date": "2025-03-17",
+      "content": "离线回放 · 2025-03-17",
+      "timestamp": 1742169780000
     },
     {
       "type": "conference_start",
-      "conferenceId": "offline-2025-03-27",
-      "title": "A股每日决策会议 · 2025-03-27",
+      "conferenceId": "offline-2025-03-17",
+      "title": "A股每日决策会议 · 2025-03-17",
       "participants": [
         "fundamentals_analyst",
         "technical_analyst",
@@ -15554,64 +15589,419 @@
         "risk_manager",
         "portfolio_manager"
       ],
-      "timestamp": 1743033661000
+      "timestamp": 1742169781000
     },
     {
-      "type": "day_start",
-      "date": "2025-03-27",
-      "content": "离线回放 · 2025-03-27",
-      "timestamp": 1743033660000
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-17",
+      "agentId": "fundamentals_analyst",
+      "agentName": "基本面分析师",
+      "content": "中性：奥马电器(TCL智家)、东鹏饮料、盐津铺子、浙江鼎力、宁沪高速、浙江荣泰、申能股份、登康口腔",
+      "timestamp": 1742169782000
     },
     {
-      "type": "day_complete",
-      "date": "2025-03-26",
-      "content": "离线回放完成 · 2025-03-26",
-      "timestamp": 1742947211000
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-17",
+      "agentId": "technical_analyst",
+      "agentName": "技术面分析师",
+      "content": "看多：东鹏饮料、盐津铺子、登康口腔；中性：奥马电器(TCL智家)、浙江鼎力、宁沪高速、浙江荣泰、申能股份",
+      "timestamp": 1742169783000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-17",
+      "agentId": "sentiment_analyst",
+      "agentName": "情绪面分析师",
+      "content": "看多：奥马电器(TCL智家)、盐津铺子、申能股份；看空：宁沪高速、登康口腔；中性：东鹏饮料、浙江鼎力、浙江荣泰",
+      "timestamp": 1742169784000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-17",
+      "agentId": "valuation_analyst",
+      "agentName": "估值分析师",
+      "content": "看多：东鹏饮料、盐津铺子、宁沪高速；中性：奥马电器(TCL智家)、浙江鼎力、浙江荣泰、申能股份、登康口腔",
+      "timestamp": 1742169785000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-17",
+      "agentId": "portfolio_manager",
+      "agentName": "组合经理",
+      "content": "【组合经理综合决策】看多：奥马电器(TCL智家)；看空：盐津铺子；中性：东鹏饮料、浙江鼎力、宁沪高速、浙江荣泰、申能股份、登康口腔",
+      "timestamp": 1742169787000
     },
     {
       "type": "conference_end",
-      "conferenceId": "offline-2025-03-26",
-      "timestamp": 1742947210000
+      "conferenceId": "offline-2025-03-17",
+      "timestamp": 1742169790000
+    },
+    {
+      "type": "day_complete",
+      "date": "2025-03-17",
+      "content": "离线回放完成 · 2025-03-17",
+      "timestamp": 1742169791000
+    },
+    {
+      "type": "day_start",
+      "date": "2025-03-18",
+      "content": "离线回放 · 2025-03-18",
+      "timestamp": 1742256240000
+    },
+    {
+      "type": "conference_start",
+      "conferenceId": "offline-2025-03-18",
+      "title": "A股每日决策会议 · 2025-03-18",
+      "participants": [
+        "fundamentals_analyst",
+        "technical_analyst",
+        "sentiment_analyst",
+        "valuation_analyst",
+        "risk_manager",
+        "portfolio_manager"
+      ],
+      "timestamp": 1742256241000
     },
     {
       "type": "conference_message",
-      "conferenceId": "offline-2025-03-26",
-      "agentId": "portfolio_manager",
-      "agentName": "组合经理",
-      "content": "【组合经理综合决策】看空：宁沪高速；中性：奥马电器(TCL智家)、东鹏饮料、盐津铺子、浙江鼎力、浙江荣泰、申能股份、登康口腔",
-      "timestamp": 1742947207000
+      "conferenceId": "offline-2025-03-18",
+      "agentId": "fundamentals_analyst",
+      "agentName": "基本面分析师",
+      "content": "中性：奥马电器(TCL智家)、东鹏饮料、盐津铺子、浙江鼎力、宁沪高速、浙江荣泰、申能股份、登康口腔",
+      "timestamp": 1742256242000
     },
     {
       "type": "conference_message",
-      "conferenceId": "offline-2025-03-26",
-      "agentId": "valuation_analyst",
-      "agentName": "估值分析师",
-      "content": "看多：东鹏饮料、盐津铺子、浙江荣泰、申能股份、登康口腔；看空：奥马电器(TCL智家)；中性：浙江鼎力、宁沪高速",
-      "timestamp": 1742947205000
-    },
-    {
-      "type": "conference_message",
-      "conferenceId": "offline-2025-03-26",
-      "agentId": "sentiment_analyst",
-      "agentName": "情绪面分析师",
-      "content": "看多：奥马电器(TCL智家)、浙江荣泰、登康口腔；中性：东鹏饮料、盐津铺子、浙江鼎力、宁沪高速、申能股份",
-      "timestamp": 1742947204000
-    },
-    {
-      "type": "conference_message",
-      "conferenceId": "offline-2025-03-26",
+      "conferenceId": "offline-2025-03-18",
       "agentId": "technical_analyst",
       "agentName": "技术面分析师",
-      "content": "看多：浙江荣泰；看空：奥马电器(TCL智家)；中性：东鹏饮料、盐津铺子、浙江鼎力、宁沪高速、申能股份、登康口腔",
-      "timestamp": 1742947203000
+      "content": "看多：宁沪高速、申能股份、登康口腔；看空：浙江荣泰；中性：奥马电器(TCL智家)、东鹏饮料、盐津铺子、浙江鼎力",
+      "timestamp": 1742256243000
     },
     {
       "type": "conference_message",
-      "conferenceId": "offline-2025-03-26",
+      "conferenceId": "offline-2025-03-18",
+      "agentId": "sentiment_analyst",
+      "agentName": "情绪面分析师",
+      "content": "看多：奥马电器(TCL智家)、东鹏饮料、盐津铺子、申能股份、登康口腔；看空：浙江荣泰；中性：浙江鼎力、宁沪高速",
+      "timestamp": 1742256244000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-18",
+      "agentId": "valuation_analyst",
+      "agentName": "估值分析师",
+      "content": "看多：宁沪高速、登康口腔；中性：奥马电器(TCL智家)、东鹏饮料、盐津铺子、浙江鼎力、浙江荣泰、申能股份",
+      "timestamp": 1742256245000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-18",
+      "agentId": "portfolio_manager",
+      "agentName": "组合经理",
+      "content": "【组合经理综合决策】看空：盐津铺子；中性：奥马电器(TCL智家)、东鹏饮料、浙江鼎力、宁沪高速、浙江荣泰、申能股份、登康口腔",
+      "timestamp": 1742256247000
+    },
+    {
+      "type": "conference_end",
+      "conferenceId": "offline-2025-03-18",
+      "timestamp": 1742256250000
+    },
+    {
+      "type": "day_complete",
+      "date": "2025-03-18",
+      "content": "离线回放完成 · 2025-03-18",
+      "timestamp": 1742256251000
+    },
+    {
+      "type": "day_start",
+      "date": "2025-03-19",
+      "content": "离线回放 · 2025-03-19",
+      "timestamp": 1742342700000
+    },
+    {
+      "type": "conference_start",
+      "conferenceId": "offline-2025-03-19",
+      "title": "A股每日决策会议 · 2025-03-19",
+      "participants": [
+        "fundamentals_analyst",
+        "technical_analyst",
+        "sentiment_analyst",
+        "valuation_analyst",
+        "risk_manager",
+        "portfolio_manager"
+      ],
+      "timestamp": 1742342701000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-19",
+      "agentId": "fundamentals_analyst",
+      "agentName": "基本面分析师",
+      "content": "中性：奥马电器(TCL智家)、东鹏饮料、盐津铺子、浙江鼎力、宁沪高速、浙江荣泰、申能股份、登康口腔",
+      "timestamp": 1742342702000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-19",
+      "agentId": "technical_analyst",
+      "agentName": "技术面分析师",
+      "content": "看多：奥马电器(TCL智家)、东鹏饮料、盐津铺子、浙江鼎力、浙江荣泰、申能股份、登康口腔；看空：宁沪高速",
+      "timestamp": 1742342703000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-19",
+      "agentId": "sentiment_analyst",
+      "agentName": "情绪面分析师",
+      "content": "看多：奥马电器(TCL智家)、申能股份；看空：东鹏饮料、浙江鼎力、宁沪高速、浙江荣泰；中性：盐津铺子、登康口腔",
+      "timestamp": 1742342704000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-19",
+      "agentId": "valuation_analyst",
+      "agentName": "估值分析师",
+      "content": "看多：东鹏饮料、浙江鼎力；看空：宁沪高速；中性：奥马电器(TCL智家)、盐津铺子、浙江荣泰、申能股份、登康口腔",
+      "timestamp": 1742342705000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-19",
+      "agentId": "portfolio_manager",
+      "agentName": "组合经理",
+      "content": "【组合经理综合决策】看空：盐津铺子；中性：东鹏饮料、奥马电器(TCL智家)、申能股份、浙江鼎力、宁沪高速、浙江荣泰、登康口腔",
+      "timestamp": 1742342707000
+    },
+    {
+      "type": "conference_end",
+      "conferenceId": "offline-2025-03-19",
+      "timestamp": 1742342710000
+    },
+    {
+      "type": "day_complete",
+      "date": "2025-03-19",
+      "content": "离线回放完成 · 2025-03-19",
+      "timestamp": 1742342711000
+    },
+    {
+      "type": "day_start",
+      "date": "2025-03-20",
+      "content": "离线回放 · 2025-03-20",
+      "timestamp": 1742429160000
+    },
+    {
+      "type": "conference_start",
+      "conferenceId": "offline-2025-03-20",
+      "title": "A股每日决策会议 · 2025-03-20",
+      "participants": [
+        "fundamentals_analyst",
+        "technical_analyst",
+        "sentiment_analyst",
+        "valuation_analyst",
+        "risk_manager",
+        "portfolio_manager"
+      ],
+      "timestamp": 1742429161000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-20",
+      "agentId": "fundamentals_analyst",
+      "agentName": "基本面分析师",
+      "content": "看多：奥马电器(TCL智家)、东鹏饮料、盐津铺子、宁沪高速、申能股份；看空：浙江荣泰、登康口腔；中性：浙江鼎力",
+      "timestamp": 1742429162000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-20",
+      "agentId": "technical_analyst",
+      "agentName": "技术面分析师",
+      "content": "看多：东鹏饮料、盐津铺子、登康口腔；看空：奥马电器(TCL智家)、浙江鼎力、宁沪高速、浙江荣泰；中性：申能股份",
+      "timestamp": 1742429163000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-20",
+      "agentId": "sentiment_analyst",
+      "agentName": "情绪面分析师",
+      "content": "看多：东鹏饮料、盐津铺子、浙江鼎力、宁沪高速、浙江荣泰；看空：奥马电器(TCL智家)；中性：申能股份、登康口腔",
+      "timestamp": 1742429164000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-20",
+      "agentId": "valuation_analyst",
+      "agentName": "估值分析师",
+      "content": "中性：奥马电器(TCL智家)、东鹏饮料、盐津铺子、浙江鼎力、宁沪高速、浙江荣泰、申能股份、登康口腔",
+      "timestamp": 1742429165000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-20",
+      "agentId": "portfolio_manager",
+      "agentName": "组合经理",
+      "content": "【组合经理综合决策】看多：盐津铺子；中性：奥马电器(TCL智家)、东鹏饮料、浙江鼎力、宁沪高速、浙江荣泰、申能股份、登康口腔",
+      "timestamp": 1742429167000
+    },
+    {
+      "type": "conference_end",
+      "conferenceId": "offline-2025-03-20",
+      "timestamp": 1742429170000
+    },
+    {
+      "type": "day_complete",
+      "date": "2025-03-20",
+      "content": "离线回放完成 · 2025-03-20",
+      "timestamp": 1742429171000
+    },
+    {
+      "type": "day_start",
+      "date": "2025-03-24",
+      "content": "离线回放 · 2025-03-24",
+      "timestamp": 1742774820000
+    },
+    {
+      "type": "conference_start",
+      "conferenceId": "offline-2025-03-24",
+      "title": "A股每日决策会议 · 2025-03-24",
+      "participants": [
+        "fundamentals_analyst",
+        "technical_analyst",
+        "sentiment_analyst",
+        "valuation_analyst",
+        "risk_manager",
+        "portfolio_manager"
+      ],
+      "timestamp": 1742774821000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-24",
+      "agentId": "fundamentals_analyst",
+      "agentName": "基本面分析师",
+      "content": "看多：东鹏饮料、盐津铺子、浙江鼎力、宁沪高速、申能股份；看空：奥马电器(TCL智家)、登康口腔；中性：浙江荣泰",
+      "timestamp": 1742774822000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-24",
+      "agentId": "technical_analyst",
+      "agentName": "技术面分析师",
+      "content": "看多：东鹏饮料、浙江荣泰、登康口腔；看空：奥马电器(TCL智家)、浙江鼎力、申能股份；中性：盐津铺子、宁沪高速",
+      "timestamp": 1742774823000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-24",
+      "agentId": "sentiment_analyst",
+      "agentName": "情绪面分析师",
+      "content": "看多：东鹏饮料、宁沪高速、浙江荣泰、申能股份；看空：奥马电器(TCL智家)、盐津铺子、浙江鼎力、登康口腔",
+      "timestamp": 1742774824000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-24",
+      "agentId": "valuation_analyst",
+      "agentName": "估值分析师",
+      "content": "看多：东鹏饮料、宁沪高速、浙江荣泰、申能股份；看空：奥马电器(TCL智家)、浙江鼎力、登康口腔；中性：盐津铺子",
+      "timestamp": 1742774825000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-24",
+      "agentId": "portfolio_manager",
+      "agentName": "组合经理",
+      "content": "【组合经理综合决策】看多：宁沪高速、申能股份；看空：奥马电器(TCL智家)、盐津铺子；中性：东鹏饮料、浙江鼎力、浙江荣泰、登康口腔",
+      "timestamp": 1742774827000
+    },
+    {
+      "type": "conference_end",
+      "conferenceId": "offline-2025-03-24",
+      "timestamp": 1742774830000
+    },
+    {
+      "type": "day_complete",
+      "date": "2025-03-24",
+      "content": "离线回放完成 · 2025-03-24",
+      "timestamp": 1742774831000
+    },
+    {
+      "type": "day_start",
+      "date": "2025-03-25",
+      "content": "离线回放 · 2025-03-25",
+      "timestamp": 1742861280000
+    },
+    {
+      "type": "conference_start",
+      "conferenceId": "offline-2025-03-25",
+      "title": "A股每日决策会议 · 2025-03-25",
+      "participants": [
+        "fundamentals_analyst",
+        "technical_analyst",
+        "sentiment_analyst",
+        "valuation_analyst",
+        "risk_manager",
+        "portfolio_manager"
+      ],
+      "timestamp": 1742861281000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-25",
       "agentId": "fundamentals_analyst",
       "agentName": "基本面分析师",
       "content": "看多：奥马电器(TCL智家)、东鹏饮料、盐津铺子、浙江鼎力、申能股份；看空：浙江荣泰、登康口腔；中性：宁沪高速",
-      "timestamp": 1742947202000
+      "timestamp": 1742861282000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-25",
+      "agentId": "technical_analyst",
+      "agentName": "技术面分析师",
+      "content": "看多：东鹏饮料、盐津铺子、浙江鼎力、浙江荣泰、登康口腔；看空：奥马电器(TCL智家)、宁沪高速；中性：申能股份",
+      "timestamp": 1742861283000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-25",
+      "agentId": "sentiment_analyst",
+      "agentName": "情绪面分析师",
+      "content": "看多：奥马电器(TCL智家)、东鹏饮料、盐津铺子、宁沪高速、浙江荣泰、申能股份；中性：浙江鼎力、登康口腔",
+      "timestamp": 1742861284000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-25",
+      "agentId": "valuation_analyst",
+      "agentName": "估值分析师",
+      "content": "看多：奥马电器(TCL智家)、东鹏饮料、宁沪高速、申能股份；看空：浙江荣泰、登康口腔；中性：盐津铺子、浙江鼎力",
+      "timestamp": 1742861285000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-25",
+      "agentId": "portfolio_manager",
+      "agentName": "组合经理",
+      "content": "【组合经理综合决策】看多：奥马电器(TCL智家)；看空：申能股份、盐津铺子；中性：东鹏饮料、宁沪高速、浙江鼎力、浙江荣泰、登康口腔",
+      "timestamp": 1742861287000
+    },
+    {
+      "type": "conference_end",
+      "conferenceId": "offline-2025-03-25",
+      "timestamp": 1742861290000
+    },
+    {
+      "type": "day_complete",
+      "date": "2025-03-25",
+      "content": "离线回放完成 · 2025-03-25",
+      "timestamp": 1742861291000
+    },
+    {
+      "type": "day_start",
+      "date": "2025-03-26",
+      "content": "离线回放 · 2025-03-26",
+      "timestamp": 1742947740000
     },
     {
       "type": "conference_start",
@@ -15625,13 +16015,271 @@
         "risk_manager",
         "portfolio_manager"
       ],
-      "timestamp": 1742947201000
+      "timestamp": 1742947741000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-26",
+      "agentId": "fundamentals_analyst",
+      "agentName": "基本面分析师",
+      "content": "看多：奥马电器(TCL智家)、东鹏饮料、盐津铺子、浙江鼎力、申能股份；看空：浙江荣泰、登康口腔；中性：宁沪高速",
+      "timestamp": 1742947742000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-26",
+      "agentId": "technical_analyst",
+      "agentName": "技术面分析师",
+      "content": "看多：浙江荣泰；看空：奥马电器(TCL智家)；中性：东鹏饮料、盐津铺子、浙江鼎力、宁沪高速、申能股份、登康口腔",
+      "timestamp": 1742947743000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-26",
+      "agentId": "sentiment_analyst",
+      "agentName": "情绪面分析师",
+      "content": "看多：奥马电器(TCL智家)、浙江荣泰、登康口腔；中性：东鹏饮料、盐津铺子、浙江鼎力、宁沪高速、申能股份",
+      "timestamp": 1742947744000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-26",
+      "agentId": "valuation_analyst",
+      "agentName": "估值分析师",
+      "content": "看多：东鹏饮料、盐津铺子、浙江荣泰、申能股份、登康口腔；看空：奥马电器(TCL智家)；中性：浙江鼎力、宁沪高速",
+      "timestamp": 1742947745000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-26",
+      "agentId": "portfolio_manager",
+      "agentName": "组合经理",
+      "content": "【组合经理综合决策】看空：宁沪高速；中性：奥马电器(TCL智家)、东鹏饮料、盐津铺子、浙江鼎力、浙江荣泰、申能股份、登康口腔",
+      "timestamp": 1742947747000
+    },
+    {
+      "type": "conference_end",
+      "conferenceId": "offline-2025-03-26",
+      "timestamp": 1742947750000
+    },
+    {
+      "type": "day_complete",
+      "date": "2025-03-26",
+      "content": "离线回放完成 · 2025-03-26",
+      "timestamp": 1742947751000
     },
     {
       "type": "day_start",
-      "date": "2025-03-26",
-      "content": "离线回放 · 2025-03-26",
-      "timestamp": 1742947200000
+      "date": "2025-03-27",
+      "content": "离线回放 · 2025-03-27",
+      "timestamp": 1743034200000
+    },
+    {
+      "type": "conference_start",
+      "conferenceId": "offline-2025-03-27",
+      "title": "A股每日决策会议 · 2025-03-27",
+      "participants": [
+        "fundamentals_analyst",
+        "technical_analyst",
+        "sentiment_analyst",
+        "valuation_analyst",
+        "risk_manager",
+        "portfolio_manager"
+      ],
+      "timestamp": 1743034201000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-27",
+      "agentId": "fundamentals_analyst",
+      "agentName": "基本面分析师",
+      "content": "看多：奥马电器(TCL智家)、东鹏饮料、盐津铺子、申能股份；看空：浙江鼎力、浙江荣泰、登康口腔；中性：宁沪高速",
+      "timestamp": 1743034202000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-27",
+      "agentId": "technical_analyst",
+      "agentName": "技术面分析师",
+      "content": "看多：东鹏饮料、盐津铺子、浙江鼎力、浙江荣泰；看空：奥马电器(TCL智家)、宁沪高速、申能股份；中性：登康口腔",
+      "timestamp": 1743034203000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-27",
+      "agentId": "sentiment_analyst",
+      "agentName": "情绪面分析师",
+      "content": "看多：浙江鼎力、宁沪高速、浙江荣泰、登康口腔；看空：申能股份；中性：奥马电器(TCL智家)、东鹏饮料、盐津铺子",
+      "timestamp": 1743034204000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-27",
+      "agentId": "valuation_analyst",
+      "agentName": "估值分析师",
+      "content": "看多：浙江鼎力；看空：奥马电器(TCL智家)；中性：东鹏饮料、盐津铺子、宁沪高速、浙江荣泰、申能股份、登康口腔",
+      "timestamp": 1743034205000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-27",
+      "agentId": "portfolio_manager",
+      "agentName": "组合经理",
+      "content": "【组合经理综合决策】中性：奥马电器(TCL智家)、东鹏饮料、盐津铺子、浙江鼎力、宁沪高速、浙江荣泰、申能股份、登康口腔",
+      "timestamp": 1743034207000
+    },
+    {
+      "type": "conference_end",
+      "conferenceId": "offline-2025-03-27",
+      "timestamp": 1743034210000
+    },
+    {
+      "type": "day_complete",
+      "date": "2025-03-27",
+      "content": "离线回放完成 · 2025-03-27",
+      "timestamp": 1743034211000
+    },
+    {
+      "type": "day_start",
+      "date": "2025-03-28",
+      "content": "离线回放 · 2025-03-28",
+      "timestamp": 1743120660000
+    },
+    {
+      "type": "conference_start",
+      "conferenceId": "offline-2025-03-28",
+      "title": "A股每日决策会议 · 2025-03-28",
+      "participants": [
+        "fundamentals_analyst",
+        "technical_analyst",
+        "sentiment_analyst",
+        "valuation_analyst",
+        "risk_manager",
+        "portfolio_manager"
+      ],
+      "timestamp": 1743120661000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-28",
+      "agentId": "fundamentals_analyst",
+      "agentName": "基本面分析师",
+      "content": "看多：浙江鼎力；中性：奥马电器(TCL智家)、东鹏饮料、盐津铺子、宁沪高速、浙江荣泰、申能股份、登康口腔",
+      "timestamp": 1743120662000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-28",
+      "agentId": "technical_analyst",
+      "agentName": "技术面分析师",
+      "content": "看多：盐津铺子、浙江鼎力、浙江荣泰；看空：奥马电器(TCL智家)、申能股份、登康口腔；中性：东鹏饮料、宁沪高速",
+      "timestamp": 1743120663000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-28",
+      "agentId": "sentiment_analyst",
+      "agentName": "情绪面分析师",
+      "content": "看多：东鹏饮料、盐津铺子、浙江荣泰、登康口腔；看空：奥马电器(TCL智家)、浙江鼎力、宁沪高速、申能股份",
+      "timestamp": 1743120664000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-28",
+      "agentId": "valuation_analyst",
+      "agentName": "估值分析师",
+      "content": "看多：东鹏饮料、盐津铺子、浙江鼎力、申能股份、登康口腔；看空：奥马电器(TCL智家)、浙江荣泰；中性：宁沪高速",
+      "timestamp": 1743120665000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-28",
+      "agentId": "portfolio_manager",
+      "agentName": "组合经理",
+      "content": "【组合经理综合决策】中性：奥马电器(TCL智家)、东鹏饮料、盐津铺子、浙江鼎力、宁沪高速、浙江荣泰、申能股份、登康口腔",
+      "timestamp": 1743120667000
+    },
+    {
+      "type": "conference_end",
+      "conferenceId": "offline-2025-03-28",
+      "timestamp": 1743120670000
+    },
+    {
+      "type": "day_complete",
+      "date": "2025-03-28",
+      "content": "离线回放完成 · 2025-03-28",
+      "timestamp": 1743120671000
+    },
+    {
+      "type": "day_start",
+      "date": "2025-03-31",
+      "content": "离线回放 · 2025-03-31",
+      "timestamp": 1743379920000
+    },
+    {
+      "type": "conference_start",
+      "conferenceId": "offline-2025-03-31",
+      "title": "A股每日决策会议 · 2025-03-31",
+      "participants": [
+        "fundamentals_analyst",
+        "technical_analyst",
+        "sentiment_analyst",
+        "valuation_analyst",
+        "risk_manager",
+        "portfolio_manager"
+      ],
+      "timestamp": 1743379921000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-31",
+      "agentId": "fundamentals_analyst",
+      "agentName": "基本面分析师",
+      "content": "看空：浙江荣泰；中性：奥马电器(TCL智家)、东鹏饮料、盐津铺子、浙江鼎力、宁沪高速、申能股份、登康口腔",
+      "timestamp": 1743379922000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-31",
+      "agentId": "technical_analyst",
+      "agentName": "技术面分析师",
+      "content": "看多：东鹏饮料、盐津铺子、宁沪高速、登康口腔；看空：奥马电器(TCL智家)、浙江鼎力、浙江荣泰、申能股份",
+      "timestamp": 1743379923000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-31",
+      "agentId": "sentiment_analyst",
+      "agentName": "情绪面分析师",
+      "content": "看多：东鹏饮料、浙江鼎力、登康口腔；看空：奥马电器(TCL智家)、盐津铺子、浙江荣泰、申能股份；中性：宁沪高速",
+      "timestamp": 1743379924000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-31",
+      "agentId": "valuation_analyst",
+      "agentName": "估值分析师",
+      "content": "看多：盐津铺子、登康口腔；看空：奥马电器(TCL智家)、东鹏饮料、浙江鼎力、宁沪高速、浙江荣泰、申能股份",
+      "timestamp": 1743379925000
+    },
+    {
+      "type": "conference_message",
+      "conferenceId": "offline-2025-03-31",
+      "agentId": "portfolio_manager",
+      "agentName": "组合经理",
+      "content": "【组合经理综合决策】看空：东鹏饮料、申能股份；中性：奥马电器(TCL智家)、盐津铺子、浙江鼎力、宁沪高速、浙江荣泰、登康口腔",
+      "timestamp": 1743379927000
+    },
+    {
+      "type": "conference_end",
+      "conferenceId": "offline-2025-03-31",
+      "timestamp": 1743379930000
+    },
+    {
+      "type": "day_complete",
+      "date": "2025-03-31",
+      "content": "离线回放完成 · 2025-03-31",
+      "timestamp": 1743379931000
     }
   ]
 }

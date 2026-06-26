@@ -97,7 +97,8 @@ def build_feed_events(leaderboard: list[dict], max_days: int) -> tuple[list[dict
         events.append({"type": "conference_end", "conferenceId": cid, "timestamp": base + 10_000})
         events.append({"type": "day_complete", "date": date,
                        "content": f"离线回放完成 · {date}", "timestamp": base + 11_000})
-    events.sort(key=lambda e: e["timestamp"], reverse=True)
+    # 正序：从最早一天到最晚一天，符合"回放/进展"直觉
+    events.sort(key=lambda e: e["timestamp"])
     return events, days
 
 
