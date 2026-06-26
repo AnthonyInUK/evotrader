@@ -1,0 +1,12 @@
+embedding_model:
+  default:
+    backend: openai_compatible
+    params:
+      dimensions: 1024
+
+vector_store:
+  default:
+    backend: local
+    embedding_model: default
+    params:
+      store_dir: backend/data/reme_vector_store

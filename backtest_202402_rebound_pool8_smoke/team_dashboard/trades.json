@@ -1,0 +1,65 @@
+[
+  {
+    "id": "t_20240223_000333.SZ_0",
+    "timestamp": 1708675200000,
+    "trading_date": "2024-02-23",
+    "side": "SHORT",
+    "ticker": "000333.SZ",
+    "qty": 500,
+    "price": 56.01
+  },
+  {
+    "id": "t_20240222_300750.SZ_0",
+    "timestamp": 1708588800000,
+    "trading_date": "2024-02-22",
+    "side": "LONG",
+    "ticker": "300750.SZ",
+    "qty": 100,
+    "price": 150.73
+  },
+  {
+    "id": "t_20240221_000858.SZ_0",
+    "timestamp": 1708502400000,
+    "trading_date": "2024-02-21",
+    "side": "LONG",
+    "ticker": "000858.SZ",
+    "qty": 200,
+    "price": 120.11
+  },
+  {
+    "id": "t_20240220_601398.SH_0",
+    "timestamp": 1708416000000,
+    "trading_date": "2024-02-20",
+    "side": "LONG",
+    "ticker": "601398.SH",
+    "qty": 21600,
+    "price": 4.61
+  },
+  {
+    "id": "t_20240220_000858.SZ_1",
+    "timestamp": 1708416000000,
+    "trading_date": "2024-02-20",
+    "side": "LONG",
+    "ticker": "000858.SZ",
+    "qty": 800,
+    "price": 122.45
+  },
+  {
+    "id": "t_20240220_000333.SZ_2",
+    "timestamp": 1708416000000,
+    "trading_date": "2024-02-20",
+    "side": "LONG",
+    "ticker": "000333.SZ",
+    "qty": 2200,
+    "price": 54.76
+  },
+  {
+    "id": "t_20240220_600276.SH_3",
+    "timestamp": 1708416000000,
+    "trading_date": "2024-02-20",
+    "side": "LONG",
+    "ticker": "600276.SH",
+    "qty": 900,
+    "price": 41.21
+  }
+]

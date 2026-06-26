@@ -1,0 +1,50 @@
+{
+  "agent_end": 509427.12,
+  "agent_return_pct": 1.8854240000000022,
+  "equal_weight_end": 509894.51,
+  "equal_weight_return_pct": 1.9789019999999935,
+  "momentum_end": 509955.3,
+  "momentum_return_pct": 1.99106,
+  "excess_vs_equal": -467.39000000001397,
+  "cash_defense_vs_equal": -9894.51000000001,
+  "active_pnl": 9427.119999999995,
+  "gross_trade_pnl": 9585.000000000002,
+  "cost_or_slippage_drag": -157.88000000000648,
+  "pnl_by_ticker": [
+    {
+      "ticker": "000333.SZ",
+      "buy_value": 120472.0,
+      "sell_value": 28005.0,
+      "final_value": 92038.0,
+      "pnl": -429.0
+    },
+    {
+      "ticker": "000858.SZ",
+      "buy_value": 121982.0,
+      "sell_value": 0.0,
+      "final_value": 127600.0,
+      "pnl": 5618.0
+    },
+    {
+      "ticker": "300750.SZ",
+      "buy_value": 15072.999999999998,
+      "sell_value": 0.0,
+      "final_value": 14996.0,
+      "pnl": -76.99999999999818
+    },
+    {
+      "ticker": "600276.SH",
+      "buy_value": 37089.0,
+      "sell_value": 0.0,
+      "final_value": 37674.0,
+      "pnl": 585.0
+    },
+    {
+      "ticker": "601398.SH",
+      "buy_value": 99576.0,
+      "sell_value": 0.0,
+      "final_value": 103464.0,
+      "pnl": 3888.0
+    }
+  ]
+}

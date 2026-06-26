@@ -1,0 +1,30 @@
+{
+  "experiment_id": "backtest_202401_pm_lot_aware_smoke",
+  "objective": "C1 smoke: validate PM lot-aware A-share probe sizing before any full-month run.",
+  "period": {
+    "start": "2024-01-02",
+    "end": "2024-01-05"
+  },
+  "variables": {
+    "tickers": [
+      "600519.SH",
+      "601398.SH"
+    ],
+    "model_provider": "DEEPSEEK",
+    "model_name": "deepseek-v4-flash",
+    "max_comm_cycles": "1",
+    "custom": "Only PM_EXPERIMENT_MODE changes to lot_aware_probe. Ordinary probe max=20%; high-price one-lot threshold=20%; cash floor=60%; single-name cap=30%; analysts, model, data, and indicators fixed."
+  },
+  "fixed_indicators": [
+    {
+      "indicator_id": "technical_trend_snapshot_v1",
+      "description": "Fixed trend snapshot: close, SMA20/SMA60, MACD, RSI14.",
+      "lookback_days": 120
+    },
+    {
+      "indicator_id": "technical_momentum_risk_v1",
+      "description": "Fixed momentum/risk snapshot: 5d/10d/20d returns and 20d volatility.",
+      "lookback_days": 120
+    }
+  ]
+}

@@ -1,0 +1,252 @@
+{
+  "status": "running",
+  "current_date": "2025-12-01",
+  "portfolio": {
+    "total_value": 100000.0,
+    "cash": 100000.0,
+    "pnl_percent": 0.0,
+    "equity": [],
+    "baseline": [],
+    "baseline_vw": [],
+    "momentum": [],
+    "strategies": [],
+    "equity_return": [],
+    "baseline_return": [],
+    "baseline_vw_return": [],
+    "momentum_return": []
+  },
+  "holdings": [],
+  "trades": [],
+  "stats": {
+    "totalAssetValue": 100000.0,
+    "totalReturn": 0.0,
+    "cashPosition": 100000.0,
+    "tickerWeights": {},
+    "totalTrades": 0,
+    "winRate": 0.0,
+    "bullBear": {
+      "bull": {
+        "n": 0,
+        "win": 0
+      },
+      "bear": {
+        "n": 0,
+        "win": 0
+      }
+    }
+  },
+  "leaderboard": [
+    {
+      "agentId": "portfolio_manager",
+      "name": "Portfolio Manager",
+      "role": "Portfolio Manager",
+      "avatar": "pm",
+      "rank": null,
+      "winRate": null,
+      "bull": {
+        "n": 0,
+        "win": 0,
+        "unknown": 0
+      },
+      "bear": {
+        "n": 0,
+        "win": 0,
+        "unknown": 0
+      },
+      "logs": [],
+      "signals": [],
+      "modelName": "qwen-max",
+      "modelProvider": "ALIBABA"
+    },
+    {
+      "agentId": "risk_manager",
+      "name": "Risk Manager",
+      "role": "Risk Manager",
+      "avatar": "risk",
+      "rank": null,
+      "winRate": null,
+      "bull": {
+        "n": 0,
+        "win": 0,
+        "unknown": 0
+      },
+      "bear": {
+        "n": 0,
+        "win": 0,
+        "unknown": 0
+      },
+      "logs": [],
+      "signals": [],
+      "modelName": "qwen-max",
+      "modelProvider": "ALIBABA"
+    },
+    {
+      "agentId": "sentiment_analyst",
+      "name": "Sentiment Analyst",
+      "role": "Sentiment Analyst",
+      "avatar": "sentiment",
+      "rank": 0,
+      "winRate": null,
+      "bull": {
+        "n": 0,
+        "win": 0,
+        "unknown": 0
+      },
+      "bear": {
+        "n": 0,
+        "win": 0,
+        "unknown": 0
+      },
+      "logs": [],
+      "signals": [],
+      "modelName": "qwen-max",
+      "modelProvider": "ALIBABA"
+    },
+    {
+      "agentId": "technical_analyst",
+      "name": "Technical Analyst",
+      "role": "Technical Analyst",
+      "avatar": "technical",
+      "rank": 0,
+      "winRate": null,
+      "bull": {
+        "n": 0,
+        "win": 0,
+        "unknown": 0
+      },
+      "bear": {
+        "n": 0,
+        "win": 0,
+        "unknown": 0
+      },
+      "logs": [],
+      "signals": [],
+      "modelName": "qwen-max",
+      "modelProvider": "ALIBABA"
+    },
+    {
+      "agentId": "fundamentals_analyst",
+      "name": "Fundamentals Analyst",
+      "role": "Fundamentals Analyst",
+      "avatar": "fundamentals",
+      "rank": 0,
+      "winRate": null,
+      "bull": {
+        "n": 0,
+        "win": 0,
+        "unknown": 0
+      },
+      "bear": {
+        "n": 0,
+        "win": 0,
+        "unknown": 0
+      },
+      "logs": [],
+      "signals": [],
+      "modelName": "qwen-max",
+      "modelProvider": "ALIBABA"
+    },
+    {
+      "agentId": "valuation_analyst",
+      "name": "Valuation Analyst",
+      "role": "Valuation Analyst",
+      "avatar": "valuation",
+      "rank": 0,
+      "winRate": null,
+      "bull": {
+        "n": 0,
+        "win": 0,
+        "unknown": 0
+      },
+      "bear": {
+        "n": 0,
+        "win": 0,
+        "unknown": 0
+      },
+      "logs": [],
+      "signals": [],
+      "modelName": "qwen-max",
+      "modelProvider": "ALIBABA"
+    }
+  ],
+  "realtime_prices": {},
+  "system_started": "2026-05-17T01:31:06.360801",
+  "feed_history": [
+    {
+      "type": "conference_message",
+      "agentId": "technical_analyst",
+      "content": "Given the current situation, where we are unable to access real-time or historical financial data due to missing API keys, I'll provide a general perspective on the technical analysis of AAPL (Apple Inc.) and MSFT (Microsoft Corporation) based on typical market behavior and common technical indicators. This will be a more theoretical approach, but it can still offer valuable insights for short to medium-term trading opportunities.\n\n### General Market Context\n- **AAPL and MSFT** are both large-cap technology stocks and are often seen as bellwethers for the broader tech sector and the overall market.\n- These companies tend to exhibit strong price trends and are influenced by a variety of factors, including earnings reports, product launches, and broader economic conditions.\n\n### Technical Analysis Perspective\n\n#### 1. **Trend Following**\n- **SMA (Simple Moving Averages)**: Typically, a 20-day SMA is used to identify short-term trends, a 50-day SMA for medium-term trends, and a 200-day SMA for long-term trends.\n  - **Bullish Signal**: If the 20-day SMA crosses above the 50-day SMA, and both are above the 200-day SMA, it suggests a strong uptrend.\n  - **Bearish Signal**: Conversely, if the 20-day SMA crosses below the 50-day SMA, and both are below the 200-day SMA, it indicates a downtrend.\n- **MACD (Moving Average Convergence Divergence)**: The MACD line crossing above the signal line is a bullish signal, while crossing below is bearish.\n\n#### 2. **Momentum Indicators**\n- **RSI (Relative Strength Index)**: RSI values above 70 indicate overbought conditions, while values below 30 suggest oversold conditions.\n- **Stochastic Oscillator**: Similar to RSI, it helps identify overbought and oversold levels. A crossover in the stochastic lines can also signal a change in momentum.\n\n#### 3. **Mean Reversion**\n- **Bollinger Bands**: When the price touches the upper band, it may be overbought, and when it touches the lower band, it may be oversold.\n- **RSI**: As mentioned, RSI values can help identify potential mean reversion points. A high RSI (above 70) might indicate a pullback, while a low RSI (below 30) might suggest a bounce.\n\n#### 4. **Volatility**\n- **ATR (Average True Range)**: Higher ATR values indicate higher volatility, which can be associated with increased risk but also potentially higher returns.\n- **Historical Volatility**: Measuring the standard deviation of daily returns over a certain period (e.g., 10, 20, or 60 days) can help gauge the level of price fluctuation.\n\n### Current Market Sentiment and Capital Flows\n- **Market Sentiment**: Both AAPL and MSFT are heavily traded and widely followed, so market sentiment can play a significant role. Positive news, such as strong earnings, new product launches, or positive analyst ratings, can drive the stock price up, while negative news can have the opposite effect.\n- **Capital Flows**: Institutional and retail investors' buying and selling activities can significantly impact the stock price. Large institutional trades, in particular, can create significant price movements.\n\n### Investment Signals and Confidence Levels\n- **AAPL**:\n  - **Bullish Signal**: If the 20-day SMA is above the 50-day SMA, and the MACD line is above the signal line, it suggests a continuation of the uptrend. A confidence level of around 70% would be reasonable, given the strong fundamentals and market sentiment.\n  - **Bearish Signal**: If the 20-day SMA is below the 50-day SMA, and the MACD line is below the signal line, it suggests a potential downtrend. A confidence level of around 60% would be appropriate, considering the potential for a market correction.\n- **MSFT**:\n  - **Bullish Signal**: Similar to AAPL, if the 20-day SMA is above the 50-day SMA, and the MACD line is above the signal line, it indicates a strong uptrend. A confidence level of around 70% would be reasonable.\n  - **Bearish Signal**: If the 20-day SMA is below the 50-day SMA, and the MACD line is below the signal line, it suggests a potential downtrend. A confidence level of around 60% would be appropriate, considering the broader market conditions.\n\n### Key Principles and Reflections\n- **Core Driver Identification**: The primary drivers for these stocks include earnings, product launches, and broader market sentiment. Understanding these drivers is crucial for making informed trading decisions.\n- **Risk Boundary Setting**: The specific scenarios that could invalidate the bullish or bearish signals include significant negative news, a broad market downturn, or a failure to meet earnings expectations.\n- **Contrarian Testing**: The prevailing market consensus is generally positive for both AAPL and MSFT, given their strong fundamentals and market leadership. However, a contrarian view might consider the potential for a market correction or a shift in investor sentiment.\n\nIn summary, while we cannot access real-time data, the general technical analysis framework suggests that both AAPL and MSFT are likely to follow their established trends, with a moderate to high confidence level. It's important to monitor key indicators and market sentiment closely to make timely and informed trading decisions.",
+      "ts": 1764576000000,
+      "timestamp": "2025-12-01"
+    },
+    {
+      "type": "conference_message",
+      "agentId": "fundamentals_analyst",
+      "content": "Given the current situation where we are unable to access specific financial data for Apple (AAPL) and Microsoft (MSFT) due to API key issues, I will provide a high-level analysis based on general market knowledge and recent trends. This will help in forming an investment perspective while addressing potential concerns and insights.\n\n### Apple (AAPL)\n**Industry Position and Market Share:**\n- **Strong Market Position:** Apple continues to dominate the premium smartphone market with its iPhone lineup. It also has a significant presence in personal computers, wearables, and services.\n- **Ecosystem Strength:** The company's ecosystem, which includes hardware, software, and services, creates a strong competitive advantage. Customers often remain within the Apple ecosystem due to the seamless integration of products and services.\n\n**Business Model Sustainability and Competitive Advantages:**\n- **Diversification:** Apple has successfully diversified its revenue streams beyond hardware, with a growing emphasis on services such as the App Store, iCloud, Apple Music, and Apple TV+.\n- **Innovation:** Apple is known for its innovation, continually introducing new features and products that set industry standards. The introduction of the M1 chip and the ongoing development of augmented reality (AR) and virtual reality (VR) technologies are examples of this.\n\n**Financial Health and Profitability:**\n- **Consistent Revenue Growth:** Apple has shown consistent revenue growth, driven by both hardware sales and service subscriptions.\n- **Strong Cash Reserves:** The company maintains a robust balance sheet with substantial cash reserves, which provides financial flexibility and the ability to invest in R&D and strategic acquisitions.\n\n**Management Quality and Corporate Governance:**\n- **Leadership:** Under the leadership of Tim Cook, Apple has continued to grow and innovate. The management team is experienced and has a track record of making strategic decisions that benefit the company.\n- **Corporate Governance:** Apple has a strong commitment to corporate governance, transparency, and ethical business practices.\n\n**Long-Term Investment Value:**\n- **Stable and Growing Dividend:** Apple has a history of returning value to shareholders through dividends and share buybacks.\n- **Brand Loyalty:** The strong brand loyalty and customer base make Apple a resilient investment, even in challenging economic conditions.\n\n### Microsoft (MSFT)\n**Industry Position and Market Share:**\n- **Dominant Player in Software:** Microsoft is a leader in the software industry, with a dominant position in operating systems (Windows), productivity software (Office 365), and cloud computing (Azure).\n- **Cloud Services:** Azure has been a key growth driver, with Microsoft gaining market share in the rapidly expanding cloud computing market.\n\n**Business Model Sustainability and Competitive Advantages:**\n- **Recurring Revenue Streams:** Microsoft's transition to a subscription-based model for Office 365 and other services has provided a stable and predictable revenue stream.\n- **Enterprise Solutions:** The company's focus on enterprise solutions, including Dynamics 365 and LinkedIn, has further diversified its revenue base and strengthened its position in the B2B market.\n\n**Financial Health and Profitability:**\n- **Strong Financials:** Microsoft has a strong financial profile, with consistent revenue growth and high profitability. The company's gross margins are particularly impressive, reflecting efficient cost management.\n- **Cash Flow Generation:** The company generates significant free cash flow, which it uses for investments, acquisitions, and returning capital to shareholders.\n\n**Management Quality and Corporate Governance:**\n- **Leadership:** Satya Nadella has transformed Microsoft into a more agile and innovative company, focusing on cloud computing and AI. His leadership has been instrumental in the company's success.\n- **Corporate Governance:** Microsoft is known for its strong corporate governance practices, with a board that includes independent directors and a commitment to ethical business conduct.\n\n**Long-Term Investment Value:**\n- **Growth Potential:** The continued expansion of cloud services and the increasing importance of AI and machine learning present significant growth opportunities for Microsoft.\n- **Stable Dividend:** Microsoft has a history of paying a stable and growing dividend, making it attractive for income-focused investors.\n\n### Investment Signals\n- **Apple (AAPL):** Bullish, Confidence Level: 80%\n  - **Reasoning:** Apple's strong market position, diversified revenue streams, and robust financial health make it a compelling long-term investment. The company's focus on innovation and the strength of its ecosystem contribute to its sustainability and competitive advantages.\n\n- **Microsoft (MSFT):** Bullish, Confidence Level: 85%\n  - **Reasoning:** Microsoft's dominance in the software and cloud computing markets, combined with its strong financials and recurring revenue streams, makes it a highly attractive investment. The company's strategic focus on enterprise solutions and AI positions it well for future growth.\n\n### Reflection and Key Principles\n- **Market Consensus:** Both AAPL and MSFT are widely viewed as blue-chip stocks with strong fundamentals, and the consensus is generally bullish. My view aligns with the market consensus, but I emphasize the importance of the companies' competitive advantages and their ability to adapt and innovate.\n- **Contrarian Testing:** While the market is bullish, potential risks include regulatory challenges, increased competition, and economic downturns. However, the companies' strong financial positions and diversified revenue streams mitigate these risks to a large extent.\n\nIn conclusion, both Apple and Microsoft are well-positioned for long-term growth, supported by their strong fundamentals, competitive advantages, and strategic initiatives.",
+      "ts": 1764576000000,
+      "timestamp": "2025-12-01"
+    },
+    {
+      "type": "conference_message",
+      "agentId": "portfolio_manager",
+      "content": "The key concerns and questions that arise from the provided information are as follows:\n\n1. **API Key Configuration:**\n   - It's clear that the API keys required for accessing financial data are not set, which is preventing the analysts from providing specific signals, confidence scores, and reasoning. We need to ensure that `FINNHUB_API_KEY` or `FINANCIAL_DATASETS_API_KEY` is correctly configured in the environment. Without this, we cannot make informed investment decisions based on fundamentals, technicals, sentiment, and valuation.\n\n2. **Lack of Data-Driven Signals:**\n   - Since the analysts could not provide their usual detailed reports, we do not have any specific investment signals, confidence levels, or reasoning. This lack of data-driven insights makes it challenging to determine the appropriate action for AAPL and MSFT. We would typically look at a combination of fundamental, technical, and sentiment analysis to form a well-rounded view of each stock.\n\n3. **Risk Management:**\n   - The risk assessment suggests starting with a conservative approach, especially since there are no current positions and the portfolio is fully in cash. It recommends taking a position size of 25-50% of available capital, diversifying between AAPL and MSFT, and using stop-loss orders to manage downside risk.\n   - The margin requirement of 25% allows for up to 4x leverage, but it is advised to start conservatively, particularly if we are new to using margin.\n\n4. **Market Conditions and Specific Risks:**\n   - Both AAPL and MSFT are large-cap technology stocks, and they may be sensitive to broader market conditions, sector-specific risks (such as changes in technology trends and regulatory changes), and company-specific news (like earnings reports and product launches).\n   - We should also consider the historical and implied volatility of each stock. For instance, MSFT tends to have higher volatility compared to AAPL, which means position sizes should account for this increased risk.\n\n5. **Diversification:**\n   - Diversification is recommended to avoid over-concentration in a single stock. A balanced allocation between AAPL and MSFT can help mitigate some of the specific risks associated with each company.\n\n6. **Stop-Loss Orders:**\n   - Implementing stop-loss orders at 5-10% below the entry price can help limit potential losses. This is a prudent risk management practice, especially when entering new positions.\n\n7. **Regular Monitoring:**\n   - Regular monitoring of the positions is necessary to adjust them based on changing market conditions and risk tolerance. This is particularly important given the dynamic nature of the technology sector.\n\nBefore making any final decisions, we need to resolve the API key issue and obtain the necessary data-driven insights from the analysts. Once we have this information, we can then proceed to make more informed investment decisions. Would you like to address the API key configuration now, or do you have any other questions or concerns?",
+      "ts": 1764576000000,
+      "timestamp": "2025-12-01"
+    },
+    {
+      "type": "conference_start",
+      "title": "Investment Discussion - 2025-12-01",
+      "date": "2025-12-01",
+      "ts": 1764576000000,
+      "timestamp": "2025-12-01"
+    },
+    {
+      "type": "agent_message",
+      "agentId": "risk_manager",
+      "content": "### Portfolio Risk Assessment: 2022-12-01\n\n#### Portfolio Overview:\n- **Cash**: $100,000.00\n- **Positions**: No current positions\n- **Margin Used**: $0.00\n- **Margin Requirement**: 25%\n\n#### Market Conditions:\n- **AAPL**: $278.01\n- **MSFT**: $488.435\n\n### Risk Assessment and Recommendations:\n\n#### 1. **Exposure and Concentration Risk**:\n- **Current Exposure**: The portfolio currently has no positions, so there is no exposure to market risk.\n- **Concentration Risk**: Not applicable as there are no positions.\n\n#### 2. **Position Sizes Relative to Volatility**:\n- **Current Position Sizes**: No positions.\n- **Volatility Consideration**: When considering new positions, it's important to evaluate the historical and implied volatility of AAPL and MSFT. \n  - **AAPL**: Historically, AAPL has a lower volatility compared to MSFT. However, specific volatility metrics (e.g., 30-day or 90-day) should be reviewed.\n  - **MSFT**: MSFT tends to have higher volatility. Ensure that position sizes account for this increased risk.\n\n#### 3. **Margin Usage and Leverage Levels**:\n- **Current Margin Usage**: $0.00\n- **Leverage Level**: No leverage is currently being used.\n- **Recommendation**: Given the margin requirement of 25%, you can use up to 4x leverage. However, it is advisable to start with a more conservative approach, especially if you are new to using margin.\n\n#### 4. **Potential Risk Factors**:\n- **Market Volatility**: Both AAPL and MSFT are large-cap stocks, but they can still be affected by market volatility. Monitor broader market conditions and economic indicators.\n- **Sector-Specific Risks**: Both companies are in the technology sector, which can be sensitive to changes in technology trends, regulatory changes, and geopolitical events.\n- **Company-Specific Risks**: Stay updated on company-specific news, such as earnings reports, product launches, and management changes.\n\n#### 5. **Risk Warnings and Position Limit Recommendations**:\n- **No Current Positions**: Since there are no current positions, the immediate risk is low. However, when entering new positions, consider the following:\n  - **Diversification**: Avoid over-concentration in a single stock. Aim for a balanced allocation between AAPL and MSFT.\n  - **Position Size**: Based on the current cash balance and margin requirement, you can take a position of up to $400,000 (4x leverage). However, start with a smaller position, e.g., 25-50% of your available capital.\n  - **Stop-Loss Orders**: Implement stop-loss orders to limit potential losses. For example, set a stop-loss at 5-10% below the entry price.\n  - **Regular Monitoring**: Regularly monitor the positions and adjust as needed based on market conditions and risk tolerance.\n\n### Summary:\n- **Immediate Risk**: Low, as there are no current positions.\n- **Actionable Recommendations**:\n  - Start with a conservative position size, e.g., 25-50% of available capital.\n  - Diversify between AAPL and MSFT.\n  - Use stop-loss orders to manage downside risk.\n  - Regularly review and adjust positions based on market conditions and risk tolerance.\n\nBy following these recommendations, you can effectively manage the risk in your portfolio while taking advantage of potential opportunities.",
+      "ts": 1764576000000,
+      "timestamp": "2025-12-01"
+    },
+    {
+      "type": "agent_message",
+      "agentId": "valuation_analyst",
+      "content": "It appears that the necessary API keys for accessing financial data are not set in the environment, which is causing errors in all the valuation analyses. To proceed with the analysis, the following steps need to be taken:\n\n1. Ensure that the `FINNHUB_API_KEY` or `FINANCIAL_DATASETS_API_KEY` is correctly set in the `.env` file.\n2. If the API keys are already set, check if they are valid and have the required permissions to access the financial datasets.\n\nOnce the API key issue is resolved, I will be able to perform the DCF, owner earnings, EV/EBITDA, and residual income valuations for the stocks AAPL and MSFT on the date 2025-12-01. Please provide the correct API key, and I can rerun the analysis.\n\nIn the meantime, let me outline the general approach I would take for the analysis of these two companies:\n\n### Core Driver Identification\n- **Revenue Growth**: For both Apple (AAPL) and Microsoft (MSFT), revenue growth is a key driver, influenced by product innovation, market share, and geographical expansion.\n- **Operating Margins**: Both companies have high operating margins, which are influenced by cost management, pricing power, and economies of scale.\n- **Capital Allocation**: The use of cash, including dividends, buybacks, and acquisitions, is critical for shareholder value.\n\n### Risk Boundary Setting\n- **Market Saturation**: A risk for both companies is the potential saturation of their primary markets, such as smartphones and PCs.\n- **Regulatory Changes**: Increasing regulatory scrutiny, especially in areas like privacy and antitrust, could impact future profitability.\n- **Technological Disruption**: Rapid technological changes could render current products obsolete, affecting long-term growth prospects.\n\n### Contrarian Testing\n- **Market Consensus**: The prevailing market consensus is that both AAPL and MSFT are well-established, with strong fundamentals and growth potential.\n- **Differentiated View**: One contrarian view could be that the increasing competition, particularly from Chinese tech firms, might erode their dominant positions over time.\n\nAfter setting up the API keys, I will be able to provide specific investment signals, confidence levels, and detailed reasoning based on the valuation models. Would you like to proceed with the setup, or do you need assistance with another aspect of the analysis?",
+      "ts": 1764576000000,
+      "timestamp": "2025-12-01"
+    },
+    {
+      "type": "agent_message",
+      "agentId": "sentiment_analyst",
+      "content": "It appears that there was an issue with the API keys required to access the necessary financial data for analyzing news sentiment and insider trading. To proceed with the analysis, we need to have valid API keys set in the environment.\n\nSince I cannot perform the analysis without the proper API keys, I will provide a general framework for how the analysis would be conducted once the keys are available:\n\n1. **News Sentiment Analysis**:\n   - We would retrieve recent news articles related to AAPL and MSFT.\n   - The sentiment of these articles would be analyzed to determine if the overall tone is positive, negative, or neutral.\n   - This information would help us understand the current market sentiment and any significant events that may impact the stocks.\n\n2. **Insider Trading Analysis**:\n   - We would track the buying and selling activities of insiders (executives, directors) for AAPL and MSFT.\n   - Insider buying can signal confidence in the company's future, while selling may indicate concerns.\n   - This data would be used to gauge the level of trust insiders have in their own companies.\n\nOnce the analysis is complete, we would synthesize the findings to provide investment signals, confidence scores, and reasoning for each stock.\n\nTo resolve the current issue, please ensure that the `FINNHUB_API_KEY` or `FINANCIAL_DATASETS_API_KEY` is correctly set in the .env file. If you have any questions on how to do this, feel free to ask.\n\nWould you like to proceed with setting up the API keys, or do you have any other questions?",
+      "ts": 1764576000000,
+      "timestamp": "2025-12-01"
+    },
+    {
+      "type": "agent_message",
+      "agentId": "technical_analyst",
+      "content": "It appears that the necessary API keys for accessing financial data are not set in the environment, which has caused an error in retrieving the required information to perform the analysis. To proceed with the technical analysis of the stocks AAPL and MSFT, we need to have the appropriate API keys configured.\n\nPlease ensure that either `FINNHUB_API_KEY` or `FINANCIAL_DATASETS_API_KEY` is set in your environment. Once the API keys are properly configured, I can re-run the analysis and provide you with the investment signals, confidence scores, and reasoning.\n\nIf you need assistance on how to set up the API keys, please let me know.",
+      "ts": 1764576000000,
+      "timestamp": "2025-12-01"
+    },
+    {
+      "type": "agent_message",
+      "agentId": "fundamentals_analyst",
+      "content": "It appears that there was an issue with the API keys required to access the financial data for the stocks AAPL and MSFT. The error message indicates that no API key was found, which is necessary for retrieving the data from the financial datasets.\n\nTo proceed with the analysis, please ensure that the environment variables `FINNHUB_API_KEY` or `FINANCIAL_DATASETS_API_KEY` are set in your `.env` file with a valid API key. Once the API key is provided, we can re-run the analysis.\n\nIf you have the API key, you may add it to the environment, and I can attempt the analysis again. If you need assistance with obtaining an API key or setting up the environment, let me know how I can assist further.",
+      "ts": 1764576000000,
+      "timestamp": "2025-12-01"
+    },
+    {
+      "type": "day_start",
+      "date": "2025-12-01",
+      "progress": 0.0,
+      "timestamp": "2025-12-01"
+    }
+  ],
+  "last_day_history": [],
+  "trading_days_total": 0,
+  "trading_days_completed": 0,
+  "server_mode": "backtest",
+  "is_backtest": true,
+  "is_mock_mode": false,
+  "last_saved": "2026-05-17T01:33:58.445281"
+}

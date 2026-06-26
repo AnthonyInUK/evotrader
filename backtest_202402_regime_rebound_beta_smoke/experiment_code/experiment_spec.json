@@ -1,0 +1,36 @@
+{
+  "experiment_id": "backtest_202402_regime_rebound_beta_smoke",
+  "objective": "Test whether a narrow rebound tactical beta sleeve helps PM capture confirmed A-share rebound windows without changing analysts, model, data, indicators, or RiskGuard.",
+  "period": {
+    "start": "2024-02-20",
+    "end": "2024-02-23"
+  },
+  "variables": {
+    "tickers": [
+      "600519.SH",
+      "601398.SH",
+      "000858.SZ",
+      "000333.SZ",
+      "300750.SZ",
+      "600030.SH",
+      "601318.SH",
+      "600276.SH"
+    ],
+    "model_provider": "DEEPSEEK",
+    "model_name": "deepseek-v4-flash",
+    "max_comm_cycles": "1",
+    "custom": "Only PM_EXPERIMENT_MODE changes from regime_target_exposure to regime_rebound_beta. It allows small tactical beta buys in confirmed REBOUND when exposure is below target and technical/sentiment evidence is strong."
+  },
+  "fixed_indicators": [
+    {
+      "indicator_id": "technical_trend_snapshot_v1",
+      "description": "Fixed trend snapshot: close, SMA20/SMA60, MACD, RSI14.",
+      "lookback_days": 120
+    },
+    {
+      "indicator_id": "technical_momentum_risk_v1",
+      "description": "Fixed momentum/risk snapshot: 5d/10d/20d returns and 20d volatility.",
+      "lookback_days": 120
+    }
+  ]
+}

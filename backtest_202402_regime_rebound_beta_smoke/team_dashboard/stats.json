@@ -1,0 +1,88 @@
+{
+  "totalAssetValue": 504227.86,
+  "totalReturn": 0.85,
+  "cashPosition": 92265.86,
+  "tickerWeights": {
+    "000333.SZ": 0.2255,
+    "000858.SZ": 0.2278,
+    "300750.SZ": 0.1784,
+    "600030.SH": 0.1013,
+    "601318.SH": 0.0555,
+    "601398.SH": 0.0285
+  },
+  "totalTrades": 14,
+  "winRate": 0.0,
+  "bullBear": {
+    "bull": {
+      "n": 0,
+      "win": 0
+    },
+    "bear": {
+      "n": 0,
+      "win": 0
+    }
+  },
+  "period": {
+    "startDate": "2024-02-20",
+    "endDate": "2024-02-23",
+    "tradingDays": 4
+  },
+  "performance": {
+    "agent": {
+      "startValue": 500000.0,
+      "endValue": 504227.86,
+      "totalReturnPct": 0.85,
+      "annualizedReturnPct": 69.97,
+      "volatilityPct": 11.78,
+      "sharpe": 4.553,
+      "maxDrawdownPct": -0.53,
+      "calmar": 131.85
+    },
+    "benchmarks": {
+      "equalWeight": {
+        "startValue": 500000.0,
+        "endValue": 509894.51,
+        "totalReturnPct": 1.98,
+        "annualizedReturnPct": 243.68,
+        "volatilityPct": 16.39,
+        "sharpe": 7.612,
+        "maxDrawdownPct": -0.21,
+        "calmar": 1187.28
+      },
+      "marketCapWeighted": {
+        "startValue": 500000.0,
+        "endValue": 509894.51,
+        "totalReturnPct": 1.98,
+        "annualizedReturnPct": 243.68,
+        "volatilityPct": 16.39,
+        "sharpe": 7.612,
+        "maxDrawdownPct": -0.21,
+        "calmar": 1187.28
+      },
+      "momentum": {
+        "startValue": 500000.0,
+        "endValue": 509955.3,
+        "totalReturnPct": 1.99,
+        "annualizedReturnPct": 246.27,
+        "volatilityPct": 18.39,
+        "sharpe": 6.839,
+        "maxDrawdownPct": -0.45,
+        "calmar": 541.476
+      }
+    },
+    "comparison": {
+      "equalWeight": {
+        "excessReturnPct": -1.13,
+        "sharpeSpread": -3.059
+      },
+      "marketCapWeighted": {
+        "excessReturnPct": -1.13,
+        "sharpeSpread": -3.059
+      },
+      "momentum": {
+        "excessReturnPct": -1.14,
+        "sharpeSpread": -2.286
+      }
+    }
+  }
+}

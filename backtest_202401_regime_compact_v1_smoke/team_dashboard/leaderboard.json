@@ -1,0 +1,605 @@
+[
+  {
+    "agentId": "portfolio_manager",
+    "name": "Portfolio Manager",
+    "role": "Portfolio Manager",
+    "avatar": "pm",
+    "rank": null,
+    "winRate": 0.0,
+    "bull": {
+      "n": 2,
+      "win": 0,
+      "unknown": 0
+    },
+    "bear": {
+      "n": 0,
+      "win": 0,
+      "unknown": 0
+    },
+    "logs": [],
+    "signals": [
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-01-02",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-01-02",
+        "is_correct": null
+      },
+      {
+        "ticker": "000858.SZ",
+        "signal": "bull",
+        "date": "2024-01-02",
+        "is_correct": false
+      },
+      {
+        "ticker": "000333.SZ",
+        "signal": "bull",
+        "date": "2024-01-02",
+        "is_correct": false
+      },
+      {
+        "ticker": "300750.SZ",
+        "signal": "neutral",
+        "date": "2024-01-02",
+        "is_correct": null
+      },
+      {
+        "ticker": "600030.SH",
+        "signal": "neutral",
+        "date": "2024-01-02",
+        "is_correct": null
+      },
+      {
+        "ticker": "601318.SH",
+        "signal": "neutral",
+        "date": "2024-01-02",
+        "is_correct": null
+      },
+      {
+        "ticker": "600276.SH",
+        "signal": "neutral",
+        "date": "2024-01-02",
+        "is_correct": null
+      }
+    ],
+    "qualityScores": {
+      "rm": null,
+      "grounding": null,
+      "audit": null,
+      "presentation": null,
+      "overall": null,
+      "count": 0
+    },
+    "qualityHistory": [
+      {
+        "rm": null,
+        "grounding": null,
+        "audit": null,
+        "presentation": null,
+        "overall": null
+      }
+    ],
+    "weightedScore": null,
+    "scoreBreakdown": {
+      "winRate": null,
+      "rm": null,
+      "grounding": null,
+      "audit": null,
+      "presentation": null,
+      "overallQuality": null
+    },
+    "performanceHistory": [],
+    "modelName": "deepseek-v4-flash",
+    "modelProvider": "DEEPSEEK"
+  },
+  {
+    "agentId": "risk_manager",
+    "name": "Risk Manager",
+    "role": "Risk Manager",
+    "avatar": "risk",
+    "rank": null,
+    "winRate": null,
+    "bull": {
+      "n": 0,
+      "win": 0,
+      "unknown": 0
+    },
+    "bear": {
+      "n": 0,
+      "win": 0,
+      "unknown": 0
+    },
+    "logs": [],
+    "signals": [],
+    "qualityScores": {
+      "rm": null,
+      "grounding": null,
+      "audit": null,
+      "presentation": null,
+      "overall": null,
+      "count": 0
+    },
+    "qualityHistory": [],
+    "weightedScore": null,
+    "scoreBreakdown": {
+      "winRate": null,
+      "rm": null,
+      "grounding": null,
+      "audit": null,
+      "presentation": null,
+      "overallQuality": null
+    },
+    "performanceHistory": [],
+    "modelName": "deepseek-v4-flash",
+    "modelProvider": "DEEPSEEK"
+  },
+  {
+    "agentId": "sentiment_analyst",
+    "name": "Sentiment Analyst",
+    "role": "Sentiment Analyst",
+    "avatar": "sentiment",
+    "rank": 4,
+    "winRate": 0.0,
+    "bull": {
+      "n": 4,
+      "win": 0,
+      "unknown": 0
+    },
+    "bear": {
+      "n": 0,
+      "win": 0,
+      "unknown": 0
+    },
+    "logs": [],
+    "signals": [
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-01-02",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-01-02",
+        "is_correct": null
+      },
+      {
+        "ticker": "000858.SZ",
+        "signal": "bull",
+        "date": "2024-01-02",
+        "is_correct": false
+      },
+      {
+        "ticker": "000333.SZ",
+        "signal": "bull",
+        "date": "2024-01-02",
+        "is_correct": false
+      },
+      {
+        "ticker": "300750.SZ",
+        "signal": "neutral",
+        "date": "2024-01-02",
+        "is_correct": null
+      },
+      {
+        "ticker": "600030.SH",
+        "signal": "neutral",
+        "date": "2024-01-02",
+        "is_correct": null
+      },
+      {
+        "ticker": "601318.SH",
+        "signal": "bull",
+        "date": "2024-01-02",
+        "is_correct": false
+      },
+      {
+        "ticker": "600276.SH",
+        "signal": "bull",
+        "date": "2024-01-02",
+        "is_correct": false
+      }
+    ],
+    "qualityScores": {
+      "rm": 1.0,
+      "grounding": 0.5,
+      "audit": 0.625,
+      "presentation": 0.9,
+      "overall": 0.7562,
+      "count": 1
+    },
+    "qualityHistory": [
+      {
+        "rm": 1.0,
+        "grounding": 0.5,
+        "audit": 0.625,
+        "presentation": 0.9,
+        "overall": 0.7562
+      }
+    ],
+    "weightedScore": 0.5294,
+    "scoreBreakdown": {
+      "winRate": 0.0,
+      "rm": 1.0,
+      "grounding": 0.5,
+      "audit": 0.625,
+      "presentation": 0.9,
+      "overallQuality": 0.7562
+    },
+    "performanceHistory": [
+      {
+        "date": "2024-01-02",
+        "win_rate": 0.0,
+        "rm": 1.0,
+        "grounding": 0.5,
+        "audit": 0.625,
+        "presentation": 0.9,
+        "overall_quality": 0.7562,
+        "weighted_score": 0.5294,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      }
+    ],
+    "modelName": "deepseek-v4-flash",
+    "modelProvider": "DEEPSEEK"
+  },
+  {
+    "agentId": "technical_analyst",
+    "name": "Technical Analyst",
+    "role": "Technical Analyst",
+    "avatar": "technical",
+    "rank": 1,
+    "winRate": 0.7143,
+    "bull": {
+      "n": 2,
+      "win": 0,
+      "unknown": 0
+    },
+    "bear": {
+      "n": 5,
+      "win": 5,
+      "unknown": 0
+    },
+    "logs": [],
+    "signals": [
+      {
+        "ticker": "600519.SH",
+        "signal": "bear",
+        "date": "2024-01-02",
+        "is_correct": true
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-01-02",
+        "is_correct": null
+      },
+      {
+        "ticker": "000858.SZ",
+        "signal": "bear",
+        "date": "2024-01-02",
+        "is_correct": true
+      },
+      {
+        "ticker": "000333.SZ",
+        "signal": "bull",
+        "date": "2024-01-02",
+        "is_correct": false
+      },
+      {
+        "ticker": "300750.SZ",
+        "signal": "bear",
+        "date": "2024-01-02",
+        "is_correct": true
+      },
+      {
+        "ticker": "600030.SH",
+        "signal": "bear",
+        "date": "2024-01-02",
+        "is_correct": true
+      },
+      {
+        "ticker": "601318.SH",
+        "signal": "bull",
+        "date": "2024-01-02",
+        "is_correct": false
+      },
+      {
+        "ticker": "600276.SH",
+        "signal": "bear",
+        "date": "2024-01-02",
+        "is_correct": true
+      }
+    ],
+    "qualityScores": {
+      "rm": 1.0,
+      "grounding": 0.65,
+      "audit": 0.6925,
+      "presentation": 0.75,
+      "overall": 0.7731,
+      "count": 1
+    },
+    "qualityHistory": [
+      {
+        "rm": 1.0,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.75,
+        "overall": 0.7731
+      }
+    ],
+    "weightedScore": 0.7555,
+    "scoreBreakdown": {
+      "winRate": 0.7142857142857143,
+      "rm": 1.0,
+      "grounding": 0.65,
+      "audit": 0.6925,
+      "presentation": 0.75,
+      "overallQuality": 0.7731
+    },
+    "performanceHistory": [
+      {
+        "date": "2024-01-02",
+        "win_rate": 0.7142857142857143,
+        "rm": 1.0,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.75,
+        "overall_quality": 0.7731,
+        "weighted_score": 0.7555,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      }
+    ],
+    "modelName": "deepseek-v4-flash",
+    "modelProvider": "DEEPSEEK"
+  },
+  {
+    "agentId": "fundamentals_analyst",
+    "name": "Fundamentals Analyst",
+    "role": "Fundamentals Analyst",
+    "avatar": "fundamentals",
+    "rank": 3,
+    "winRate": null,
+    "bull": {
+      "n": 0,
+      "win": 0,
+      "unknown": 0
+    },
+    "bear": {
+      "n": 0,
+      "win": 0,
+      "unknown": 0
+    },
+    "logs": [],
+    "signals": [
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-01-02",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-01-02",
+        "is_correct": null
+      },
+      {
+        "ticker": "000858.SZ",
+        "signal": "neutral",
+        "date": "2024-01-02",
+        "is_correct": null
+      },
+      {
+        "ticker": "000333.SZ",
+        "signal": "neutral",
+        "date": "2024-01-02",
+        "is_correct": null
+      },
+      {
+        "ticker": "300750.SZ",
+        "signal": "neutral",
+        "date": "2024-01-02",
+        "is_correct": null
+      },
+      {
+        "ticker": "600030.SH",
+        "signal": "neutral",
+        "date": "2024-01-02",
+        "is_correct": null
+      },
+      {
+        "ticker": "601318.SH",
+        "signal": "neutral",
+        "date": "2024-01-02",
+        "is_correct": null
+      },
+      {
+        "ticker": "600276.SH",
+        "signal": "neutral",
+        "date": "2024-01-02",
+        "is_correct": null
+      }
+    ],
+    "qualityScores": {
+      "rm": 1.0,
+      "grounding": 0.65,
+      "audit": 0.6925,
+      "presentation": 0.9,
+      "overall": 0.8106,
+      "count": 1
+    },
+    "qualityHistory": [
+      {
+        "rm": 1.0,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.9,
+        "overall": 0.8106
+      }
+    ],
+    "weightedScore": 0.5674,
+    "scoreBreakdown": {
+      "winRate": null,
+      "rm": 1.0,
+      "grounding": 0.65,
+      "audit": 0.6925,
+      "presentation": 0.9,
+      "overallQuality": 0.8106
+    },
+    "performanceHistory": [
+      {
+        "date": "2024-01-02",
+        "win_rate": null,
+        "rm": 1.0,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.9,
+        "overall_quality": 0.8106,
+        "weighted_score": 0.5674,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      }
+    ],
+    "modelName": "deepseek-v4-flash",
+    "modelProvider": "DEEPSEEK"
+  },
+  {
+    "agentId": "valuation_analyst",
+    "name": "Valuation Analyst",
+    "role": "Valuation Analyst",
+    "avatar": "valuation",
+    "rank": 2,
+    "winRate": 0.4,
+    "bull": {
+      "n": 3,
+      "win": 0,
+      "unknown": 0
+    },
+    "bear": {
+      "n": 2,
+      "win": 2,
+      "unknown": 0
+    },
+    "logs": [],
+    "signals": [
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-01-02",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-01-02",
+        "is_correct": null
+      },
+      {
+        "ticker": "000858.SZ",
+        "signal": "bull",
+        "date": "2024-01-02",
+        "is_correct": false
+      },
+      {
+        "ticker": "000333.SZ",
+        "signal": "bull",
+        "date": "2024-01-02",
+        "is_correct": false
+      },
+      {
+        "ticker": "300750.SZ",
+        "signal": "bull",
+        "date": "2024-01-02",
+        "is_correct": false
+      },
+      {
+        "ticker": "600030.SH",
+        "signal": "bear",
+        "date": "2024-01-02",
+        "is_correct": true
+      },
+      {
+        "ticker": "601318.SH",
+        "signal": "bear",
+        "date": "2024-01-02",
+        "is_correct": true
+      },
+      {
+        "ticker": "600276.SH",
+        "signal": "neutral",
+        "date": "2024-01-02",
+        "is_correct": null
+      }
+    ],
+    "qualityScores": {
+      "rm": 1.0,
+      "grounding": 0.65,
+      "audit": 0.5425,
+      "presentation": 0.9,
+      "overall": 0.7731,
+      "count": 1
+    },
+    "qualityHistory": [
+      {
+        "rm": 1.0,
+        "grounding": 0.65,
+        "audit": 0.5425,
+        "presentation": 0.9,
+        "overall": 0.7731
+      }
+    ],
+    "weightedScore": 0.6612,
+    "scoreBreakdown": {
+      "winRate": 0.4,
+      "rm": 1.0,
+      "grounding": 0.65,
+      "audit": 0.5425,
+      "presentation": 0.9,
+      "overallQuality": 0.7731
+    },
+    "performanceHistory": [
+      {
+        "date": "2024-01-02",
+        "win_rate": 0.4,
+        "rm": 1.0,
+        "grounding": 0.65,
+        "audit": 0.5425,
+        "presentation": 0.9,
+        "overall_quality": 0.7731,
+        "weighted_score": 0.6612,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      }
+    ],
+    "modelName": "deepseek-v4-flash",
+    "modelProvider": "DEEPSEEK"
+  }
+]

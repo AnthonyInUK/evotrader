@@ -1,0 +1,44 @@
+[
+  {
+    "ticker": "CASH",
+    "quantity": 1,
+    "currentPrice": 268233.38,
+    "marketValue": 268233.38,
+    "weight": 0.5343
+  },
+  {
+    "ticker": "605499.SH",
+    "quantity": 500,
+    "currentPrice": 185.72,
+    "marketValue": 92858.96,
+    "weight": 0.185
+  },
+  {
+    "ticker": "600642.SH",
+    "quantity": 6200,
+    "currentPrice": 8.47,
+    "marketValue": 52507.24,
+    "weight": 0.1046
+  },
+  {
+    "ticker": "600377.SH",
+    "quantity": 3300,
+    "currentPrice": 14.78,
+    "marketValue": 48766.87,
+    "weight": 0.0971
+  },
+  {
+    "ticker": "002668.SZ",
+    "quantity": 2400,
+    "currentPrice": 11.35,
+    "marketValue": 27241.88,
+    "weight": 0.0543
+  },
+  {
+    "ticker": "002847.SZ",
+    "quantity": 200,
+    "currentPrice": 62.21,
+    "marketValue": 12442.12,
+    "weight": 0.0248
+  }
+]

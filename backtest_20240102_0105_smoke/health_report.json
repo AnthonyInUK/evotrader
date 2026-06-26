@@ -1,0 +1,38 @@
+{
+  "configName": "backtest_20240102_0105_smoke",
+  "dashboardDir": "backtest_20240102_0105_smoke/team_dashboard",
+  "missingFiles": [],
+  "datesChecked": [
+    "2024-01-02",
+    "2024-01-03",
+    "2024-01-04",
+    "2024-01-05"
+  ],
+  "logFindings": [
+    {
+      "date": "2024-01-04",
+      "kind": "tool_error",
+      "message": ": 'call_9b6417e3846249efb844ed', 'name': 'crawl_ths_position', 'output': [{'type': 'text', 'text': \"[ERROR] Error in crawl_ths_position: crawl_ths_position() got an unexpected keyword argument 'tickers'\"}]}  [system] {'type': 'tool_result', 'id': 'call_92553df"
+    },
+    {
+      "date": "2024-01-04",
+      "kind": "tool_error",
+      "message": "9b6417e3846249efb844ed', 'name': 'crawl_ths_position', 'output': [{'type': 'text', 'text': \"[ERROR] Error in crawl_ths_position: crawl_ths_position() got an unexpected keyword argument 'tickers'\"}]}  [system] {'type': 'tool_result', 'id': 'call_92553df8e3814b0"
+    },
+    {
+      "date": "2024-01-04",
+      "kind": "unexpected_kwarg",
+      "message": "utput': [{'type': 'text', 'text': \"[ERROR] Error in crawl_ths_position: crawl_ths_position() got an unexpected keyword argument 'tickers'\"}]}  [system] {'type': 'tool_result', 'id': 'call_92553df8e3814b01914853', 'name': 'crawl_ths_event', 'output': [{'type': "
+    }
+  ],
+  "signals": 92,
+  "pmRecordedDecisions": 8,
+  "pmCompletedDays": 4,
+  "finalEquity": 500920.09,
+  "cashPosition": 400246.09,
+  "totalReturn": 0.18,
+  "holdingsCount": 2,
+  "tradesCount": 1,
+  "leaderboardCount": 6,
+  "ok": false
+}

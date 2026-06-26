@@ -1,0 +1,81 @@
+{
+  "totalAssetValue": 500000.0,
+  "totalReturn": 0.0,
+  "cashPosition": 500000.0,
+  "tickerWeights": {},
+  "totalTrades": 0,
+  "winRate": 0.0,
+  "bullBear": {
+    "bull": {
+      "n": 0,
+      "win": 0
+    },
+    "bear": {
+      "n": 0,
+      "win": 0
+    }
+  },
+  "period": {
+    "startDate": "2024-01-02",
+    "endDate": "2024-01-02",
+    "tradingDays": 1
+  },
+  "performance": {
+    "agent": {
+      "startValue": 500000.0,
+      "endValue": 500000.0,
+      "totalReturnPct": 0.0,
+      "annualizedReturnPct": 0.0,
+      "volatilityPct": null,
+      "sharpe": null,
+      "maxDrawdownPct": 0.0,
+      "calmar": null
+    },
+    "benchmarks": {
+      "equalWeight": {
+        "startValue": 500000.0,
+        "endValue": 495937.43,
+        "totalReturnPct": -0.81,
+        "annualizedReturnPct": -87.2,
+        "volatilityPct": null,
+        "sharpe": null,
+        "maxDrawdownPct": -0.81,
+        "calmar": -107.324
+      },
+      "marketCapWeighted": {
+        "startValue": 500000.0,
+        "endValue": 495937.43,
+        "totalReturnPct": -0.81,
+        "annualizedReturnPct": -87.2,
+        "volatilityPct": null,
+        "sharpe": null,
+        "maxDrawdownPct": -0.81,
+        "calmar": -107.324
+      },
+      "momentum": {
+        "startValue": 500000.0,
+        "endValue": 490678.69,
+        "totalReturnPct": -1.86,
+        "annualizedReturnPct": -99.13,
+        "volatilityPct": null,
+        "sharpe": null,
+        "maxDrawdownPct": -1.86,
+        "calmar": -53.173
+      }
+    },
+    "comparison": {
+      "equalWeight": {
+        "excessReturnPct": 0.81,
+        "sharpeSpread": null
+      },
+      "marketCapWeighted": {
+        "excessReturnPct": 0.81,
+        "sharpeSpread": null
+      },
+      "momentum": {
+        "excessReturnPct": 1.86,
+        "sharpeSpread": null
+      }
+    }
+  }
+}

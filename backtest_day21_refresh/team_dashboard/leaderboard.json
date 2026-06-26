@@ -1,0 +1,248 @@
+[
+  {
+    "agentId": "portfolio_manager",
+    "name": "Portfolio Manager",
+    "role": "Portfolio Manager",
+    "avatar": "pm",
+    "rank": null,
+    "winRate": null,
+    "bull": {
+      "n": 0,
+      "win": 0,
+      "unknown": 0
+    },
+    "bear": {
+      "n": 0,
+      "win": 0,
+      "unknown": 0
+    },
+    "logs": [],
+    "signals": [],
+    "qualityScores": {
+      "rm": null,
+      "grounding": null,
+      "audit": null,
+      "presentation": null,
+      "overall": null,
+      "count": 0
+    },
+    "qualityHistory": [],
+    "weightedScore": null,
+    "scoreBreakdown": {
+      "winRate": null,
+      "rm": null,
+      "grounding": null,
+      "audit": null,
+      "presentation": null,
+      "overallQuality": null
+    },
+    "performanceHistory": [],
+    "modelName": "qwen-max",
+    "modelProvider": "ALIBABA"
+  },
+  {
+    "agentId": "risk_manager",
+    "name": "Risk Manager",
+    "role": "Risk Manager",
+    "avatar": "risk",
+    "rank": null,
+    "winRate": null,
+    "bull": {
+      "n": 0,
+      "win": 0,
+      "unknown": 0
+    },
+    "bear": {
+      "n": 0,
+      "win": 0,
+      "unknown": 0
+    },
+    "logs": [],
+    "signals": [],
+    "qualityScores": {
+      "rm": null,
+      "grounding": null,
+      "audit": null,
+      "presentation": null,
+      "overall": null,
+      "count": 0
+    },
+    "qualityHistory": [],
+    "weightedScore": null,
+    "scoreBreakdown": {
+      "winRate": null,
+      "rm": null,
+      "grounding": null,
+      "audit": null,
+      "presentation": null,
+      "overallQuality": null
+    },
+    "performanceHistory": [],
+    "modelName": "qwen-max",
+    "modelProvider": "ALIBABA"
+  },
+  {
+    "agentId": "sentiment_analyst",
+    "name": "Sentiment Analyst",
+    "role": "Sentiment Analyst",
+    "avatar": "sentiment",
+    "rank": 0,
+    "winRate": null,
+    "bull": {
+      "n": 0,
+      "win": 0,
+      "unknown": 0
+    },
+    "bear": {
+      "n": 0,
+      "win": 0,
+      "unknown": 0
+    },
+    "logs": [],
+    "signals": [],
+    "qualityScores": {
+      "rm": null,
+      "grounding": null,
+      "audit": null,
+      "presentation": null,
+      "overall": null,
+      "count": 0
+    },
+    "qualityHistory": [],
+    "weightedScore": null,
+    "scoreBreakdown": {
+      "winRate": null,
+      "rm": null,
+      "grounding": null,
+      "audit": null,
+      "presentation": null,
+      "overallQuality": null
+    },
+    "performanceHistory": [],
+    "modelName": "qwen-max",
+    "modelProvider": "ALIBABA"
+  },
+  {
+    "agentId": "technical_analyst",
+    "name": "Technical Analyst",
+    "role": "Technical Analyst",
+    "avatar": "technical",
+    "rank": 0,
+    "winRate": null,
+    "bull": {
+      "n": 0,
+      "win": 0,
+      "unknown": 0
+    },
+    "bear": {
+      "n": 0,
+      "win": 0,
+      "unknown": 0
+    },
+    "logs": [],
+    "signals": [],
+    "qualityScores": {
+      "rm": null,
+      "grounding": null,
+      "audit": null,
+      "presentation": null,
+      "overall": null,
+      "count": 0
+    },
+    "qualityHistory": [],
+    "weightedScore": null,
+    "scoreBreakdown": {
+      "winRate": null,
+      "rm": null,
+      "grounding": null,
+      "audit": null,
+      "presentation": null,
+      "overallQuality": null
+    },
+    "performanceHistory": [],
+    "modelName": "qwen-max",
+    "modelProvider": "ALIBABA"
+  },
+  {
+    "agentId": "fundamentals_analyst",
+    "name": "Fundamentals Analyst",
+    "role": "Fundamentals Analyst",
+    "avatar": "fundamentals",
+    "rank": 0,
+    "winRate": null,
+    "bull": {
+      "n": 0,
+      "win": 0,
+      "unknown": 0
+    },
+    "bear": {
+      "n": 0,
+      "win": 0,
+      "unknown": 0
+    },
+    "logs": [],
+    "signals": [],
+    "qualityScores": {
+      "rm": null,
+      "grounding": null,
+      "audit": null,
+      "presentation": null,
+      "overall": null,
+      "count": 0
+    },
+    "qualityHistory": [],
+    "weightedScore": null,
+    "scoreBreakdown": {
+      "winRate": null,
+      "rm": null,
+      "grounding": null,
+      "audit": null,
+      "presentation": null,
+      "overallQuality": null
+    },
+    "performanceHistory": [],
+    "modelName": "qwen-max",
+    "modelProvider": "ALIBABA"
+  },
+  {
+    "agentId": "valuation_analyst",
+    "name": "Valuation Analyst",
+    "role": "Valuation Analyst",
+    "avatar": "valuation",
+    "rank": 0,
+    "winRate": null,
+    "bull": {
+      "n": 0,
+      "win": 0,
+      "unknown": 0
+    },
+    "bear": {
+      "n": 0,
+      "win": 0,
+      "unknown": 0
+    },
+    "logs": [],
+    "signals": [],
+    "qualityScores": {
+      "rm": null,
+      "grounding": null,
+      "audit": null,
+      "presentation": null,
+      "overall": null,
+      "count": 0
+    },
+    "qualityHistory": [],
+    "weightedScore": null,
+    "scoreBreakdown": {
+      "winRate": null,
+      "rm": null,
+      "grounding": null,
+      "audit": null,
+      "presentation": null,
+      "overallQuality": null
+    },
+    "performanceHistory": [],
+    "modelName": "qwen-max",
+    "modelProvider": "ALIBABA"
+  }
+]

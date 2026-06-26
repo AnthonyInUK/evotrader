@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>EvoTraders · Multi-Agent Backtest Dashboard</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/recharts/2.12.7/Recharts.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0a0c10;
+    --bg2: #0f1117;
+    --bg3: #151820;
+    --border: rgba(255,255,255,0.06);
+    --border2: rgba(255,255,255,0.12);
+    --text: #e8eaf0;
+    --text2: #7a7f8e;
+    --text3: #4a4f5c;
+    --green: #00d48a;
+    --green-dim: rgba(0,212,138,0.12);
+    --red: #ff4d6d;
+    --red-dim: rgba(255,77,109,0.10);
+    --blue: #4da6ff;
+    --blue-dim: rgba(77,166,255,0.10);
+    --gold: #f5c842;
+    --gold-dim: rgba(245,200,66,0.10);
+    --mono: 'IBM Plex Mono', monospace;
+    --sans: 'Inter', sans-serif;
+  }
+
+  html, body { background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 14px; line-height: 1.5; min-height: 100vh; }
+
+  #root { max-width: 1200px; margin: 0 auto; padding: 32px 24px; }
+
+  .header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 36px; }
+  .header-left {}
+  .brand { font-family: var(--mono); font-size: 11px; letter-spacing: 0.15em; color: var(--text3); text-transform: uppercase; margin-bottom: 6px; }
+  .title { font-size: 22px; font-weight: 600; color: var(--text); letter-spacing: -0.02em; }
+  .subtitle { font-size: 13px; color: var(--text2); margin-top: 4px; }
+  .badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-family: var(--mono); letter-spacing: 0.05em; }
+  .badge-green { background: var(--green-dim); color: var(--green); border: 1px solid rgba(0,212,138,0.2); }
+  .badge-dot { width: 5px; height: 5px; border-radius: 50%; background: currentColor; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+
+  .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px; }
+  .metric { background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; position: relative; overflow: hidden; }
+  .metric::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; }
+  .metric.green::before { background: var(--green); }
+  .metric.red::before { background: var(--red); }
+  .metric.blue::before { background: var(--blue); }
+  .metric.gold::before { background: var(--gold); }
+  .metric-label { font-size: 11px; color: var(--text2); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 8px; font-family: var(--mono); }
+  .metric-value { font-size: 26px; font-weight: 600; font-family: var(--mono); letter-spacing: -0.02em; }
+  .metric-value.green { color: var(--green); }
+  .metric-value.red { color: var(--red); }
+  .metric-value.blue { color: var(--blue); }
+  .metric-value.gold { color: var(--gold); }
+  .metric-sub { font-size: 11px; color: var(--text3); margin-top: 4px; font-family: var(--mono); }
+
+  .chart-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .chart-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+  .chart-title { font-size: 13px; font-weight: 500; color: var(--text); }
+  .chart-desc { font-size: 12px; color: var(--text2); margin-top: 2px; }
+  .legend { display: flex; gap: 20px; }
+  .legend-item { display: flex; align-items: center; gap: 7px; font-size: 12px; color: var(--text2); font-family: var(--mono); }
+  .legend-line { width: 20px; height: 2px; border-radius: 1px; }
+  .legend-line.dashed { background: repeating-linear-gradient(90deg, currentColor 0, currentColor 4px, transparent 4px, transparent 8px); height: 1px; }
+
+  .tabs { display: flex; gap: 2px; background: var(--bg3); border-radius: 8px; padding: 3px; margin-bottom: 20px; width: fit-content; }
+  .tab { padding: 6px 16px; border-radius: 6px; font-size: 12px; cursor: pointer; color: var(--text2); font-family: var(--mono); letter-spacing: 0.03em; border: none; background: none; transition: all 0.15s; }
+  .tab.active { background: var(--bg2); color: var(--text); border: 1px solid var(--border2); }
+
+  .signals-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 20px; }
+  .signal-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; }
+  .signal-agent { font-size: 11px; font-family: var(--mono); color: var(--text2); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px; }
+  .signal-row { display: flex; align-items: center; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid var(--border); }
+  .signal-row:last-child { border-bottom: none; }
+  .signal-date { font-size: 11px; font-family: var(--mono); color: var(--text3); }
+  .signal-ticker { font-size: 11px; font-family: var(--mono); color: var(--text2); }
+  .signal-badge { font-size: 10px; font-family: var(--mono); padding: 2px 8px; border-radius: 4px; letter-spacing: 0.05em; }
+  .signal-bull { background: var(--green-dim); color: var(--green); }
+  .signal-bear { background: var(--red-dim); color: var(--red); }
+  .signal-neutral { background: rgba(122,127,142,0.15); color: var(--text2); }
+
+  .insight { background: var(--bg3); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 16px; }
+  .insight-label { font-size: 10px; font-family: var(--mono); color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px; }
+  .insight-text { font-size: 13px; color: var(--text2); line-height: 1.6; }
+  .insight-text strong { color: var(--text); font-weight: 500; }
+
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+  .footer-text { font-size: 11px; font-family: var(--mono); color: var(--text3); }
+
+  .custom-tooltip { background: #1a1d26; border: 1px solid var(--border2); border-radius: 8px; padding: 10px 14px; font-family: var(--mono); font-size: 11px; }
+  .tooltip-date { color: var(--text2); margin-bottom: 6px; }
+  .tooltip-row { display: flex; justify-content: space-between; gap: 20px; margin: 2px 0; }
+  .tooltip-label { color: var(--text2); }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { useState } = React;
+const {
+  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip,
+  ResponsiveContainer, ReferenceLine, Legend
+} = Recharts;
+
+const MEMORY_NAV = [
+  {date:'01/02',nav:500000},
+  {date:'01/03',nav:500000},
+  {date:'01/04',nav:500000},
+  {date:'01/05',nav:500000},
+  {date:'01/08',nav:500000},
+  {date:'01/09',nav:500000},
+  {date:'01/10',nav:500000},
+  {date:'01/11',nav:501071},
+  {date:'01/12',nav:501109},
+  {date:'01/16',nav:503509},
+  {date:'01/17',nav:502009},
+  {date:'01/18',nav:502309},
+  {date:'01/19',nav:503509},
+  {date:'01/22',nav:512809},
+  {date:'01/23',nav:512809},
+  {date:'01/24',nav:514909},
+  {date:'01/25',nav:515036},
+  {date:'01/26',nav:515036},
+  {date:'01/29',nav:515036},
+  {date:'01/30',nav:515036},
+  {date:'01/31',nav:515036},
+];
+
+const NO_MEMORY_NAV = [
+  {date:'01/02',nav:500000},
+  {date:'01/03',nav:500488},
+  {date:'01/04',nav:501475},
+  {date:'01/05',nav:501149},
+  {date:'01/08',nav:501299},
+  {date:'01/09',nav:501299},
+  {date:'01/10',nav:500211},
+  {date:'01/11',nav:497244},
+  {date:'01/12',nav:498577},
+  {date:'01/16',nav:501362},
+  {date:'01/17',nav:499772},
+  {date:'01/18',nav:500090},
+  {date:'01/19',nav:501362},
+  {date:'01/22',nav:501362},
+  {date:'01/23',nav:501362},
+  {date:'01/24',nav:503906},
+  {date:'01/25',nav:504711},
+  {date:'01/26',nav:506199},
+  {date:'01/29',nav:507501},
+  {date:'01/30',nav:506943},
+  {date:'01/31',nav:507354},
+];
+
+const BASE = 500000;
+const BENCHMARK_FINAL = 500000 * 1.0087;
+
+const combined = MEMORY_NAV.map((d, i) => ({
+  date: d.date,
+  memory: d.nav,
+  noMemory: NO_MEMORY_NAV[i].nav,
+  benchmark: parseFloat((BASE + (BENCHMARK_FINAL - BASE) * i / (MEMORY_NAV.length - 1)).toFixed(0)),
+}));
+
+const toRet = (nav) => ((nav - BASE) / BASE * 100).toFixed(2);
+
+const ANALYST_SIGNALS = [
+  {agent:'Valuation Analyst', signals:[
+    {date:'02/01',ticker:'600519',signal:'neutral'},{date:'02/01',ticker:'601398',signal:'bull'},
+    {date:'02/02',ticker:'600519',signal:'bear'},{date:'02/05',ticker:'600519',signal:'bear'},
+    {date:'02/06',ticker:'600519',signal:'bull'},{date:'02/07',ticker:'600519',signal:'bear'},
+    {date:'02/08',ticker:'600519',signal:'bear'},{date:'02/09',ticker:'600519',signal:'bear'},
+  ]},
+  {agent:'Technical Analyst', signals:[
+    {date:'02/01',ticker:'600519',signal:'bull'},{date:'02/01',ticker:'601398',signal:'bull'},
+    {date:'02/02',ticker:'600519',signal:'neutral'},{date:'02/05',ticker:'600519',signal:'bull'},
+    {date:'02/06',ticker:'601398',signal:'bull'},{date:'02/07',ticker:'600519',signal:'bull'},
+    {date:'02/08',ticker:'600519',signal:'bull'},{date:'02/09',ticker:'600519',signal:'neutral'},
+  ]},
+  {agent:'Fundamentals Analyst', signals:[
+    {date:'02/01',ticker:'600519',signal:'bull'},{date:'02/02',ticker:'600519',signal:'bull'},
+    {date:'02/05',ticker:'600519',signal:'bull'},{date:'02/06',ticker:'600519',signal:'bull'},
+    {date:'02/07',ticker:'600519',signal:'bull'},{date:'02/08',ticker:'600519',signal:'bull'},
+    {date:'02/09',ticker:'600519',signal:'bull'},
+  ]},
+];
+
+const CustomTooltip = ({ active, payload, label }) => {
+  if (!active || !payload?.length) return null;
+  return (
+    <div className="custom-tooltip">
+      <div className="tooltip-date">2024 · {label}</div>
+      {payload.map(p => (
+        <div className="tooltip-row" key={p.dataKey}>
+          <span className="tooltip-label" style={{color: p.color}}>{
+            p.dataKey === 'memory' ? '有记忆' :
+            p.dataKey === 'noMemory' ? '无记忆' : '基准'
+          }</span>
+          <span style={{color: p.color}}>
+            ¥{p.value?.toLocaleString()} ({toRet(p.value) > 0 ? '+' : ''}{toRet(p.value)}%)
+          </span>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+function SignalBadge({ signal }) {
+  const cls = signal === 'bull' ? 'signal-bull' : signal === 'bear' ? 'signal-bear' : 'signal-neutral';
+  const label = signal === 'bull' ? 'BULL ▲' : signal === 'bear' ? 'BEAR ▼' : 'NEUTRAL';
+  return <span className={`signal-badge ${cls}`}>{label}</span>;
+}
+
+function App() {
+  const [tab, setTab] = useState('jan');
+
+  return (
+    <div>
+      <div className="header">
+        <div className="header-left">
+          <div className="brand">EvoTraders · AgentScope</div>
+          <div className="title">Multi-Agent Quant Backtest</div>
+          <div className="subtitle">A股回测 · 2024年1月 · 长期记忆对比实验</div>
+        </div>
+        <div>
+          <span className="badge badge-green"><span className="badge-dot"></span>Backtest Complete</span>
+        </div>
+      </div>
+
+      <div className="metrics">
+        <div className="metric green">
+          <div className="metric-label">有记忆 · 总收益</div>
+          <div className="metric-value green">+3.01%</div>
+          <div className="metric-sub">¥515,036 最终资产</div>
+        </div>
+        <div className="metric blue">
+          <div className="metric-label">无记忆 · 总收益</div>
+          <div className="metric-value blue">+1.47%</div>
+          <div className="metric-sub">¥507,354 最终资产</div>
+        </div>
+        <div className="metric gold">
+          <div className="metric-label">基准收益（买入持有）</div>
+          <div className="metric-value gold">+0.87%</div>
+          <div className="metric-sub">600519 + 601398 等权</div>
+        </div>
+        <div className="metric green">
+          <div className="metric-label">记忆带来的超额</div>
+          <div className="metric-value green">+1.54%</div>
+          <div className="metric-sub">vs 无记忆版</div>
+        </div>
+      </div>
+
+      <div className="tabs">
+        <button className={`tab ${tab === 'jan' ? 'active' : ''}`} onClick={() => setTab('jan')}>1月 NAV 对比</button>
+        <button className={`tab ${tab === 'signals' ? 'active' : ''}`} onClick={() => setTab('signals')}>2月 Analyst 信号</button>
+        <button className={`tab ${tab === 'insight' ? 'active' : ''}`} onClick={() => setTab('insight')}>关键洞察</button>
+      </div>
+
+      {tab === 'jan' && (
+        <div className="chart-card">
+          <div className="chart-header">
+            <div>
+              <div className="chart-title">净值曲线对比 · 2024年1月</div>
+              <div className="chart-desc">有记忆版在1月11日后才首次建仓，无记忆版第2天即开始频繁换手</div>
+            </div>
+            <div className="legend">
+              <div className="legend-item"><div className="legend-line" style={{background:'#00d48a'}}></div>有记忆</div>
+              <div className="legend-item"><div className="legend-line" style={{background:'#4da6ff', opacity: 0.7}}></div>无记忆</div>
+              <div className="legend-item"><div className="legend-line" style={{background:'#7a7f8e', opacity: 0.5}}></div>基准</div>
+            </div>
+          </div>
+          <ResponsiveContainer width="100%" height={320}>
+            <LineChart data={combined} margin={{top:5, right:10, left:10, bottom:5}}>
+              <CartesianGrid strokeDasharray="3 6" stroke="rgba(255,255,255,0.04)" />
+              <XAxis dataKey="date" tick={{fill:'#4a4f5c', fontSize:11, fontFamily:'IBM Plex Mono'}} tickLine={false} axisLine={{stroke:'rgba(255,255,255,0.06)'}} />
+              <YAxis domain={[496000, 517000]} tick={{fill:'#4a4f5c', fontSize:11, fontFamily:'IBM Plex Mono'}} tickLine={false} axisLine={false}
+                tickFormatter={v => `¥${(v/1000).toFixed(0)}k`} />
+              <Tooltip content={<CustomTooltip />} />
+              <ReferenceLine y={500000} stroke="rgba(255,255,255,0.08)" strokeDasharray="4 4" />
+              <Line type="monotone" dataKey="memory" stroke="#00d48a" strokeWidth={2} dot={false} activeDot={{r:4, fill:'#00d48a'}} />
+              <Line type="monotone" dataKey="noMemory" stroke="#4da6ff" strokeWidth={2} strokeOpacity={0.7} strokeDasharray="5 3" dot={false} activeDot={{r:4, fill:'#4da6ff'}} />
+              <Line type="monotone" dataKey="benchmark" stroke="#4a4f5c" strokeWidth={1} strokeDasharray="3 3" dot={false} />
+            </LineChart>
+          </ResponsiveContainer>
+          <div style={{marginTop:16, padding:'12px 16px', background:'rgba(0,212,138,0.04)', border:'1px solid rgba(0,212,138,0.1)', borderRadius:8}}>
+            <span style={{fontFamily:'var(--mono)', fontSize:11, color:'var(--text2)'}}>
+              <span style={{color:'var(--green)'}}>▲ 关键时刻</span>　1月11日：无记忆版跌破50万（-0.55%），有记忆版同日建仓后开始上涨——两条线在此分叉
+            </span>
+          </div>
+        </div>
+      )}
+
+      {tab === 'signals' && (
+        <>
+          <div className="insight">
+            <div className="insight-label">记忆锚定效应</div>
+            <div className="insight-text">
+              Valuation Analyst <strong>记住了1月底 DCF 高估32%的结论</strong>，2月持续给出 bear 信号。
+              PM 综合信号后选择持币，错过了基准 <strong>+3.69%</strong> 的反弹。
+            </div>
+          </div>
+          <div className="signals-grid">
+            {ANALYST_SIGNALS.map(a => (
+              <div className="signal-card" key={a.agent}>
+                <div className="signal-agent">{a.agent}</div>
+                {a.signals.map((s, i) => (
+                  <div className="signal-row" key={i}>
+                    <span className="signal-date">{s.date}</span>
+                    <span className="signal-ticker">{s.ticker}.SH</span>
+                    <SignalBadge signal={s.signal} />
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        </>
+      )}
+
+      {tab === 'insight' && (
+        <>
+          <div className="insight">
+            <div className="insight-label">Long-Term Memory · 效果</div>
+            <div className="insight-text">
+              有记忆版在1月前10个交易日<strong>全程 HOLD</strong>，等待信号明确再建仓。
+              无记忆版第2天即开始频繁换手，在1月11日亏至 <strong>¥497,244（-0.55%）</strong>。
+              耐心等待使有记忆版避开了最大回撤，最终跑赢无记忆版 <strong>+1.54%</strong>。
+            </div>
+          </div>
+          <div className="insight">
+            <div className="insight-label">Signal Staleness · 信号过期问题</div>
+            <div className="insight-text">
+              DCF 是中长期估值工具，其结论在有记忆版中被无限延续。
+              2月市场由情绪和资金面驱动上涨，但系统仍用1月的 <strong>"DCF高估32%"</strong> 作为决策依据，
+              导致踏空 +3.69% 的反弹。这是长期记忆引入的 <strong>锚定偏差（Anchoring Bias）</strong>。
+            </div>
+          </div>
+          <div className="insight" style={{borderColor:'var(--blue)'}}>
+            <div className="insight-label" style={{color:'var(--blue)'}}>AgentScope 架构优势</div>
+            <div className="insight-text">
+              系统基于 <strong>AgentScope ReActAgent</strong> 构建，analyst 通过 <strong>MsgHub</strong> 广播信号，
+              PM 在同一会话内收集所有报告后做综合决策，而非顺序调用。
+              与 LangChain State Machine 相比，MsgHub 的<strong>广播模式</strong>使 analyst 之间相互独立，避免了顺序偏差。
+            </div>
+          </div>
+        </>
+      )}
+
+      <div className="footer">
+        <span className="footer-text">EvoTraders · Multi-Agent Quantitative System · AgentScope + DashScope</span>
+        <span className="footer-text">回测区间: 2024-01-02 ~ 2024-01-31 · 初始资金 ¥500,000</span>
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>

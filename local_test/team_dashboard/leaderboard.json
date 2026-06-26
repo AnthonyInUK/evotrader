@@ -1,0 +1,425 @@
+[
+  {
+    "agentId": "portfolio_manager",
+    "name": "Portfolio Manager",
+    "role": "Portfolio Manager",
+    "avatar": "pm",
+    "rank": null,
+    "winRate": null,
+    "bull": {
+      "n": 0,
+      "win": 0,
+      "unknown": 0
+    },
+    "bear": {
+      "n": 0,
+      "win": 0,
+      "unknown": 0
+    },
+    "logs": [],
+    "signals": [
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-01-02",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-01-02",
+        "is_correct": null
+      }
+    ],
+    "qualityScores": {
+      "rm": null,
+      "grounding": null,
+      "audit": null,
+      "presentation": null,
+      "overall": null,
+      "count": 0
+    },
+    "qualityHistory": [
+      {
+        "rm": null,
+        "grounding": null,
+        "audit": null,
+        "presentation": null,
+        "overall": null
+      }
+    ],
+    "weightedScore": null,
+    "scoreBreakdown": {
+      "winRate": null,
+      "rm": null,
+      "grounding": null,
+      "audit": null,
+      "presentation": null,
+      "overallQuality": null
+    },
+    "performanceHistory": [],
+    "modelName": "qwen-plus",
+    "modelProvider": "DASHSCOPE"
+  },
+  {
+    "agentId": "risk_manager",
+    "name": "Risk Manager",
+    "role": "Risk Manager",
+    "avatar": "risk",
+    "rank": null,
+    "winRate": null,
+    "bull": {
+      "n": 0,
+      "win": 0,
+      "unknown": 0
+    },
+    "bear": {
+      "n": 0,
+      "win": 0,
+      "unknown": 0
+    },
+    "logs": [],
+    "signals": [],
+    "qualityScores": {
+      "rm": null,
+      "grounding": null,
+      "audit": null,
+      "presentation": null,
+      "overall": null,
+      "count": 0
+    },
+    "qualityHistory": [],
+    "weightedScore": null,
+    "scoreBreakdown": {
+      "winRate": null,
+      "rm": null,
+      "grounding": null,
+      "audit": null,
+      "presentation": null,
+      "overallQuality": null
+    },
+    "performanceHistory": [],
+    "modelName": "qwen-plus",
+    "modelProvider": "DASHSCOPE"
+  },
+  {
+    "agentId": "sentiment_analyst",
+    "name": "Sentiment Analyst",
+    "role": "Sentiment Analyst",
+    "avatar": "sentiment",
+    "rank": 3,
+    "winRate": 0.0,
+    "bull": {
+      "n": 1,
+      "win": 0,
+      "unknown": 0
+    },
+    "bear": {
+      "n": 0,
+      "win": 0,
+      "unknown": 0
+    },
+    "logs": [],
+    "signals": [
+      {
+        "ticker": "600519.SH",
+        "signal": "bull",
+        "date": "2024-01-02",
+        "is_correct": false
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-01-02",
+        "is_correct": null
+      }
+    ],
+    "qualityScores": {
+      "rm": 0.4704,
+      "grounding": 0.35,
+      "audit": 0.5575,
+      "presentation": 0.5,
+      "overall": 0.4695,
+      "count": 1
+    },
+    "qualityHistory": [
+      {
+        "rm": 0.4704,
+        "grounding": 0.35,
+        "audit": 0.5575,
+        "presentation": 0.5,
+        "overall": 0.4695
+      }
+    ],
+    "weightedScore": 0.3286,
+    "scoreBreakdown": {
+      "winRate": 0.0,
+      "rm": 0.4704,
+      "grounding": 0.35,
+      "audit": 0.5575,
+      "presentation": 0.5,
+      "overallQuality": 0.4695
+    },
+    "performanceHistory": [
+      {
+        "date": "2024-01-02",
+        "win_rate": 0.0,
+        "rm": 0.4704,
+        "grounding": 0.35,
+        "audit": 0.5575,
+        "presentation": 0.5,
+        "overall_quality": 0.4695,
+        "weighted_score": 0.3286,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      }
+    ],
+    "modelName": "qwen-plus",
+    "modelProvider": "DASHSCOPE"
+  },
+  {
+    "agentId": "technical_analyst",
+    "name": "Technical Analyst",
+    "role": "Technical Analyst",
+    "avatar": "technical",
+    "rank": 2,
+    "winRate": 0.5,
+    "bull": {
+      "n": 2,
+      "win": 1,
+      "unknown": 0
+    },
+    "bear": {
+      "n": 0,
+      "win": 0,
+      "unknown": 0
+    },
+    "logs": [],
+    "signals": [
+      {
+        "ticker": "600519.SH",
+        "signal": "bull",
+        "date": "2024-01-02",
+        "is_correct": false
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "bull",
+        "date": "2024-01-02",
+        "is_correct": true
+      }
+    ],
+    "qualityScores": {
+      "rm": 0.469,
+      "grounding": 0.35,
+      "audit": 0.4075,
+      "presentation": 0.35,
+      "overall": 0.3941,
+      "count": 1
+    },
+    "qualityHistory": [
+      {
+        "rm": 0.469,
+        "grounding": 0.35,
+        "audit": 0.4075,
+        "presentation": 0.35,
+        "overall": 0.3941
+      }
+    ],
+    "weightedScore": 0.4259,
+    "scoreBreakdown": {
+      "winRate": 0.5,
+      "rm": 0.469,
+      "grounding": 0.35,
+      "audit": 0.4075,
+      "presentation": 0.35,
+      "overallQuality": 0.3941
+    },
+    "performanceHistory": [
+      {
+        "date": "2024-01-02",
+        "win_rate": 0.5,
+        "rm": 0.469,
+        "grounding": 0.35,
+        "audit": 0.4075,
+        "presentation": 0.35,
+        "overall_quality": 0.3941,
+        "weighted_score": 0.4259,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      }
+    ],
+    "modelName": "qwen-plus",
+    "modelProvider": "DASHSCOPE"
+  },
+  {
+    "agentId": "fundamentals_analyst",
+    "name": "Fundamentals Analyst",
+    "role": "Fundamentals Analyst",
+    "avatar": "fundamentals",
+    "rank": 4,
+    "winRate": 0.0,
+    "bull": {
+      "n": 1,
+      "win": 0,
+      "unknown": 0
+    },
+    "bear": {
+      "n": 0,
+      "win": 0,
+      "unknown": 0
+    },
+    "logs": [],
+    "signals": [
+      {
+        "ticker": "600519.SH",
+        "signal": "bull",
+        "date": "2024-01-02",
+        "is_correct": false
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-01-02",
+        "is_correct": null
+      }
+    ],
+    "qualityScores": {
+      "rm": 0.4704,
+      "grounding": 0.35,
+      "audit": 0.5575,
+      "presentation": 0.5,
+      "overall": 0.4695,
+      "count": 1
+    },
+    "qualityHistory": [
+      {
+        "rm": 0.4704,
+        "grounding": 0.35,
+        "audit": 0.5575,
+        "presentation": 0.5,
+        "overall": 0.4695
+      }
+    ],
+    "weightedScore": 0.3286,
+    "scoreBreakdown": {
+      "winRate": 0.0,
+      "rm": 0.4704,
+      "grounding": 0.35,
+      "audit": 0.5575,
+      "presentation": 0.5,
+      "overallQuality": 0.4695
+    },
+    "performanceHistory": [
+      {
+        "date": "2024-01-02",
+        "win_rate": 0.0,
+        "rm": 0.4704,
+        "grounding": 0.35,
+        "audit": 0.5575,
+        "presentation": 0.5,
+        "overall_quality": 0.4695,
+        "weighted_score": 0.3286,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      }
+    ],
+    "modelName": "qwen-plus",
+    "modelProvider": "DASHSCOPE"
+  },
+  {
+    "agentId": "valuation_analyst",
+    "name": "Valuation Analyst",
+    "role": "Valuation Analyst",
+    "avatar": "valuation",
+    "rank": 1,
+    "winRate": 1.0,
+    "bull": {
+      "n": 0,
+      "win": 0,
+      "unknown": 0
+    },
+    "bear": {
+      "n": 1,
+      "win": 1,
+      "unknown": 0
+    },
+    "logs": [],
+    "signals": [
+      {
+        "ticker": "600519.SH",
+        "signal": "bear",
+        "date": "2024-01-02",
+        "is_correct": true
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-01-02",
+        "is_correct": null
+      }
+    ],
+    "qualityScores": {
+      "rm": 0.471,
+      "grounding": 0.35,
+      "audit": 0.5575,
+      "presentation": 0.5,
+      "overall": 0.4696,
+      "count": 1
+    },
+    "qualityHistory": [
+      {
+        "rm": 0.471,
+        "grounding": 0.35,
+        "audit": 0.5575,
+        "presentation": 0.5,
+        "overall": 0.4696
+      }
+    ],
+    "weightedScore": 0.6287,
+    "scoreBreakdown": {
+      "winRate": 1.0,
+      "rm": 0.471,
+      "grounding": 0.35,
+      "audit": 0.5575,
+      "presentation": 0.5,
+      "overallQuality": 0.4696
+    },
+    "performanceHistory": [
+      {
+        "date": "2024-01-02",
+        "win_rate": 1.0,
+        "rm": 0.471,
+        "grounding": 0.35,
+        "audit": 0.5575,
+        "presentation": 0.5,
+        "overall_quality": 0.4696,
+        "weighted_score": 0.6287,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      }
+    ],
+    "modelName": "qwen-plus",
+    "modelProvider": "DASHSCOPE"
+  }
+]

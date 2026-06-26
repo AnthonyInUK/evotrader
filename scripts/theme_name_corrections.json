@@ -1,0 +1,195 @@
+{
+  "raw": {
+    "ths_industry": [
+      {
+        "configured": "银行",
+        "status": "EXACT",
+        "suggestion": "银行",
+        "alternatives": []
+      },
+      {
+        "configured": "证券",
+        "status": "EXACT",
+        "suggestion": "证券",
+        "alternatives": []
+      },
+      {
+        "configured": "保险",
+        "status": "EXACT",
+        "suggestion": "保险",
+        "alternatives": []
+      },
+      {
+        "configured": "酿酒行业",
+        "status": "NOT_FOUND",
+        "suggestion": "银行",
+        "alternatives": [
+          "银行",
+          "白酒"
+        ]
+      },
+      {
+        "configured": "家电行业",
+        "status": "NOT_FOUND",
+        "suggestion": "小家电",
+        "alternatives": [
+          "小家电",
+          "黑色家电",
+          "白色家电",
+          "银行",
+          "电池"
+        ]
+      },
+      {
+        "configured": "电池",
+        "status": "EXACT",
+        "suggestion": "电池",
+        "alternatives": []
+      },
+      {
+        "configured": "光伏设备",
+        "status": "EXACT",
+        "suggestion": "光伏设备",
+        "alternatives": []
+      },
+      {
+        "configured": "半导体",
+        "status": "EXACT",
+        "suggestion": "半导体",
+        "alternatives": []
+      },
+      {
+        "configured": "通信设备",
+        "status": "EXACT",
+        "suggestion": "通信设备",
+        "alternatives": []
+      },
+      {
+        "configured": "计算机设备",
+        "status": "EXACT",
+        "suggestion": "计算机设备",
+        "alternatives": []
+      },
+      {
+        "configured": "软件开发",
+        "status": "EXACT",
+        "suggestion": "软件开发",
+        "alternatives": []
+      },
+      {
+        "configured": "医疗服务",
+        "status": "EXACT",
+        "suggestion": "医疗服务",
+        "alternatives": []
+      },
+      {
+        "configured": "化学制药",
+        "status": "EXACT",
+        "suggestion": "化学制药",
+        "alternatives": []
+      },
+      {
+        "configured": "中药",
+        "status": "EXACT",
+        "suggestion": "中药",
+        "alternatives": []
+      }
+    ],
+    "ths_concept": [
+      {
+        "configured": "白酒",
+        "status": "NOT_FOUND",
+        "suggestion": "白酒概念",
+        "alternatives": [
+          "白酒概念",
+          "重组蛋白",
+          "啤酒概念"
+        ]
+      },
+      {
+        "configured": "券商概念",
+        "status": "NOT_FOUND",
+        "suggestion": "黄金概念",
+        "alternatives": [
+          "黄金概念",
+          "鸿蒙概念",
+          "足球概念",
+          "超导概念",
+          "赛马概念"
+        ]
+      },
+      {
+        "configured": "国企改革",
+        "status": "EXACT",
+        "suggestion": "国企改革",
+        "alternatives": []
+      },
+      {
+        "configured": "人工智能",
+        "status": "EXACT",
+        "suggestion": "人工智能",
+        "alternatives": []
+      },
+      {
+        "configured": "算力概念",
+        "status": "NOT_FOUND",
+        "suggestion": "黄金概念",
+        "alternatives": [
+          "黄金概念",
+          "鸿蒙概念",
+          "足球概念",
+          "超导概念",
+          "赛马概念"
+        ]
+      },
+      {
+        "configured": "创新药",
+        "status": "EXACT",
+        "suggestion": "创新药",
+        "alternatives": []
+      },
+      {
+        "configured": "固态电池",
+        "status": "EXACT",
+        "suggestion": "固态电池",
+        "alternatives": []
+      }
+    ]
+  },
+  "suggested_config": {
+    "industry_themes": [
+      "银行",
+      "证券",
+      "保险",
+      "银行",
+      "小家电",
+      "电池",
+      "光伏设备",
+      "半导体",
+      "通信设备",
+      "计算机设备",
+      "软件开发",
+      "医疗服务",
+      "化学制药",
+      "中药"
+    ],
+    "industry_corrections": {
+      "酿酒行业": "银行",
+      "家电行业": "小家电"
+    },
+    "concept_themes": [
+      "白酒概念",
+      "黄金概念",
+      "国企改革",
+      "人工智能",
+      "黄金概念",
+      "创新药",
+      "固态电池"
+    ],
+    "concept_corrections": {
+      "白酒": "白酒概念",
+      "券商概念": "黄金概念",
+      "算力概念": "黄金概念"
+    }
+  }
+}

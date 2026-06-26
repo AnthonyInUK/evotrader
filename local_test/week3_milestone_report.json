@@ -1,0 +1,19 @@
+{
+  "milestone": "Day 21 acceptance",
+  "generatedAt": "2026-05-19T11:15:32",
+  "checks": {
+    "reportGenerated": true,
+    "quantMetricsPresent": true,
+    "benchmarkComparisonPresent": true,
+    "leaderboardSchemaReady": true,
+    "leaderboardRankedAgents": 4,
+    "leaderboardHistoryReady": true
+  },
+  "highlights": {
+    "agentAnnualizedReturnPct": -80.26,
+    "agentSharpe": -40.302,
+    "agentMaxDrawdownPct": -1.91,
+    "agentCalmar": -41.953,
+    "equalWeightExcessReturnPct": -1.91
+  }
+}

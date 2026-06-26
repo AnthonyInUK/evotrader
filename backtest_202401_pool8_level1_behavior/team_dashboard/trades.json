@@ -1,0 +1,92 @@
+[
+  {
+    "id": "t_20240130_601398.SH_0",
+    "timestamp": 1706601600000,
+    "trading_date": "2024-01-30",
+    "side": "SHORT",
+    "ticker": "601398.SH",
+    "qty": 2000,
+    "price": 4.22
+  },
+  {
+    "id": "t_20240130_600276.SH_1",
+    "timestamp": 1706601600000,
+    "trading_date": "2024-01-30",
+    "side": "SHORT",
+    "ticker": "600276.SH",
+    "qty": 100,
+    "price": 38.73
+  },
+  {
+    "id": "t_20240126_600276.SH_0",
+    "timestamp": 1706256000000,
+    "trading_date": "2024-01-26",
+    "side": "SHORT",
+    "ticker": "600276.SH",
+    "qty": 100,
+    "price": 40.39
+  },
+  {
+    "id": "t_20240125_600276.SH_0",
+    "timestamp": 1706169600000,
+    "trading_date": "2024-01-25",
+    "side": "SHORT",
+    "ticker": "600276.SH",
+    "qty": 300,
+    "price": 40.33
+  },
+  {
+    "id": "t_20240124_600276.SH_0",
+    "timestamp": 1706083200000,
+    "trading_date": "2024-01-24",
+    "side": "SHORT",
+    "ticker": "600276.SH",
+    "qty": 500,
+    "price": 40.17
+  },
+  {
+    "id": "t_20240119_600276.SH_0",
+    "timestamp": 1705651200000,
+    "trading_date": "2024-01-19",
+    "side": "LONG",
+    "ticker": "600276.SH",
+    "qty": 1000,
+    "price": 40.58
+  },
+  {
+    "id": "t_20240116_000858.SZ_0",
+    "timestamp": 1705392000000,
+    "trading_date": "2024-01-16",
+    "side": "SHORT",
+    "ticker": "000858.SZ",
+    "qty": 300,
+    "price": 115.18
+  },
+  {
+    "id": "t_20240109_000858.SZ_0",
+    "timestamp": 1704787200000,
+    "trading_date": "2024-01-09",
+    "side": "LONG",
+    "ticker": "000858.SZ",
+    "qty": 1100,
+    "price": 115.34
+  },
+  {
+    "id": "t_20240105_601398.SH_0",
+    "timestamp": 1704441600000,
+    "trading_date": "2024-01-05",
+    "side": "LONG",
+    "ticker": "601398.SH",
+    "qty": 14000,
+    "price": 4.28
+  },
+  {
+    "id": "t_20240102_000333.SZ_0",
+    "timestamp": 1704182400000,
+    "trading_date": "2024-01-02",
+    "side": "LONG",
+    "ticker": "000333.SZ",
+    "qty": 2000,
+    "price": 49.61
+  }
+]

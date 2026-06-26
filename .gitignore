@@ -1,0 +1,79 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+/.venv/
+ENV/
+
+# Environment Variables
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.cursorrules
+.cursorignore
+
+# OS
+.DS_Store
+
+# Txt files
+*.txt
+# 例外：部署/构建必需，不能被 *.txt 吞掉
+!requirements.txt
+
+# PDF files
+*.pdf
+
+# Frontend
+node_modules
+
+# Outputs
+outputs/
+
+# Data files
+backend/data/ret_data/
+
+# 重数据缓存 / 向量库 / 快照：体积大(akshare_cache 180M+)、可按需重新拉取或生成，
+# 不入库。部署 mock 模式不需要；要跑真实回测时另行同步缓存。
+backend/data/akshare_cache/
+backend/data/akshare_financial_cache/
+backend/data/reme_vector_store/
+backend/data/financial_snapshots/
+backend/data/company_news_snapshots/
+backend/data/market_index_cache/
+backend/data/theme_index_cache/
+backend/data/code_repair_cache/
+backend/data/__MACOSX/
+*.parquet
+*.pkl
+
+# Database files (users will have their own local databases)
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+
+*.ipynb
+*.log

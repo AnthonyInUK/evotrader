@@ -1,0 +1,36 @@
+{
+  "experiment_id": "backtest_202401_pool8_level0_v2",
+  "objective": "Level 0 expanded-pool smoke: validate data, tools, fixed indicators, PM decision recording, and dashboard output for an 8-stock A-share watchlist.",
+  "period": {
+    "start": "2024-01-02",
+    "end": "2024-01-02"
+  },
+  "variables": {
+    "tickers": [
+      "600519.SH",
+      "601398.SH",
+      "000858.SZ",
+      "000333.SZ",
+      "300750.SZ",
+      "600030.SH",
+      "601318.SH",
+      "600276.SH"
+    ],
+    "model_provider": "DEEPSEEK",
+    "model_name": "deepseek-v4-flash",
+    "max_comm_cycles": "1",
+    "custom": "Stock pool expands from 2 to 8. PM uses baseline conservative mode. Analysts, model, data tools, and indicators stay fixed. No PM or analyst rule changes."
+  },
+  "fixed_indicators": [
+    {
+      "indicator_id": "technical_trend_snapshot_v1",
+      "description": "Fixed trend snapshot: close, SMA20/SMA60, MACD, RSI14.",
+      "lookback_days": 120
+    },
+    {
+      "indicator_id": "technical_momentum_risk_v1",
+      "description": "Fixed momentum/risk snapshot: 5d/10d/20d returns and 20d volatility.",
+      "lookback_days": 120
+    }
+  ]
+}

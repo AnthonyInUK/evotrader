@@ -1,0 +1,1509 @@
+[
+  {
+    "agentId": "portfolio_manager",
+    "name": "Portfolio Manager",
+    "role": "Portfolio Manager",
+    "avatar": "pm",
+    "rank": null,
+    "winRate": null,
+    "bull": {
+      "n": 0,
+      "win": 0,
+      "unknown": 0
+    },
+    "bear": {
+      "n": 0,
+      "win": 0,
+      "unknown": 0
+    },
+    "logs": [],
+    "signals": [
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-03-19",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-03-19",
+        "is_correct": null
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-03-22",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-03-22",
+        "is_correct": null
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-03-26",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-03-26",
+        "is_correct": null
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-03-27",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-03-27",
+        "is_correct": null
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-03-28",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-03-28",
+        "is_correct": null
+      }
+    ],
+    "qualityScores": {
+      "rm": null,
+      "grounding": null,
+      "audit": null,
+      "presentation": null,
+      "overall": null,
+      "count": 0
+    },
+    "qualityHistory": [
+      {
+        "rm": null,
+        "grounding": null,
+        "audit": null,
+        "presentation": null,
+        "overall": null
+      },
+      {
+        "rm": null,
+        "grounding": null,
+        "audit": null,
+        "presentation": null,
+        "overall": null
+      },
+      {
+        "rm": null,
+        "grounding": null,
+        "audit": null,
+        "presentation": null,
+        "overall": null
+      },
+      {
+        "rm": null,
+        "grounding": null,
+        "audit": null,
+        "presentation": null,
+        "overall": null
+      },
+      {
+        "rm": null,
+        "grounding": null,
+        "audit": null,
+        "presentation": null,
+        "overall": null
+      }
+    ],
+    "weightedScore": null,
+    "scoreBreakdown": {
+      "winRate": null,
+      "rm": null,
+      "grounding": null,
+      "audit": null,
+      "presentation": null,
+      "overallQuality": null
+    },
+    "performanceHistory": [],
+    "modelName": "qwen-turbo",
+    "modelProvider": "DASHSCOPE"
+  },
+  {
+    "agentId": "risk_manager",
+    "name": "Risk Manager",
+    "role": "Risk Manager",
+    "avatar": "risk",
+    "rank": null,
+    "winRate": null,
+    "bull": {
+      "n": 0,
+      "win": 0,
+      "unknown": 0
+    },
+    "bear": {
+      "n": 0,
+      "win": 0,
+      "unknown": 0
+    },
+    "logs": [],
+    "signals": [],
+    "qualityScores": {
+      "rm": null,
+      "grounding": null,
+      "audit": null,
+      "presentation": null,
+      "overall": null,
+      "count": 0
+    },
+    "qualityHistory": [],
+    "weightedScore": null,
+    "scoreBreakdown": {
+      "winRate": null,
+      "rm": null,
+      "grounding": null,
+      "audit": null,
+      "presentation": null,
+      "overallQuality": null
+    },
+    "performanceHistory": [],
+    "modelName": "qwen-turbo",
+    "modelProvider": "DASHSCOPE"
+  },
+  {
+    "agentId": "sentiment_analyst",
+    "name": "Sentiment Analyst",
+    "role": "Sentiment Analyst",
+    "avatar": "sentiment",
+    "rank": 3,
+    "winRate": 0.5714,
+    "bull": {
+      "n": 7,
+      "win": 4,
+      "unknown": 0
+    },
+    "bear": {
+      "n": 0,
+      "win": 0,
+      "unknown": 0
+    },
+    "logs": [],
+    "signals": [
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-03-19",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "bull",
+        "date": "2024-03-19",
+        "is_correct": false
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-03-20",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-03-20",
+        "is_correct": null
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-03-21",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "bull",
+        "date": "2024-03-21",
+        "is_correct": true
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "bull",
+        "date": "2024-03-22",
+        "is_correct": false
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-03-22",
+        "is_correct": null
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-03-25",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "bull",
+        "date": "2024-03-25",
+        "is_correct": true
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-03-26",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "bull",
+        "date": "2024-03-26",
+        "is_correct": true
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-03-27",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "bull",
+        "date": "2024-03-27",
+        "is_correct": true
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-03-28",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "bull",
+        "date": "2024-03-28",
+        "is_correct": false
+      }
+    ],
+    "qualityScores": {
+      "rm": 0.8881,
+      "grounding": 0.4625,
+      "audit": 0.5331,
+      "presentation": 0.85,
+      "overall": 0.6834,
+      "count": 8
+    },
+    "qualityHistory": [
+      {
+        "rm": 0.8557,
+        "grounding": 0.5,
+        "audit": 0.475,
+        "presentation": 0.85,
+        "overall": 0.6702
+      },
+      {
+        "rm": 1.0,
+        "grounding": 0.5,
+        "audit": 0.625,
+        "presentation": 0.85,
+        "overall": 0.7438
+      },
+      {
+        "rm": 0.9012,
+        "grounding": 0.5,
+        "audit": 0.475,
+        "presentation": 0.85,
+        "overall": 0.6815
+      },
+      {
+        "rm": 0.9485,
+        "grounding": 0.5,
+        "audit": 0.475,
+        "presentation": 0.85,
+        "overall": 0.6934
+      },
+      {
+        "rm": 0.8292,
+        "grounding": 0.5,
+        "audit": 0.475,
+        "presentation": 0.85,
+        "overall": 0.6636
+      },
+      {
+        "rm": 0.8765,
+        "grounding": 0.5,
+        "audit": 0.625,
+        "presentation": 0.85,
+        "overall": 0.7129
+      },
+      {
+        "rm": 0.8385,
+        "grounding": 0.35,
+        "audit": 0.5575,
+        "presentation": 0.85,
+        "overall": 0.649
+      },
+      {
+        "rm": 0.8555,
+        "grounding": 0.35,
+        "audit": 0.5575,
+        "presentation": 0.85,
+        "overall": 0.6532
+      }
+    ],
+    "weightedScore": 0.4573,
+    "scoreBreakdown": {
+      "winRate": 0.0,
+      "rm": 0.8555,
+      "grounding": 0.35,
+      "audit": 0.5575,
+      "presentation": 0.85,
+      "overallQuality": 0.6532
+    },
+    "performanceHistory": [
+      {
+        "date": "2024-03-19",
+        "win_rate": 0.0,
+        "rm": 0.8557,
+        "grounding": 0.5,
+        "audit": 0.475,
+        "presentation": 0.85,
+        "overall_quality": 0.6702,
+        "weighted_score": 0.4691,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-03-20",
+        "win_rate": null,
+        "rm": 1.0,
+        "grounding": 0.5,
+        "audit": 0.625,
+        "presentation": 0.85,
+        "overall_quality": 0.7438,
+        "weighted_score": 0.5206,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-03-21",
+        "win_rate": 1.0,
+        "rm": 0.9012,
+        "grounding": 0.5,
+        "audit": 0.475,
+        "presentation": 0.85,
+        "overall_quality": 0.6815,
+        "weighted_score": 0.7771,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-03-22",
+        "win_rate": 0.0,
+        "rm": 0.9485,
+        "grounding": 0.5,
+        "audit": 0.475,
+        "presentation": 0.85,
+        "overall_quality": 0.6934,
+        "weighted_score": 0.4854,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-03-25",
+        "win_rate": 1.0,
+        "rm": 0.8292,
+        "grounding": 0.5,
+        "audit": 0.475,
+        "presentation": 0.85,
+        "overall_quality": 0.6636,
+        "weighted_score": 0.7645,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-03-26",
+        "win_rate": 1.0,
+        "rm": 0.8765,
+        "grounding": 0.5,
+        "audit": 0.625,
+        "presentation": 0.85,
+        "overall_quality": 0.7129,
+        "weighted_score": 0.799,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-03-27",
+        "win_rate": 1.0,
+        "rm": 0.8385,
+        "grounding": 0.35,
+        "audit": 0.5575,
+        "presentation": 0.85,
+        "overall_quality": 0.649,
+        "weighted_score": 0.7543,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-03-28",
+        "win_rate": 0.0,
+        "rm": 0.8555,
+        "grounding": 0.35,
+        "audit": 0.5575,
+        "presentation": 0.85,
+        "overall_quality": 0.6532,
+        "weighted_score": 0.4573,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      }
+    ],
+    "modelName": "qwen-plus-2025-01-25",
+    "modelProvider": "DASHSCOPE"
+  },
+  {
+    "agentId": "technical_analyst",
+    "name": "Technical Analyst",
+    "role": "Technical Analyst",
+    "avatar": "technical",
+    "rank": 2,
+    "winRate": 0.5556,
+    "bull": {
+      "n": 7,
+      "win": 4,
+      "unknown": 0
+    },
+    "bear": {
+      "n": 2,
+      "win": 1,
+      "unknown": 0
+    },
+    "logs": [],
+    "signals": [
+      {
+        "ticker": "600519.SH",
+        "signal": "bear",
+        "date": "2024-03-19",
+        "is_correct": false
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "bull",
+        "date": "2024-03-19",
+        "is_correct": false
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-03-20",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "bull",
+        "date": "2024-03-20",
+        "is_correct": true
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-03-21",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "bull",
+        "date": "2024-03-21",
+        "is_correct": true
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-03-22",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "bull",
+        "date": "2024-03-22",
+        "is_correct": true
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "bear",
+        "date": "2024-03-25",
+        "is_correct": true
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-03-25",
+        "is_correct": null
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-03-26",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "bull",
+        "date": "2024-03-26",
+        "is_correct": true
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "bull",
+        "date": "2024-03-27",
+        "is_correct": false
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-03-27",
+        "is_correct": null
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-03-28",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "bull",
+        "date": "2024-03-28",
+        "is_correct": false
+      }
+    ],
+    "qualityScores": {
+      "rm": 0.8619,
+      "grounding": 0.5375,
+      "audit": 0.5856,
+      "presentation": 0.85,
+      "overall": 0.7088,
+      "count": 8
+    },
+    "qualityHistory": [
+      {
+        "rm": 0.7608,
+        "grounding": 0.65,
+        "audit": 0.5425,
+        "presentation": 0.85,
+        "overall": 0.7008
+      },
+      {
+        "rm": 0.9078,
+        "grounding": 0.5,
+        "audit": 0.625,
+        "presentation": 0.85,
+        "overall": 0.7207
+      },
+      {
+        "rm": 0.8695,
+        "grounding": 0.5,
+        "audit": 0.475,
+        "presentation": 0.85,
+        "overall": 0.6736
+      },
+      {
+        "rm": 0.8878,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.85,
+        "overall": 0.7701
+      },
+      {
+        "rm": 0.8505,
+        "grounding": 0.35,
+        "audit": 0.5575,
+        "presentation": 0.85,
+        "overall": 0.652
+      },
+      {
+        "rm": 0.8373,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.85,
+        "overall": 0.7575
+      },
+      {
+        "rm": 0.914,
+        "grounding": 0.5,
+        "audit": 0.475,
+        "presentation": 0.85,
+        "overall": 0.6848
+      },
+      {
+        "rm": 0.8678,
+        "grounding": 0.5,
+        "audit": 0.625,
+        "presentation": 0.85,
+        "overall": 0.7107
+      }
+    ],
+    "weightedScore": 0.4975,
+    "scoreBreakdown": {
+      "winRate": 0.0,
+      "rm": 0.8678,
+      "grounding": 0.5,
+      "audit": 0.625,
+      "presentation": 0.85,
+      "overallQuality": 0.7107
+    },
+    "performanceHistory": [
+      {
+        "date": "2024-03-19",
+        "win_rate": 0.0,
+        "rm": 0.7608,
+        "grounding": 0.65,
+        "audit": 0.5425,
+        "presentation": 0.85,
+        "overall_quality": 0.7008,
+        "weighted_score": 0.4906,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-03-20",
+        "win_rate": 1.0,
+        "rm": 0.9078,
+        "grounding": 0.5,
+        "audit": 0.625,
+        "presentation": 0.85,
+        "overall_quality": 0.7207,
+        "weighted_score": 0.8045,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-03-21",
+        "win_rate": 1.0,
+        "rm": 0.8695,
+        "grounding": 0.5,
+        "audit": 0.475,
+        "presentation": 0.85,
+        "overall_quality": 0.6736,
+        "weighted_score": 0.7715,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-03-22",
+        "win_rate": 1.0,
+        "rm": 0.8878,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.85,
+        "overall_quality": 0.7701,
+        "weighted_score": 0.8391,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-03-25",
+        "win_rate": 1.0,
+        "rm": 0.8505,
+        "grounding": 0.35,
+        "audit": 0.5575,
+        "presentation": 0.85,
+        "overall_quality": 0.652,
+        "weighted_score": 0.7564,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-03-26",
+        "win_rate": 1.0,
+        "rm": 0.8373,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.85,
+        "overall_quality": 0.7575,
+        "weighted_score": 0.8302,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-03-27",
+        "win_rate": 0.0,
+        "rm": 0.914,
+        "grounding": 0.5,
+        "audit": 0.475,
+        "presentation": 0.85,
+        "overall_quality": 0.6848,
+        "weighted_score": 0.4793,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-03-28",
+        "win_rate": 0.0,
+        "rm": 0.8678,
+        "grounding": 0.5,
+        "audit": 0.625,
+        "presentation": 0.85,
+        "overall_quality": 0.7107,
+        "weighted_score": 0.4975,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      }
+    ],
+    "modelName": "qwen-plus-2025-01-25",
+    "modelProvider": "DASHSCOPE"
+  },
+  {
+    "agentId": "fundamentals_analyst",
+    "name": "Fundamentals Analyst",
+    "role": "Fundamentals Analyst",
+    "avatar": "fundamentals",
+    "rank": 4,
+    "winRate": 0.5714,
+    "bull": {
+      "n": 7,
+      "win": 4,
+      "unknown": 0
+    },
+    "bear": {
+      "n": 0,
+      "win": 0,
+      "unknown": 0
+    },
+    "logs": [],
+    "signals": [
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-03-19",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "bull",
+        "date": "2024-03-19",
+        "is_correct": false
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-03-20",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "bull",
+        "date": "2024-03-20",
+        "is_correct": true
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-03-21",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "bull",
+        "date": "2024-03-21",
+        "is_correct": true
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-03-22",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "bull",
+        "date": "2024-03-22",
+        "is_correct": true
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-03-25",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "bull",
+        "date": "2024-03-25",
+        "is_correct": true
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-03-26",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-03-26",
+        "is_correct": null
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "bull",
+        "date": "2024-03-27",
+        "is_correct": false
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-03-27",
+        "is_correct": null
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-03-28",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "bull",
+        "date": "2024-03-28",
+        "is_correct": false
+      }
+    ],
+    "qualityScores": {
+      "rm": 0.9336,
+      "grounding": 0.425,
+      "audit": 0.5163,
+      "presentation": 0.85,
+      "overall": 0.6813,
+      "count": 8
+    },
+    "qualityHistory": [
+      {
+        "rm": 0.9238,
+        "grounding": 0.35,
+        "audit": 0.4075,
+        "presentation": 0.85,
+        "overall": 0.6328
+      },
+      {
+        "rm": 0.8049,
+        "grounding": 0.35,
+        "audit": 0.5575,
+        "presentation": 0.85,
+        "overall": 0.6406
+      },
+      {
+        "rm": 1.0,
+        "grounding": 0.35,
+        "audit": 0.4075,
+        "presentation": 0.85,
+        "overall": 0.6519
+      },
+      {
+        "rm": 0.9451,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.85,
+        "overall": 0.7844
+      },
+      {
+        "rm": 0.9092,
+        "grounding": 0.5,
+        "audit": 0.625,
+        "presentation": 0.85,
+        "overall": 0.7211
+      },
+      {
+        "rm": 0.9708,
+        "grounding": 0.5,
+        "audit": 0.475,
+        "presentation": 0.85,
+        "overall": 0.699
+      },
+      {
+        "rm": 0.9304,
+        "grounding": 0.35,
+        "audit": 0.5575,
+        "presentation": 0.85,
+        "overall": 0.672
+      },
+      {
+        "rm": 0.9845,
+        "grounding": 0.35,
+        "audit": 0.4075,
+        "presentation": 0.85,
+        "overall": 0.648
+      }
+    ],
+    "weightedScore": 0.4536,
+    "scoreBreakdown": {
+      "winRate": 0.0,
+      "rm": 0.9845,
+      "grounding": 0.35,
+      "audit": 0.4075,
+      "presentation": 0.85,
+      "overallQuality": 0.648
+    },
+    "performanceHistory": [
+      {
+        "date": "2024-03-19",
+        "win_rate": 0.0,
+        "rm": 0.9238,
+        "grounding": 0.35,
+        "audit": 0.4075,
+        "presentation": 0.85,
+        "overall_quality": 0.6328,
+        "weighted_score": 0.443,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-03-20",
+        "win_rate": 1.0,
+        "rm": 0.8049,
+        "grounding": 0.35,
+        "audit": 0.5575,
+        "presentation": 0.85,
+        "overall_quality": 0.6406,
+        "weighted_score": 0.7484,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-03-21",
+        "win_rate": 1.0,
+        "rm": 1.0,
+        "grounding": 0.35,
+        "audit": 0.4075,
+        "presentation": 0.85,
+        "overall_quality": 0.6519,
+        "weighted_score": 0.7563,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-03-22",
+        "win_rate": 1.0,
+        "rm": 0.9451,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.85,
+        "overall_quality": 0.7844,
+        "weighted_score": 0.8491,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-03-25",
+        "win_rate": 1.0,
+        "rm": 0.9092,
+        "grounding": 0.5,
+        "audit": 0.625,
+        "presentation": 0.85,
+        "overall_quality": 0.7211,
+        "weighted_score": 0.8047,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-03-26",
+        "win_rate": null,
+        "rm": 0.9708,
+        "grounding": 0.5,
+        "audit": 0.475,
+        "presentation": 0.85,
+        "overall_quality": 0.699,
+        "weighted_score": 0.4893,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-03-27",
+        "win_rate": 0.0,
+        "rm": 0.9304,
+        "grounding": 0.35,
+        "audit": 0.5575,
+        "presentation": 0.85,
+        "overall_quality": 0.672,
+        "weighted_score": 0.4704,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-03-28",
+        "win_rate": 0.0,
+        "rm": 0.9845,
+        "grounding": 0.35,
+        "audit": 0.4075,
+        "presentation": 0.85,
+        "overall_quality": 0.648,
+        "weighted_score": 0.4536,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      }
+    ],
+    "modelName": "qwen-plus-2025-01-25",
+    "modelProvider": "DASHSCOPE"
+  },
+  {
+    "agentId": "valuation_analyst",
+    "name": "Valuation Analyst",
+    "role": "Valuation Analyst",
+    "avatar": "valuation",
+    "rank": 1,
+    "winRate": 0.6667,
+    "bull": {
+      "n": 5,
+      "win": 4,
+      "unknown": 0
+    },
+    "bear": {
+      "n": 1,
+      "win": 0,
+      "unknown": 0
+    },
+    "logs": [],
+    "signals": [
+      {
+        "ticker": "600519.SH",
+        "signal": "bull",
+        "date": "2024-03-19",
+        "is_correct": true
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-03-19",
+        "is_correct": null
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-03-20",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-03-20",
+        "is_correct": null
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "bull",
+        "date": "2024-03-21",
+        "is_correct": true
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-03-21",
+        "is_correct": null
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-03-22",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "bull",
+        "date": "2024-03-22",
+        "is_correct": true
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-03-25",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "bull",
+        "date": "2024-03-25",
+        "is_correct": true
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "bear",
+        "date": "2024-03-26",
+        "is_correct": false
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-03-26",
+        "is_correct": null
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-03-27",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-03-27",
+        "is_correct": null
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-03-28",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "bull",
+        "date": "2024-03-28",
+        "is_correct": false
+      }
+    ],
+    "qualityScores": {
+      "rm": 0.9175,
+      "grounding": 0.5,
+      "audit": 0.55,
+      "presentation": 0.85,
+      "overall": 0.7043,
+      "count": 8
+    },
+    "qualityHistory": [
+      {
+        "rm": 0.7993,
+        "grounding": 0.35,
+        "audit": 0.5575,
+        "presentation": 0.85,
+        "overall": 0.6392
+      },
+      {
+        "rm": 1.0,
+        "grounding": 0.5,
+        "audit": 0.475,
+        "presentation": 0.85,
+        "overall": 0.7063
+      },
+      {
+        "rm": 0.8619,
+        "grounding": 0.35,
+        "audit": 0.4075,
+        "presentation": 0.85,
+        "overall": 0.6173
+      },
+      {
+        "rm": 0.882,
+        "grounding": 0.5,
+        "audit": 0.625,
+        "presentation": 0.85,
+        "overall": 0.7143
+      },
+      {
+        "rm": 1.0,
+        "grounding": 0.65,
+        "audit": 0.5425,
+        "presentation": 0.85,
+        "overall": 0.7606
+      },
+      {
+        "rm": 0.9244,
+        "grounding": 0.35,
+        "audit": 0.5575,
+        "presentation": 0.85,
+        "overall": 0.6705
+      },
+      {
+        "rm": 1.0,
+        "grounding": 0.65,
+        "audit": 0.5425,
+        "presentation": 0.85,
+        "overall": 0.7606
+      },
+      {
+        "rm": 0.8723,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.85,
+        "overall": 0.7662
+      }
+    ],
+    "weightedScore": 0.5363,
+    "scoreBreakdown": {
+      "winRate": 0.0,
+      "rm": 0.8723,
+      "grounding": 0.65,
+      "audit": 0.6925,
+      "presentation": 0.85,
+      "overallQuality": 0.7662
+    },
+    "performanceHistory": [
+      {
+        "date": "2024-03-19",
+        "win_rate": 1.0,
+        "rm": 0.7993,
+        "grounding": 0.35,
+        "audit": 0.5575,
+        "presentation": 0.85,
+        "overall_quality": 0.6392,
+        "weighted_score": 0.7474,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-03-20",
+        "win_rate": null,
+        "rm": 1.0,
+        "grounding": 0.5,
+        "audit": 0.475,
+        "presentation": 0.85,
+        "overall_quality": 0.7063,
+        "weighted_score": 0.4944,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-03-21",
+        "win_rate": 1.0,
+        "rm": 0.8619,
+        "grounding": 0.35,
+        "audit": 0.4075,
+        "presentation": 0.85,
+        "overall_quality": 0.6173,
+        "weighted_score": 0.7321,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-03-22",
+        "win_rate": 1.0,
+        "rm": 0.882,
+        "grounding": 0.5,
+        "audit": 0.625,
+        "presentation": 0.85,
+        "overall_quality": 0.7143,
+        "weighted_score": 0.8,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-03-25",
+        "win_rate": 1.0,
+        "rm": 1.0,
+        "grounding": 0.65,
+        "audit": 0.5425,
+        "presentation": 0.85,
+        "overall_quality": 0.7606,
+        "weighted_score": 0.8324,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-03-26",
+        "win_rate": 0.0,
+        "rm": 0.9244,
+        "grounding": 0.35,
+        "audit": 0.5575,
+        "presentation": 0.85,
+        "overall_quality": 0.6705,
+        "weighted_score": 0.4693,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-03-27",
+        "win_rate": null,
+        "rm": 1.0,
+        "grounding": 0.65,
+        "audit": 0.5425,
+        "presentation": 0.85,
+        "overall_quality": 0.7606,
+        "weighted_score": 0.5324,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-03-28",
+        "win_rate": 0.0,
+        "rm": 0.8723,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.85,
+        "overall_quality": 0.7662,
+        "weighted_score": 0.5363,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      }
+    ],
+    "modelName": "qwen-plus-2025-01-25",
+    "modelProvider": "DASHSCOPE"
+  }
+]

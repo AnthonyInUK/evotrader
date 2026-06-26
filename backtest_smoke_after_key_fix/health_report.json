@@ -1,0 +1,19 @@
+{
+  "configName": "backtest_smoke_after_key_fix",
+  "dashboardDir": "backtest_smoke_after_key_fix/team_dashboard",
+  "missingFiles": [],
+  "datesChecked": [
+    "2024-01-02"
+  ],
+  "logFindings": [],
+  "signals": 22,
+  "pmRecordedDecisions": 2,
+  "pmCompletedDays": 1,
+  "finalEquity": null,
+  "cashPosition": 500000.0,
+  "totalReturn": 0.0,
+  "holdingsCount": 0,
+  "tradesCount": 0,
+  "leaderboardCount": 6,
+  "ok": true
+}

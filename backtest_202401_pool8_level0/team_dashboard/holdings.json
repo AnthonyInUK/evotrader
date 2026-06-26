@@ -1,0 +1,9 @@
+[
+  {
+    "ticker": "CASH",
+    "quantity": 1,
+    "currentPrice": 500000.0,
+    "marketValue": 500000.0,
+    "weight": 1.0
+  }
+]

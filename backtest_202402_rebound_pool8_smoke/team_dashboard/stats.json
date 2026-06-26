@@ -1,0 +1,87 @@
+{
+  "totalAssetValue": 509427.12,
+  "totalReturn": 1.89,
+  "cashPosition": 133655.12,
+  "tickerWeights": {
+    "601398.SH": 0.2031,
+    "000858.SZ": 0.2505,
+    "000333.SZ": 0.1807,
+    "600276.SH": 0.074,
+    "300750.SZ": 0.0294
+  },
+  "totalTrades": 7,
+  "winRate": 0.0,
+  "bullBear": {
+    "bull": {
+      "n": 0,
+      "win": 0
+    },
+    "bear": {
+      "n": 0,
+      "win": 0
+    }
+  },
+  "period": {
+    "startDate": "2024-02-20",
+    "endDate": "2024-02-23",
+    "tradingDays": 4
+  },
+  "performance": {
+    "agent": {
+      "startValue": 500000.0,
+      "endValue": 509427.12,
+      "totalReturnPct": 1.89,
+      "annualizedReturnPct": 224.38,
+      "volatilityPct": 12.32,
+      "sharpe": 9.617,
+      "maxDrawdownPct": -0.25,
+      "calmar": 892.204
+    },
+    "benchmarks": {
+      "equalWeight": {
+        "startValue": 500000.0,
+        "endValue": 509894.51,
+        "totalReturnPct": 1.98,
+        "annualizedReturnPct": 243.68,
+        "volatilityPct": 16.39,
+        "sharpe": 7.612,
+        "maxDrawdownPct": -0.21,
+        "calmar": 1187.28
+      },
+      "marketCapWeighted": {
+        "startValue": 500000.0,
+        "endValue": 509894.51,
+        "totalReturnPct": 1.98,
+        "annualizedReturnPct": 243.68,
+        "volatilityPct": 16.39,
+        "sharpe": 7.612,
+        "maxDrawdownPct": -0.21,
+        "calmar": 1187.28
+      },
+      "momentum": {
+        "startValue": 500000.0,
+        "endValue": 509955.3,
+        "totalReturnPct": 1.99,
+        "annualizedReturnPct": 246.27,
+        "volatilityPct": 18.39,
+        "sharpe": 6.839,
+        "maxDrawdownPct": -0.45,
+        "calmar": 541.476
+      }
+    },
+    "comparison": {
+      "equalWeight": {
+        "excessReturnPct": -0.09,
+        "sharpeSpread": 2.005
+      },
+      "marketCapWeighted": {
+        "excessReturnPct": -0.09,
+        "sharpeSpread": 2.005
+      },
+      "momentum": {
+        "excessReturnPct": -0.1,
+        "sharpeSpread": 2.778
+      }
+    }
+  }
+}

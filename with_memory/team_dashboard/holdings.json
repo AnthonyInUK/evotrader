@@ -1,0 +1,23 @@
+[
+  {
+    "ticker": "CASH",
+    "quantity": 1,
+    "currentPrice": 299019.57,
+    "marketValue": 299019.57,
+    "weight": 0.5664
+  },
+  {
+    "ticker": "600519.SH",
+    "quantity": 100,
+    "currentPrice": 1498.59,
+    "marketValue": 149859.0,
+    "weight": 0.2839
+  },
+  {
+    "ticker": "601398.SH",
+    "quantity": 18600,
+    "currentPrice": 4.25,
+    "marketValue": 79050.0,
+    "weight": 0.1497
+  }
+]

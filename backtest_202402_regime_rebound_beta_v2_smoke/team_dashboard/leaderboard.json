@@ -1,0 +1,1634 @@
+[
+  {
+    "agentId": "portfolio_manager",
+    "name": "Portfolio Manager",
+    "role": "Portfolio Manager",
+    "avatar": "pm",
+    "rank": null,
+    "winRate": 0.6364,
+    "bull": {
+      "n": 10,
+      "win": 7,
+      "unknown": 0
+    },
+    "bear": {
+      "n": 1,
+      "win": 0,
+      "unknown": 0
+    },
+    "logs": [],
+    "signals": [
+      {
+        "ticker": "000333.SZ",
+        "signal": "bull",
+        "date": "2024-02-20",
+        "is_correct": true
+      },
+      {
+        "ticker": "600030.SH",
+        "signal": "bull",
+        "date": "2024-02-20",
+        "is_correct": true
+      },
+      {
+        "ticker": "000858.SZ",
+        "signal": "bull",
+        "date": "2024-02-20",
+        "is_correct": false
+      },
+      {
+        "ticker": "300750.SZ",
+        "signal": "bull",
+        "date": "2024-02-20",
+        "is_correct": false
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "bull",
+        "date": "2024-02-20",
+        "is_correct": true
+      },
+      {
+        "ticker": "600276.SH",
+        "signal": "bull",
+        "date": "2024-02-20",
+        "is_correct": true
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-02-20",
+        "is_correct": null
+      },
+      {
+        "ticker": "601318.SH",
+        "signal": "neutral",
+        "date": "2024-02-20",
+        "is_correct": null
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-02-21",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-02-21",
+        "is_correct": null
+      },
+      {
+        "ticker": "000858.SZ",
+        "signal": "neutral",
+        "date": "2024-02-21",
+        "is_correct": null
+      },
+      {
+        "ticker": "000333.SZ",
+        "signal": "neutral",
+        "date": "2024-02-21",
+        "is_correct": null
+      },
+      {
+        "ticker": "300750.SZ",
+        "signal": "bull",
+        "date": "2024-02-21",
+        "is_correct": true
+      },
+      {
+        "ticker": "600030.SH",
+        "signal": "neutral",
+        "date": "2024-02-21",
+        "is_correct": null
+      },
+      {
+        "ticker": "601318.SH",
+        "signal": "neutral",
+        "date": "2024-02-21",
+        "is_correct": null
+      },
+      {
+        "ticker": "600276.SH",
+        "signal": "neutral",
+        "date": "2024-02-21",
+        "is_correct": null
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-02-22",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-02-22",
+        "is_correct": null
+      },
+      {
+        "ticker": "000858.SZ",
+        "signal": "neutral",
+        "date": "2024-02-22",
+        "is_correct": null
+      },
+      {
+        "ticker": "000333.SZ",
+        "signal": "neutral",
+        "date": "2024-02-22",
+        "is_correct": null
+      },
+      {
+        "ticker": "300750.SZ",
+        "signal": "neutral",
+        "date": "2024-02-22",
+        "is_correct": null
+      },
+      {
+        "ticker": "600030.SH",
+        "signal": "neutral",
+        "date": "2024-02-22",
+        "is_correct": null
+      },
+      {
+        "ticker": "601318.SH",
+        "signal": "neutral",
+        "date": "2024-02-22",
+        "is_correct": null
+      },
+      {
+        "ticker": "600276.SH",
+        "signal": "bear",
+        "date": "2024-02-22",
+        "is_correct": false
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-02-23",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-02-23",
+        "is_correct": null
+      },
+      {
+        "ticker": "000858.SZ",
+        "signal": "bull",
+        "date": "2024-02-23",
+        "is_correct": true
+      },
+      {
+        "ticker": "000333.SZ",
+        "signal": "neutral",
+        "date": "2024-02-23",
+        "is_correct": null
+      },
+      {
+        "ticker": "300750.SZ",
+        "signal": "neutral",
+        "date": "2024-02-23",
+        "is_correct": null
+      },
+      {
+        "ticker": "600030.SH",
+        "signal": "bull",
+        "date": "2024-02-23",
+        "is_correct": false
+      },
+      {
+        "ticker": "601318.SH",
+        "signal": "bull",
+        "date": "2024-02-23",
+        "is_correct": true
+      },
+      {
+        "ticker": "600276.SH",
+        "signal": "neutral",
+        "date": "2024-02-23",
+        "is_correct": null
+      }
+    ],
+    "qualityScores": {
+      "rm": null,
+      "grounding": null,
+      "audit": null,
+      "presentation": null,
+      "overall": null,
+      "count": 0
+    },
+    "qualityHistory": [
+      {
+        "rm": null,
+        "grounding": null,
+        "audit": null,
+        "presentation": null,
+        "overall": null
+      },
+      {
+        "rm": null,
+        "grounding": null,
+        "audit": null,
+        "presentation": null,
+        "overall": null
+      },
+      {
+        "rm": null,
+        "grounding": null,
+        "audit": null,
+        "presentation": null,
+        "overall": null
+      },
+      {
+        "rm": null,
+        "grounding": null,
+        "audit": null,
+        "presentation": null,
+        "overall": null
+      }
+    ],
+    "weightedScore": null,
+    "scoreBreakdown": {
+      "winRate": null,
+      "rm": null,
+      "grounding": null,
+      "audit": null,
+      "presentation": null,
+      "overallQuality": null
+    },
+    "performanceHistory": [],
+    "modelName": "deepseek-v4-flash",
+    "modelProvider": "DEEPSEEK"
+  },
+  {
+    "agentId": "risk_manager",
+    "name": "Risk Manager",
+    "role": "Risk Manager",
+    "avatar": "risk",
+    "rank": null,
+    "winRate": null,
+    "bull": {
+      "n": 0,
+      "win": 0,
+      "unknown": 0
+    },
+    "bear": {
+      "n": 0,
+      "win": 0,
+      "unknown": 0
+    },
+    "logs": [],
+    "signals": [],
+    "qualityScores": {
+      "rm": null,
+      "grounding": null,
+      "audit": null,
+      "presentation": null,
+      "overall": null,
+      "count": 0
+    },
+    "qualityHistory": [],
+    "weightedScore": null,
+    "scoreBreakdown": {
+      "winRate": null,
+      "rm": null,
+      "grounding": null,
+      "audit": null,
+      "presentation": null,
+      "overallQuality": null
+    },
+    "performanceHistory": [],
+    "modelName": "deepseek-v4-flash",
+    "modelProvider": "DEEPSEEK"
+  },
+  {
+    "agentId": "sentiment_analyst",
+    "name": "Sentiment Analyst",
+    "role": "Sentiment Analyst",
+    "avatar": "sentiment",
+    "rank": 4,
+    "winRate": 0.75,
+    "bull": {
+      "n": 11,
+      "win": 9,
+      "unknown": 0
+    },
+    "bear": {
+      "n": 1,
+      "win": 0,
+      "unknown": 0
+    },
+    "logs": [],
+    "signals": [
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-02-20",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "bear",
+        "date": "2024-02-20",
+        "is_correct": false
+      },
+      {
+        "ticker": "000858.SZ",
+        "signal": "neutral",
+        "date": "2024-02-20",
+        "is_correct": null
+      },
+      {
+        "ticker": "000333.SZ",
+        "signal": "neutral",
+        "date": "2024-02-20",
+        "is_correct": null
+      },
+      {
+        "ticker": "300750.SZ",
+        "signal": "neutral",
+        "date": "2024-02-20",
+        "is_correct": null
+      },
+      {
+        "ticker": "600030.SH",
+        "signal": "neutral",
+        "date": "2024-02-20",
+        "is_correct": null
+      },
+      {
+        "ticker": "601318.SH",
+        "signal": "neutral",
+        "date": "2024-02-20",
+        "is_correct": null
+      },
+      {
+        "ticker": "600276.SH",
+        "signal": "neutral",
+        "date": "2024-02-20",
+        "is_correct": null
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-02-21",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-02-21",
+        "is_correct": null
+      },
+      {
+        "ticker": "000858.SZ",
+        "signal": "bull",
+        "date": "2024-02-21",
+        "is_correct": true
+      },
+      {
+        "ticker": "000333.SZ",
+        "signal": "neutral",
+        "date": "2024-02-21",
+        "is_correct": null
+      },
+      {
+        "ticker": "300750.SZ",
+        "signal": "bull",
+        "date": "2024-02-21",
+        "is_correct": true
+      },
+      {
+        "ticker": "600030.SH",
+        "signal": "bull",
+        "date": "2024-02-21",
+        "is_correct": true
+      },
+      {
+        "ticker": "601318.SH",
+        "signal": "neutral",
+        "date": "2024-02-21",
+        "is_correct": null
+      },
+      {
+        "ticker": "600276.SH",
+        "signal": "bull",
+        "date": "2024-02-21",
+        "is_correct": true
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-02-22",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-02-22",
+        "is_correct": null
+      },
+      {
+        "ticker": "000858.SZ",
+        "signal": "bull",
+        "date": "2024-02-22",
+        "is_correct": true
+      },
+      {
+        "ticker": "000333.SZ",
+        "signal": "bull",
+        "date": "2024-02-22",
+        "is_correct": true
+      },
+      {
+        "ticker": "300750.SZ",
+        "signal": "neutral",
+        "date": "2024-02-22",
+        "is_correct": null
+      },
+      {
+        "ticker": "600030.SH",
+        "signal": "neutral",
+        "date": "2024-02-22",
+        "is_correct": null
+      },
+      {
+        "ticker": "601318.SH",
+        "signal": "neutral",
+        "date": "2024-02-22",
+        "is_correct": null
+      },
+      {
+        "ticker": "600276.SH",
+        "signal": "bull",
+        "date": "2024-02-22",
+        "is_correct": true
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "bull",
+        "date": "2024-02-23",
+        "is_correct": true
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-02-23",
+        "is_correct": null
+      },
+      {
+        "ticker": "000858.SZ",
+        "signal": "bull",
+        "date": "2024-02-23",
+        "is_correct": true
+      },
+      {
+        "ticker": "000333.SZ",
+        "signal": "bull",
+        "date": "2024-02-23",
+        "is_correct": false
+      },
+      {
+        "ticker": "300750.SZ",
+        "signal": "bull",
+        "date": "2024-02-23",
+        "is_correct": false
+      },
+      {
+        "ticker": "600030.SH",
+        "signal": "neutral",
+        "date": "2024-02-23",
+        "is_correct": null
+      },
+      {
+        "ticker": "601318.SH",
+        "signal": "neutral",
+        "date": "2024-02-23",
+        "is_correct": null
+      },
+      {
+        "ticker": "600276.SH",
+        "signal": "neutral",
+        "date": "2024-02-23",
+        "is_correct": null
+      }
+    ],
+    "qualityScores": {
+      "rm": 1.0,
+      "grounding": 0.45,
+      "audit": 0.565,
+      "presentation": 0.8125,
+      "overall": 0.7069,
+      "count": 4
+    },
+    "qualityHistory": [
+      {
+        "rm": 1.0,
+        "grounding": 0.5,
+        "audit": 0.625,
+        "presentation": 0.75,
+        "overall": 0.7188
+      },
+      {
+        "rm": 1.0,
+        "grounding": 0.5,
+        "audit": 0.625,
+        "presentation": 0.9,
+        "overall": 0.7562
+      },
+      {
+        "rm": 1.0,
+        "grounding": 0.3,
+        "audit": 0.385,
+        "presentation": 0.75,
+        "overall": 0.6088
+      },
+      {
+        "rm": 1.0,
+        "grounding": 0.5,
+        "audit": 0.625,
+        "presentation": 0.85,
+        "overall": 0.7438
+      }
+    ],
+    "weightedScore": 0.6706,
+    "scoreBreakdown": {
+      "winRate": 0.5,
+      "rm": 1.0,
+      "grounding": 0.5,
+      "audit": 0.625,
+      "presentation": 0.85,
+      "overallQuality": 0.7438
+    },
+    "performanceHistory": [
+      {
+        "date": "2024-02-20",
+        "win_rate": 0.0,
+        "rm": 1.0,
+        "grounding": 0.5,
+        "audit": 0.625,
+        "presentation": 0.75,
+        "overall_quality": 0.7188,
+        "weighted_score": 0.5031,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-02-21",
+        "win_rate": 1.0,
+        "rm": 1.0,
+        "grounding": 0.5,
+        "audit": 0.625,
+        "presentation": 0.9,
+        "overall_quality": 0.7562,
+        "weighted_score": 0.8294,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-02-22",
+        "win_rate": 1.0,
+        "rm": 1.0,
+        "grounding": 0.3,
+        "audit": 0.385,
+        "presentation": 0.75,
+        "overall_quality": 0.6088,
+        "weighted_score": 0.7261,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-02-23",
+        "win_rate": 0.5,
+        "rm": 1.0,
+        "grounding": 0.5,
+        "audit": 0.625,
+        "presentation": 0.85,
+        "overall_quality": 0.7438,
+        "weighted_score": 0.6706,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      }
+    ],
+    "modelName": "deepseek-v4-flash",
+    "modelProvider": "DEEPSEEK"
+  },
+  {
+    "agentId": "technical_analyst",
+    "name": "Technical Analyst",
+    "role": "Technical Analyst",
+    "avatar": "technical",
+    "rank": 3,
+    "winRate": 0.6818,
+    "bull": {
+      "n": 19,
+      "win": 15,
+      "unknown": 0
+    },
+    "bear": {
+      "n": 3,
+      "win": 0,
+      "unknown": 0
+    },
+    "logs": [],
+    "signals": [
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-02-20",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "bull",
+        "date": "2024-02-20",
+        "is_correct": true
+      },
+      {
+        "ticker": "000858.SZ",
+        "signal": "bull",
+        "date": "2024-02-20",
+        "is_correct": false
+      },
+      {
+        "ticker": "000333.SZ",
+        "signal": "bull",
+        "date": "2024-02-20",
+        "is_correct": true
+      },
+      {
+        "ticker": "300750.SZ",
+        "signal": "bull",
+        "date": "2024-02-20",
+        "is_correct": false
+      },
+      {
+        "ticker": "600030.SH",
+        "signal": "bull",
+        "date": "2024-02-20",
+        "is_correct": true
+      },
+      {
+        "ticker": "601318.SH",
+        "signal": "bull",
+        "date": "2024-02-20",
+        "is_correct": false
+      },
+      {
+        "ticker": "600276.SH",
+        "signal": "bull",
+        "date": "2024-02-20",
+        "is_correct": true
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "bull",
+        "date": "2024-02-21",
+        "is_correct": true
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-02-21",
+        "is_correct": null
+      },
+      {
+        "ticker": "000858.SZ",
+        "signal": "bull",
+        "date": "2024-02-21",
+        "is_correct": true
+      },
+      {
+        "ticker": "000333.SZ",
+        "signal": "neutral",
+        "date": "2024-02-21",
+        "is_correct": null
+      },
+      {
+        "ticker": "300750.SZ",
+        "signal": "bull",
+        "date": "2024-02-21",
+        "is_correct": true
+      },
+      {
+        "ticker": "600030.SH",
+        "signal": "bull",
+        "date": "2024-02-21",
+        "is_correct": true
+      },
+      {
+        "ticker": "601318.SH",
+        "signal": "bull",
+        "date": "2024-02-21",
+        "is_correct": true
+      },
+      {
+        "ticker": "600276.SH",
+        "signal": "neutral",
+        "date": "2024-02-21",
+        "is_correct": null
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "bull",
+        "date": "2024-02-22",
+        "is_correct": true
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "bear",
+        "date": "2024-02-22",
+        "is_correct": false
+      },
+      {
+        "ticker": "000858.SZ",
+        "signal": "bull",
+        "date": "2024-02-22",
+        "is_correct": true
+      },
+      {
+        "ticker": "000333.SZ",
+        "signal": "bear",
+        "date": "2024-02-22",
+        "is_correct": false
+      },
+      {
+        "ticker": "300750.SZ",
+        "signal": "neutral",
+        "date": "2024-02-22",
+        "is_correct": null
+      },
+      {
+        "ticker": "600030.SH",
+        "signal": "bull",
+        "date": "2024-02-22",
+        "is_correct": true
+      },
+      {
+        "ticker": "601318.SH",
+        "signal": "bear",
+        "date": "2024-02-22",
+        "is_correct": false
+      },
+      {
+        "ticker": "600276.SH",
+        "signal": "neutral",
+        "date": "2024-02-22",
+        "is_correct": null
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-02-23",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "bull",
+        "date": "2024-02-23",
+        "is_correct": true
+      },
+      {
+        "ticker": "000858.SZ",
+        "signal": "bull",
+        "date": "2024-02-23",
+        "is_correct": true
+      },
+      {
+        "ticker": "000333.SZ",
+        "signal": "neutral",
+        "date": "2024-02-23",
+        "is_correct": null
+      },
+      {
+        "ticker": "300750.SZ",
+        "signal": "neutral",
+        "date": "2024-02-23",
+        "is_correct": null
+      },
+      {
+        "ticker": "600030.SH",
+        "signal": "bull",
+        "date": "2024-02-23",
+        "is_correct": false
+      },
+      {
+        "ticker": "601318.SH",
+        "signal": "bull",
+        "date": "2024-02-23",
+        "is_correct": true
+      },
+      {
+        "ticker": "600276.SH",
+        "signal": "neutral",
+        "date": "2024-02-23",
+        "is_correct": null
+      }
+    ],
+    "qualityScores": {
+      "rm": 1.0,
+      "grounding": 0.65,
+      "audit": 0.6925,
+      "presentation": 0.75,
+      "overall": 0.7731,
+      "count": 4
+    },
+    "qualityHistory": [
+      {
+        "rm": 1.0,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.75,
+        "overall": 0.7731
+      },
+      {
+        "rm": 1.0,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.75,
+        "overall": 0.7731
+      },
+      {
+        "rm": 1.0,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.75,
+        "overall": 0.7731
+      },
+      {
+        "rm": 1.0,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.75,
+        "overall": 0.7731
+      }
+    ],
+    "weightedScore": 0.7662,
+    "scoreBreakdown": {
+      "winRate": 0.75,
+      "rm": 1.0,
+      "grounding": 0.65,
+      "audit": 0.6925,
+      "presentation": 0.75,
+      "overallQuality": 0.7731
+    },
+    "performanceHistory": [
+      {
+        "date": "2024-02-20",
+        "win_rate": 0.5714285714285714,
+        "rm": 1.0,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.75,
+        "overall_quality": 0.7731,
+        "weighted_score": 0.7126,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-02-21",
+        "win_rate": 1.0,
+        "rm": 1.0,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.75,
+        "overall_quality": 0.7731,
+        "weighted_score": 0.8412,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-02-22",
+        "win_rate": 0.5,
+        "rm": 1.0,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.75,
+        "overall_quality": 0.7731,
+        "weighted_score": 0.6912,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-02-23",
+        "win_rate": 0.75,
+        "rm": 1.0,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.75,
+        "overall_quality": 0.7731,
+        "weighted_score": 0.7662,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      }
+    ],
+    "modelName": "deepseek-v4-flash",
+    "modelProvider": "DEEPSEEK"
+  },
+  {
+    "agentId": "fundamentals_analyst",
+    "name": "Fundamentals Analyst",
+    "role": "Fundamentals Analyst",
+    "avatar": "fundamentals",
+    "rank": 1,
+    "winRate": 0.7059,
+    "bull": {
+      "n": 13,
+      "win": 11,
+      "unknown": 0
+    },
+    "bear": {
+      "n": 4,
+      "win": 1,
+      "unknown": 0
+    },
+    "logs": [],
+    "signals": [
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-02-20",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "bull",
+        "date": "2024-02-20",
+        "is_correct": true
+      },
+      {
+        "ticker": "000858.SZ",
+        "signal": "bull",
+        "date": "2024-02-20",
+        "is_correct": false
+      },
+      {
+        "ticker": "000333.SZ",
+        "signal": "neutral",
+        "date": "2024-02-20",
+        "is_correct": null
+      },
+      {
+        "ticker": "300750.SZ",
+        "signal": "neutral",
+        "date": "2024-02-20",
+        "is_correct": null
+      },
+      {
+        "ticker": "600030.SH",
+        "signal": "bull",
+        "date": "2024-02-20",
+        "is_correct": true
+      },
+      {
+        "ticker": "601318.SH",
+        "signal": "bear",
+        "date": "2024-02-20",
+        "is_correct": true
+      },
+      {
+        "ticker": "600276.SH",
+        "signal": "neutral",
+        "date": "2024-02-20",
+        "is_correct": null
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "bull",
+        "date": "2024-02-21",
+        "is_correct": true
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-02-21",
+        "is_correct": null
+      },
+      {
+        "ticker": "000858.SZ",
+        "signal": "bull",
+        "date": "2024-02-21",
+        "is_correct": true
+      },
+      {
+        "ticker": "000333.SZ",
+        "signal": "bull",
+        "date": "2024-02-21",
+        "is_correct": true
+      },
+      {
+        "ticker": "300750.SZ",
+        "signal": "bull",
+        "date": "2024-02-21",
+        "is_correct": true
+      },
+      {
+        "ticker": "600030.SH",
+        "signal": "bear",
+        "date": "2024-02-21",
+        "is_correct": false
+      },
+      {
+        "ticker": "601318.SH",
+        "signal": "neutral",
+        "date": "2024-02-21",
+        "is_correct": null
+      },
+      {
+        "ticker": "600276.SH",
+        "signal": "neutral",
+        "date": "2024-02-21",
+        "is_correct": null
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-02-22",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "bull",
+        "date": "2024-02-22",
+        "is_correct": true
+      },
+      {
+        "ticker": "000858.SZ",
+        "signal": "bull",
+        "date": "2024-02-22",
+        "is_correct": true
+      },
+      {
+        "ticker": "000333.SZ",
+        "signal": "bull",
+        "date": "2024-02-22",
+        "is_correct": true
+      },
+      {
+        "ticker": "300750.SZ",
+        "signal": "bull",
+        "date": "2024-02-22",
+        "is_correct": false
+      },
+      {
+        "ticker": "600030.SH",
+        "signal": "bear",
+        "date": "2024-02-22",
+        "is_correct": false
+      },
+      {
+        "ticker": "601318.SH",
+        "signal": "bear",
+        "date": "2024-02-22",
+        "is_correct": false
+      },
+      {
+        "ticker": "600276.SH",
+        "signal": "neutral",
+        "date": "2024-02-22",
+        "is_correct": null
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "bull",
+        "date": "2024-02-23",
+        "is_correct": true
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-02-23",
+        "is_correct": null
+      },
+      {
+        "ticker": "000858.SZ",
+        "signal": "bull",
+        "date": "2024-02-23",
+        "is_correct": true
+      },
+      {
+        "ticker": "000333.SZ",
+        "signal": "neutral",
+        "date": "2024-02-23",
+        "is_correct": null
+      },
+      {
+        "ticker": "300750.SZ",
+        "signal": "neutral",
+        "date": "2024-02-23",
+        "is_correct": null
+      },
+      {
+        "ticker": "600030.SH",
+        "signal": "neutral",
+        "date": "2024-02-23",
+        "is_correct": null
+      },
+      {
+        "ticker": "601318.SH",
+        "signal": "neutral",
+        "date": "2024-02-23",
+        "is_correct": null
+      },
+      {
+        "ticker": "600276.SH",
+        "signal": "neutral",
+        "date": "2024-02-23",
+        "is_correct": null
+      }
+    ],
+    "qualityScores": {
+      "rm": 1.0,
+      "grounding": 0.65,
+      "audit": 0.6925,
+      "presentation": 0.85,
+      "overall": 0.7982,
+      "count": 4
+    },
+    "qualityHistory": [
+      {
+        "rm": 1.0,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.9,
+        "overall": 0.8106
+      },
+      {
+        "rm": 1.0,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.85,
+        "overall": 0.7981
+      },
+      {
+        "rm": 1.0,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.75,
+        "overall": 0.7731
+      },
+      {
+        "rm": 1.0,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.9,
+        "overall": 0.8106
+      }
+    ],
+    "weightedScore": 0.8674,
+    "scoreBreakdown": {
+      "winRate": 1.0,
+      "rm": 1.0,
+      "grounding": 0.65,
+      "audit": 0.6925,
+      "presentation": 0.9,
+      "overallQuality": 0.8106
+    },
+    "performanceHistory": [
+      {
+        "date": "2024-02-20",
+        "win_rate": 0.75,
+        "rm": 1.0,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.9,
+        "overall_quality": 0.8106,
+        "weighted_score": 0.7924,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-02-21",
+        "win_rate": 0.8,
+        "rm": 1.0,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.85,
+        "overall_quality": 0.7981,
+        "weighted_score": 0.7987,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-02-22",
+        "win_rate": 0.5,
+        "rm": 1.0,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.75,
+        "overall_quality": 0.7731,
+        "weighted_score": 0.6912,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-02-23",
+        "win_rate": 1.0,
+        "rm": 1.0,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.9,
+        "overall_quality": 0.8106,
+        "weighted_score": 0.8674,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      }
+    ],
+    "modelName": "deepseek-v4-flash",
+    "modelProvider": "DEEPSEEK"
+  },
+  {
+    "agentId": "valuation_analyst",
+    "name": "Valuation Analyst",
+    "role": "Valuation Analyst",
+    "avatar": "valuation",
+    "rank": 2,
+    "winRate": 0.3333,
+    "bull": {
+      "n": 6,
+      "win": 3,
+      "unknown": 0
+    },
+    "bear": {
+      "n": 6,
+      "win": 1,
+      "unknown": 0
+    },
+    "logs": [],
+    "signals": [
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-02-20",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "bear",
+        "date": "2024-02-20",
+        "is_correct": false
+      },
+      {
+        "ticker": "000858.SZ",
+        "signal": "bull",
+        "date": "2024-02-20",
+        "is_correct": false
+      },
+      {
+        "ticker": "000333.SZ",
+        "signal": "bull",
+        "date": "2024-02-20",
+        "is_correct": true
+      },
+      {
+        "ticker": "300750.SZ",
+        "signal": "bull",
+        "date": "2024-02-20",
+        "is_correct": false
+      },
+      {
+        "ticker": "600030.SH",
+        "signal": "bear",
+        "date": "2024-02-20",
+        "is_correct": false
+      },
+      {
+        "ticker": "601318.SH",
+        "signal": "bull",
+        "date": "2024-02-20",
+        "is_correct": false
+      },
+      {
+        "ticker": "600276.SH",
+        "signal": "neutral",
+        "date": "2024-02-20",
+        "is_correct": null
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-02-21",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-02-21",
+        "is_correct": null
+      },
+      {
+        "ticker": "000858.SZ",
+        "signal": "neutral",
+        "date": "2024-02-21",
+        "is_correct": null
+      },
+      {
+        "ticker": "000333.SZ",
+        "signal": "neutral",
+        "date": "2024-02-21",
+        "is_correct": null
+      },
+      {
+        "ticker": "300750.SZ",
+        "signal": "bull",
+        "date": "2024-02-21",
+        "is_correct": true
+      },
+      {
+        "ticker": "600030.SH",
+        "signal": "bear",
+        "date": "2024-02-21",
+        "is_correct": false
+      },
+      {
+        "ticker": "601318.SH",
+        "signal": "bear",
+        "date": "2024-02-21",
+        "is_correct": false
+      },
+      {
+        "ticker": "600276.SH",
+        "signal": "neutral",
+        "date": "2024-02-21",
+        "is_correct": null
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-02-22",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-02-22",
+        "is_correct": null
+      },
+      {
+        "ticker": "000858.SZ",
+        "signal": "bull",
+        "date": "2024-02-22",
+        "is_correct": true
+      },
+      {
+        "ticker": "000333.SZ",
+        "signal": "neutral",
+        "date": "2024-02-22",
+        "is_correct": null
+      },
+      {
+        "ticker": "300750.SZ",
+        "signal": "neutral",
+        "date": "2024-02-22",
+        "is_correct": null
+      },
+      {
+        "ticker": "600030.SH",
+        "signal": "bear",
+        "date": "2024-02-22",
+        "is_correct": false
+      },
+      {
+        "ticker": "601318.SH",
+        "signal": "neutral",
+        "date": "2024-02-22",
+        "is_correct": null
+      },
+      {
+        "ticker": "600276.SH",
+        "signal": "neutral",
+        "date": "2024-02-22",
+        "is_correct": null
+      },
+      {
+        "ticker": "600519.SH",
+        "signal": "neutral",
+        "date": "2024-02-23",
+        "is_correct": null
+      },
+      {
+        "ticker": "601398.SH",
+        "signal": "neutral",
+        "date": "2024-02-23",
+        "is_correct": null
+      },
+      {
+        "ticker": "000858.SZ",
+        "signal": "neutral",
+        "date": "2024-02-23",
+        "is_correct": null
+      },
+      {
+        "ticker": "000333.SZ",
+        "signal": "neutral",
+        "date": "2024-02-23",
+        "is_correct": null
+      },
+      {
+        "ticker": "300750.SZ",
+        "signal": "neutral",
+        "date": "2024-02-23",
+        "is_correct": null
+      },
+      {
+        "ticker": "600030.SH",
+        "signal": "neutral",
+        "date": "2024-02-23",
+        "is_correct": null
+      },
+      {
+        "ticker": "601318.SH",
+        "signal": "neutral",
+        "date": "2024-02-23",
+        "is_correct": null
+      },
+      {
+        "ticker": "600276.SH",
+        "signal": "bear",
+        "date": "2024-02-23",
+        "is_correct": true
+      }
+    ],
+    "qualityScores": {
+      "rm": 0.9925,
+      "grounding": 0.65,
+      "audit": 0.6925,
+      "presentation": 0.75,
+      "overall": 0.7712,
+      "count": 4
+    },
+    "qualityHistory": [
+      {
+        "rm": 1.0,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.75,
+        "overall": 0.7731
+      },
+      {
+        "rm": 0.97,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.75,
+        "overall": 0.7656
+      },
+      {
+        "rm": 1.0,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.75,
+        "overall": 0.7731
+      },
+      {
+        "rm": 1.0,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.75,
+        "overall": 0.7731
+      }
+    ],
+    "weightedScore": 0.8412,
+    "scoreBreakdown": {
+      "winRate": 1.0,
+      "rm": 1.0,
+      "grounding": 0.65,
+      "audit": 0.6925,
+      "presentation": 0.75,
+      "overallQuality": 0.7731
+    },
+    "performanceHistory": [
+      {
+        "date": "2024-02-20",
+        "win_rate": 0.16666666666666666,
+        "rm": 1.0,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.75,
+        "overall_quality": 0.7731,
+        "weighted_score": 0.5912,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-02-21",
+        "win_rate": 0.3333333333333333,
+        "rm": 0.97,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.75,
+        "overall_quality": 0.7656,
+        "weighted_score": 0.6359,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-02-22",
+        "win_rate": 0.5,
+        "rm": 1.0,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.75,
+        "overall_quality": 0.7731,
+        "weighted_score": 0.6912,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      },
+      {
+        "date": "2024-02-23",
+        "win_rate": 1.0,
+        "rm": 1.0,
+        "grounding": 0.65,
+        "audit": 0.6925,
+        "presentation": 0.75,
+        "overall_quality": 0.7731,
+        "weighted_score": 0.8412,
+        "weights": {
+          "win_rate": 0.3,
+          "rm": 0.175,
+          "grounding": 0.175,
+          "audit": 0.175,
+          "presentation": 0.175
+        }
+      }
+    ],
+    "modelName": "deepseek-v4-flash",
+    "modelProvider": "DEEPSEEK"
+  }
+]

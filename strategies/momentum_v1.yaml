@@ -1,0 +1,45 @@
+strategy_id: momentum_v1
+description: "Momentum-based multi-agent analysis"
+universe: ["600519", "000858", "300750", "002415", "601318"]
+universe_mode: selector
+selector:
+  top_n: 8
+  lookback_days: 180
+  theme_lookback_days: 120
+  top_sectors: 8
+  report_lag_days: 90
+  require_financial: false
+  enable_regime_gating: true
+  regime_index: sh000001
+  weak_allowed_buckets:
+    - TECHNICAL_CANDIDATE
+  sideways_allowed_buckets:
+    - TECHNICAL_CANDIDATE
+  rebound_allowed_buckets:
+    - CORE_CANDIDATE
+    - ENTRY_SETUP_PULLBACK
+    - TECHNICAL_CANDIDATE
+  allowed_buckets:
+    - CORE_CANDIDATE
+    - ENTRY_SETUP_PULLBACK
+    - TACTICAL_CANDIDATE
+    - TECHNICAL_CANDIDATE
+lookback_days: 20
+rebalance_freq: daily
+risk_limits:
+  max_drawdown: 0.08
+  max_position_size: 0.30
+  max_correlation: 0.75
+agents:
+  - role: technical_analyst
+    model: qwen-plus
+  - role: fundamental_analyst
+    model: qwen-plus
+  - role: sentiment_analyst
+    model: qwen-plus
+  - role: macro_analyst
+    model: qwen-plus
+  - role: risk_manager
+    model: qwen-max
+  - role: portfolio_manager
+    model: qwen-max

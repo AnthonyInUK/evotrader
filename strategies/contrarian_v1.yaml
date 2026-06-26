@@ -1,0 +1,22 @@
+strategy_id: contrarian_v1
+description: "Contrarian multi-agent analysis with stricter drawdown control"
+universe: ["601398", "600036", "000333", "600276", "002594"]
+lookback_days: 60
+rebalance_freq: daily
+risk_limits:
+  max_drawdown: 0.05
+  max_position_size: 0.20
+  max_correlation: 0.65
+agents:
+  - role: technical_analyst
+    model: qwen-plus
+  - role: fundamental_analyst
+    model: qwen-plus
+  - role: sentiment_analyst
+    model: qwen-plus
+  - role: macro_analyst
+    model: qwen-plus
+  - role: risk_manager
+    model: qwen-max
+  - role: portfolio_manager
+    model: qwen-max

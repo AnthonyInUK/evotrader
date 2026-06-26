@@ -1,0 +1,38 @@
+[
+  {
+    "id": "t_20240515_000858.SZ_0",
+    "timestamp": 1715760000000,
+    "trading_date": "2024-05-15",
+    "side": "LONG",
+    "ticker": "000858.SZ",
+    "qty": 300,
+    "price": 136.26
+  },
+  {
+    "id": "t_20240515_600276.SH_1",
+    "timestamp": 1715760000000,
+    "trading_date": "2024-05-15",
+    "side": "LONG",
+    "ticker": "600276.SH",
+    "qty": 1000,
+    "price": 44.77
+  },
+  {
+    "id": "t_20240513_000858.SZ_0",
+    "timestamp": 1715587200000,
+    "trading_date": "2024-05-13",
+    "side": "LONG",
+    "ticker": "000858.SZ",
+    "qty": 500,
+    "price": 137.58
+  },
+  {
+    "id": "t_20240513_000333.SZ_1",
+    "timestamp": 1715587200000,
+    "trading_date": "2024-05-13",
+    "side": "LONG",
+    "ticker": "000333.SZ",
+    "qty": 1900,
+    "price": 65.27
+  }
+]

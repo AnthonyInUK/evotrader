@@ -1,0 +1,128 @@
+{
+  "week": 2,
+  "milestone": "Day 14 acceptance",
+  "toolkits": {
+    "fundamentals_analyst": {
+      "expected": [
+        "crawl_ths_finance",
+        "extract_entities_code"
+      ],
+      "actual": [
+        "analyze_efficiency_ratios",
+        "analyze_financial_health",
+        "analyze_growth",
+        "analyze_profitability",
+        "analyze_valuation_ratios",
+        "crawl_ths_finance",
+        "extract_entities_code"
+      ],
+      "missing": [],
+      "ok": true
+    },
+    "technical_analyst": {
+      "expected": [
+        "execute_code",
+        "extract_entities_code",
+        "history_calculate"
+      ],
+      "actual": [
+        "analyze_mean_reversion",
+        "analyze_momentum",
+        "analyze_trend_following",
+        "analyze_volatility",
+        "execute_code",
+        "extract_entities_code",
+        "history_calculate"
+      ],
+      "missing": [],
+      "ok": true
+    },
+    "sentiment_analyst": {
+      "expected": [
+        "crawl_ths_concept",
+        "crawl_ths_news",
+        "dashscope_search",
+        "extract_entities_code"
+      ],
+      "actual": [
+        "analyze_insider_trading",
+        "analyze_news_sentiment",
+        "crawl_ths_concept",
+        "crawl_ths_holder",
+        "crawl_ths_news",
+        "dashscope_search",
+        "extract_entities_code"
+      ],
+      "missing": [],
+      "ok": true
+    },
+    "risk_manager": {
+      "expected": [
+        "crawl_ths_event",
+        "crawl_ths_holder",
+        "crawl_ths_position"
+      ],
+      "actual": [
+        "crawl_ths_event",
+        "crawl_ths_holder",
+        "crawl_ths_position"
+      ],
+      "missing": [],
+      "ok": true
+    }
+  },
+  "tool_smokes": [
+    {
+      "tool": "crawl_ths_finance",
+      "ok": true,
+      "preview": "=== Finance Snapshot (2024-03-29) ===\n\n600519.SH:\n  Revenue Growth: 18.0%\n  Earnings Growth: 19.2%\n  ROE: 0.3%\n  Net Margin: 0.5%\n  Current Ratio: 4.62\n  Debt to Equity: 0.23\n  P/E: N/A\n  P/B: N/A\n"
+    },
+    {
+      "tool": "history_calculate",
+      "ok": true,
+      "preview": "=== Historical Indicator Snapshot (2024-03-29) ===\n\n300750.SZ: Insufficient price data\n"
+    },
+    {
+      "tool": "crawl_ths_news",
+      "ok": true,
+      "preview": "=== News Feed Snapshot (2024-03-29) ===\n\n600519.SH: [News Evidence] source=akshare, transport=no data\n  No recent news\n"
+    },
+    {
+      "tool": "analyze_news_sentiment",
+      "ok": true,
+      "preview": "=== News Analysis (2024-03-29) ===\n\n600519.SH - [News Evidence] source=akshare, transport=no data\n  No recent news\n"
+    },
+    {
+      "tool": "crawl_ths_position",
+      "ok": true,
+      "preview": "=== Portfolio Position Snapshot ===\n\nCash: 20,000.00\nMargin Used: 5,000.00\nEstimated Total Equity: 41,918.30\nPositions:\n  - 600519.SH: long=10, short=0, price=1596.58, mv=15,965.80, weight=38.1%\n  - 300750.SZ: long=5, short=0, price=190.50, mv=952.50, weight=2.3%\nLargest Position Weight: 600519.SH (38.1%)"
+    },
+    {
+      "tool": "crawl_ths_event",
+      "ok": true,
+      "preview": "=== Event Risk Snapshot (2024-03-29) ===\n\n600519.SH: [News Evidence] source=akshare, transport=no data\n  No recent event headlines\n"
+    }
+  ],
+  "tool_success_rate": 1.0,
+  "minimal_pipeline": {
+    "ok": true,
+    "result_keys": [
+      "analyst_results",
+      "executed_trades",
+      "pm_decisions",
+      "portfolio",
+      "risk_assessment",
+      "settlement_result"
+    ],
+    "pm_decisions": {
+      "600519.SH": {
+        "action": "hold",
+        "quantity": 0,
+        "confidence": 60,
+        "reasoning": "Neutral signal with no recent news or catalysts. No position currently held, and additional analysis is needed before making an investment decision."
+      }
+    },
+    "executed_trades": [],
+    "risk_assessment_preview": "{'agent': 'risk_manager', 'content': [{'type': 'text', 'text': 'The portfolio currently holds no open positions, with a cash balance of 100,000.00. There are no recent event headlines or risks identified for the ticker 600519.SH.\\n\\nRisk Score: 0'}]}"
+  }
+}

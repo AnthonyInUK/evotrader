@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>backtest_day21_refresh Backtest Report</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --ink: #132238;
+      --muted: #5e6b7a;
+      --line: #d7dfeb;
+      --accent: #2563eb;
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    .page {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 32px 24px 48px;
+    }
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    h1, h2 {
+      margin: 0;
+    }
+    h1 {
+      font-size: 34px;
+      letter-spacing: -0.03em;
+    }
+    h2 {
+      font-size: 20px;
+      margin-bottom: 14px;
+    }
+    .meta, .muted {
+      color: var(--muted);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    .metric-card, .panel {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(19, 34, 56, 0.05);
+    }
+    .metric-card {
+      padding: 18px 18px 16px;
+    }
+    .metric-label {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+    .metric-value {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.45fr 1fr;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+    .panel {
+      padding: 18px 20px;
+      overflow: hidden;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    th, td {
+      border-bottom: 1px solid var(--line);
+      padding: 10px 8px;
+      text-align: left;
+    }
+    th {
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 14px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      display: inline-block;
+    }
+    .equity-chart {
+      width: 100%;
+      background: linear-gradient(180deg, rgba(37,99,235,0.04), rgba(37,99,235,0));
+      border-radius: 12px;
+    }
+    @media (max-width: 900px) {
+      .grid, .two-col {
+        grid-template-columns: 1fr;
+      }
+      .hero {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="hero">
+      <div>
+        <div class="meta">Day 19-20 · Backtest Report</div>
+        <h1>backtest_day21_refresh</h1>
+        <div class="meta">区间 N/A - N/A</div>
+      </div>
+      <div class="meta">Generated at 2026-05-19 11:12:17</div>
+    </div>
+
+    <div class="grid"><div class="metric-card"><div class="metric-label">组合净值</div><div class="metric-value">100,000.00</div></div><div class="metric-card"><div class="metric-label">累计收益</div><div class="metric-value">0.00%</div></div><div class="metric-card"><div class="metric-label">年化收益</div><div class="metric-value">N/A</div></div><div class="metric-card"><div class="metric-label">Sharpe</div><div class="metric-value">N/A</div></div><div class="metric-card"><div class="metric-label">最大回撤</div><div class="metric-value">N/A</div></div><div class="metric-card"><div class="metric-label">Calmar</div><div class="metric-value">N/A</div></div><div class="metric-card"><div class="metric-label">交易日数</div><div class="metric-value">0</div></div><div class="metric-card"><div class="metric-label">总交易数</div><div class="metric-value">0</div></div></div>
+
+    <div class="panel" style="margin-bottom:18px;">
+      <h2>净值与基准曲线</h2>
+      <p class="muted">暂无净值曲线数据。</p>
+    </div>
+
+    <div class="two-col">
+      <div class="panel">
+        <h2>量化指标与基准对比</h2>
+        <table><thead><tr><th>Portfolio</th><th>Total Return</th><th>Annualized</th><th>Volatility</th><th>Sharpe</th><th>Max Drawdown</th><th>Calmar</th><th>Excess Return</th><th>Sharpe Spread</th></tr></thead><tbody><tr><td>Agent</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>—</td><td>—</td></tr><tr><td>Equal Weight</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>—</td><td>—</td></tr><tr><td>Market Cap Weighted</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>—</td><td>—</td></tr><tr><td>Momentum</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>—</td><td>—</td></tr></tbody></table>
+      </div>
+      <div class="panel">
+        <h2>当前持仓权重</h2>
+        <p class="muted">当前无持仓。</p>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="panel">
+        <h2>分析师排行榜</h2>
+        <table><thead><tr><th>Rank</th><th>Agent</th><th>Weighted</th><th>WinRate</th><th>RM</th><th>Grounding</th><th>Audit</th><th>Presentation</th></tr></thead><tbody><tr><td>0</td><td>Sentiment Analyst</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td></tr><tr><td>0</td><td>Technical Analyst</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td></tr><tr><td>0</td><td>Fundamentals Analyst</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td></tr><tr><td>0</td><td>Valuation Analyst</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td></tr></tbody></table>
+      </div>
+      <div class="panel">
+        <h2>最近交易</h2>
+        <p class="muted">暂无交易记录。</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

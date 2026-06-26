@@ -1,0 +1,53 @@
+services:
+  # ── Postgres：研究/信号/策略持久化 ──────────────────────────────────────────
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-evotraders}
+      POSTGRES_USER: ${POSTGRES_USER:-evotraders}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-evotraders}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    # 仅内部访问，不对外暴露端口（如需本地连库可临时打开）
+    expose:
+      - "5432"
+
+  # ── FastAPI REST API（研究/信号/策略接口）──────────────────────────────────
+  api:
+    build: .
+    depends_on:
+      - db
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-evotraders}:${POSTGRES_PASSWORD:-evotraders}@db:5432/${POSTGRES_DB:-evotraders}
+    expose:
+      - "8000"
+    command: uvicorn api.main:app --host 0.0.0.0 --port 8000
+
+  # ── WebSocket 网关（前端实时数据来源；默认 mock 模式，开箱即用无需 key）────────
+  gateway:
+    build: .
+    depends_on:
+      - db
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-evotraders}:${POSTGRES_PASSWORD:-evotraders}@db:5432/${POSTGRES_DB:-evotraders}
+    expose:
+      - "8765"
+    # mock 模式：用模拟行情驱动，不需要真实 API key、不动真钱，适合演示。
+    # 切真实数据：去掉 --mock，改 --mode backtest/live 并在 .env 配齐 key。
+    command: python -m backend.main --mode live --mock --host 0.0.0.0 --port 8765
+
+  # ── Nginx：单一入口（静态前端 + /api 反代 + /ws 反代）───────────────────────
+  frontend:
+    build: ./frontend
+    depends_on:
+      - api
+      - gateway
+    ports:
+      - "${WEB_PORT:-80}:80"
+
+volumes:
+  postgres_data:

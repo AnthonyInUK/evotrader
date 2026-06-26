@@ -1,0 +1,90 @@
+{
+  "baseline_state": {
+    "initialized": true,
+    "initial_allocation": {
+      "600519.SH": 155.40691747271055,
+      "601398.SH": 59808.61244019139
+    }
+  },
+  "baseline_vw_state": {
+    "initialized": true,
+    "initial_allocation": {
+      "600519.SH": 155.40691747271055,
+      "601398.SH": 59808.61244019139
+    }
+  },
+  "momentum_state": {
+    "positions": {
+      "600519.SH": 310.8138349454211
+    },
+    "cash": 0.0,
+    "initialized": true,
+    "last_rebalance_date": "2024-01-02"
+  },
+  "equity_history": [
+    {
+      "t": 1704096000000,
+      "v": 500000.0
+    },
+    {
+      "t": 1704182400000,
+      "v": 500000.0
+    }
+  ],
+  "baseline_history": [
+    {
+      "t": 1704096000000,
+      "v": 500000.0
+    },
+    {
+      "t": 1704182400000,
+      "v": 495937.43
+    }
+  ],
+  "baseline_vw_history": [
+    {
+      "t": 1704096000000,
+      "v": 500000.0
+    },
+    {
+      "t": 1704182400000,
+      "v": 495937.43
+    }
+  ],
+  "momentum_history": [
+    {
+      "t": 1704096000000,
+      "v": 500000.0
+    },
+    {
+      "t": 1704182400000,
+      "v": 490678.69
+    }
+  ],
+  "price_history": {
+    "600519.SH": [
+      {
+        "date": "2024-01-02",
+        "price": 1578.69
+      }
+    ],
+    "601398.SH": [
+      {
+        "date": "2024-01-02",
+        "price": 4.19
+      }
+    ]
+  },
+  "portfolio_state": {
+    "cash": 500000.0,
+    "positions": {},
+    "margin_used": 0.0
+  },
+  "all_trades": [],
+  "daily_position_history": {},
+  "last_prices": {
+    "600519.SH": 1578.69,
+    "601398.SH": 4.19
+  },
+  "last_update_date": "2024-01-02"
+}
