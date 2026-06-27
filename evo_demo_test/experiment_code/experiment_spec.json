@@ -1,0 +1,36 @@
+{
+  "experiment_id": "evo_demo_test",
+  "objective": "Evaluate fixed-indicator A-share multi-agent backtest behavior.",
+  "period": {
+    "start": "2025-03-17",
+    "end": "2025-03-31"
+  },
+  "variables": {
+    "tickers": [
+      "002668.SZ",
+      "605499.SH",
+      "002847.SZ",
+      "603338.SH",
+      "600377.SH",
+      "603119.SH",
+      "600642.SH",
+      "001328.SZ"
+    ],
+    "model_provider": "DEEPSEEK",
+    "model_name": "deepseek-chat",
+    "max_comm_cycles": "1",
+    "custom": null
+  },
+  "fixed_indicators": [
+    {
+      "indicator_id": "technical_trend_snapshot_v1",
+      "description": "Fixed trend snapshot: close, SMA20/SMA60, MACD, RSI14.",
+      "lookback_days": 120
+    },
+    {
+      "indicator_id": "technical_momentum_risk_v1",
+      "description": "Fixed momentum/risk snapshot: 5d/10d/20d returns and 20d volatility.",
+      "lookback_days": 120
+    }
+  ]
+}

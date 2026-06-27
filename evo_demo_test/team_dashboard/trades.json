@@ -1,0 +1,26 @@
+[
+  {
+    "date": "2025-03-31",
+    "ticker": "605499.SH",
+    "action": "short",
+    "quantity": 200,
+    "price": 177.5945856,
+    "pnl": -1624.67
+  },
+  {
+    "date": "2025-03-31",
+    "ticker": "603338.SH",
+    "action": "long",
+    "quantity": 300,
+    "price": 57.22062537,
+    "pnl": 164.24
+  },
+  {
+    "date": "2025-03-31",
+    "ticker": "600377.SH",
+    "action": "short",
+    "quantity": 200,
+    "price": 14.4586832,
+    "pnl": -63.83
+  }
+]

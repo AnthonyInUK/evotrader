@@ -66,7 +66,9 @@ class StorageService:
         self.server_state_file = self.state_dir / "server_state.json"
 
         # Feed history (for agent messages)
-        self.max_feed_history = 200
+        # 调大到 1000：两周(~10交易日)×~22事件/天 ≈ 220 条，200 上限会截掉前几天的
+        # agent 推理文字，导致 demo 回放缺失。1000 可容纳约 45 个交易日。
+        self.max_feed_history = 1000
 
         # File modification time cache (for change detection)
         self.file_mtimes: Dict[str, float] = {}

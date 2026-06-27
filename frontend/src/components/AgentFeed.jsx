@@ -1,8 +1,9 @@
-import React, { useState, useRef, useImperativeHandle, forwardRef } from 'react';
+import React, { useState, useRef, useImperativeHandle, forwardRef, useMemo } from 'react';
 import { formatTime } from '../utils/formatters';
 import { MESSAGE_COLORS, getAgentColors, AGENTS, ASSETS } from '../config/constants';
 import { getModelIcon } from '../utils/modelIcons';
 import MarkdownModal from './MarkdownModal';
+import PhaseProgressBar from './PhaseProgressBar';
 
 const isAnalyst = (agentId, agentName) => {
   if (agentId && agentId.includes('analyst')) return true;
@@ -40,6 +41,28 @@ const AgentFeed = forwardRef(({ feed, leaderboard }, ref) => {
   const [highlightedId, setHighlightedId] = useState(null);
   const [selectedAgent, setSelectedAgent] = useState('all');
   const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  // Derive current phase and date from the most recent day's events
+  const { activePhaseId, completedPhaseIds, currentDate } = useMemo(() => {
+    // feed is newest-first; find latest day_start to get currentDate
+    let date = null;
+    let activePhase = null;
+    const done = new Set();
+    for (const item of feed) {
+      if (item.type === 'message' && item.data?.role === 'Phase') {
+        const d = item.data;
+        if (!date) date = null; // will be set below
+        if (d.isPhaseEnd) done.add(d.phaseId);
+        else if (!activePhase) activePhase = d.phaseId;
+      }
+      if (item.type === 'message' && item.data?.agent === 'System' && !date) {
+        // day_start content looks like "Trading Day · 2025-03-12"
+        const m = (item.data?.content || '').match(/(\d{4}-\d{2}-\d{2})/);
+        if (m) date = m[1];
+      }
+    }
+    return { activePhaseId: activePhase, completedPhaseIds: done, currentDate: date };
+  }, [feed]);
 
   const getAgentModelInfo = (agentId) => {
     if (!leaderboard || !agentId) return { modelName: null, modelProvider: null };
@@ -175,7 +198,12 @@ const AgentFeed = forwardRef(({ feed, leaderboard }, ref) => {
   const currentSelection = getCurrentSelectionInfo();
 
   return (
-    <div className="agent-feed">
+    <div className="agent-feed" style={{ display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+      <PhaseProgressBar
+        activePhaseId={activePhaseId}
+        completedPhaseIds={completedPhaseIds}
+        currentDate={currentDate}
+      />
       <div className="agent-feed-header">
         <h3 className="agent-feed-title">ACTIVITY FEED</h3>
         <div className="agent-filter-wrapper">
@@ -252,6 +280,14 @@ const AgentFeed = forwardRef(({ feed, leaderboard }, ref) => {
             return <ConferenceItem key={`${item.id}-${selectedAgent}`} conference={item.data} itemId={item.id} isHighlighted={isHighlighted} getAgentModelInfo={getAgentModelInfo} />;
           } else if (item.type === 'memory') {
             return <MemoryItem key={item.id} memory={item.data} itemId={item.id} isHighlighted={isHighlighted} />;
+          } else if (item.data?.role === 'Phase') {
+            return item.data.isPhaseEnd ? null : (
+              <PhaseItem key={item.id} data={item.data} itemId={item.id} />
+            );
+          } else if (item.data?.role === 'Trade') {
+            return <TradeItem key={item.id} data={item.data} itemId={item.id} />;
+          } else if (item.data?.role === 'Settlement') {
+            return <SettlementItem key={item.id} data={item.data} itemId={item.id} />;
           } else if (item.data?.agent === 'System') {
             return <SystemDivider key={item.id} message={item.data} itemId={item.id} />;
           } else {
@@ -266,6 +302,64 @@ const AgentFeed = forwardRef(({ feed, leaderboard }, ref) => {
 AgentFeed.displayName = 'AgentFeed';
 
 export default AgentFeed;
+
+const PHASE_ICONS = { p0:'🧹', p1a:'🔍', p1b:'🛡️', p2a:'💬', p3:'⚖️', p5:'📊' };
+
+function PhaseItem({ data, itemId }) {
+  return (
+    <div id={`feed-item-${itemId}`} style={{
+      display: 'flex', alignItems: 'center', padding: '10px 16px', gap: 10,
+    }}>
+      <div style={{ flex: 1, height: 1, background: '#e0e0e0' }} />
+      <div style={{
+        display: 'flex', alignItems: 'center', gap: 6,
+        background: '#1a1a2e', borderRadius: 20, padding: '4px 12px',
+        fontSize: 11, color: '#fff', fontFamily: 'monospace', fontWeight: 700,
+        letterSpacing: '0.5px',
+      }}>
+        <span>{PHASE_ICONS[data.phaseId] || '▶'}</span>
+        <span>{data.phaseLabel || data.content}</span>
+      </div>
+      <div style={{ flex: 1, height: 1, background: '#e0e0e0' }} />
+    </div>
+  );
+}
+
+function TradeItem({ data, itemId }) {
+  const isLong = (data.action || '').toUpperCase() === 'LONG';
+  const color = isLong ? '#2e7d32' : '#c62828';
+  return (
+    <div id={`feed-item-${itemId}`} style={{
+      margin: '2px 16px', padding: '8px 12px', borderRadius: 6,
+      background: isLong ? '#e8f5e9' : '#fce4ec',
+      border: `1px solid ${isLong ? '#a5d6a7' : '#f48fb1'}`,
+      display: 'flex', alignItems: 'center', gap: 10, fontSize: 12,
+    }}>
+      <span style={{ fontSize: 16 }}>{isLong ? '📈' : '📉'}</span>
+      <span style={{ fontWeight: 700, color, fontFamily: 'monospace' }}>
+        {data.action} {data.quantity} × {data.ticker}
+      </span>
+      <span style={{ color: '#666' }}>@ ¥{Number(data.price || 0).toFixed(2)}</span>
+    </div>
+  );
+}
+
+function SettlementItem({ data, itemId }) {
+  return (
+    <div id={`feed-item-${itemId}`} className="feed-item" style={{
+      background: 'linear-gradient(135deg, #f0f4ff 0%, #fff8f0 100%)',
+      border: '1px solid #c5cae9',
+    }}>
+      <div className="feed-item-header">
+        <span className="feed-item-title" style={{ color: '#3949ab' }}>📊 SETTLEMENT</span>
+        <span className="feed-item-time">{formatTime(data.timestamp)}</span>
+      </div>
+      <div className="feed-item-content" style={{ whiteSpace: 'pre-line', fontFamily: 'monospace', fontSize: 12 }}>
+        {data.content}
+      </div>
+    </div>
+  );
+}
 
 function SystemDivider({ message, itemId }) {
   const content = String(message.content || '');

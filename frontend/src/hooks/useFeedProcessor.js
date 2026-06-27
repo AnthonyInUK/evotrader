@@ -53,6 +53,42 @@ const eventToMessage = (evt) => {
       content: evt.content || `${evt.type}: ${evt.date || ""}`
     };
 
+  case "phase_start":
+  case "phase_end":
+    return {
+      id: generateId("phase"),
+      timestamp,
+      agent: "System",
+      role: "Phase",
+      phaseId: evt.phaseId,
+      phaseLabel: evt.label,
+      phaseDesc: evt.desc,
+      isPhaseEnd: evt.type === "phase_end",
+      content: evt.label || evt.phaseId
+    };
+
+  case "trade_executed":
+    return {
+      id: generateId("trade"),
+      timestamp,
+      agent: "System",
+      role: "Trade",
+      ticker: evt.ticker,
+      action: evt.action,
+      quantity: evt.quantity,
+      price: evt.price,
+      content: evt.content || `${evt.action} ${evt.ticker}`
+    };
+
+  case "settlement":
+    return {
+      id: generateId("settlement"),
+      timestamp,
+      agent: "System",
+      role: "Settlement",
+      content: evt.content || "Settlement complete"
+    };
+
   default:
     return null;
   }
@@ -272,7 +308,11 @@ export function useFeedProcessor() {
     }
 
     // Handle other feed events (agent_message, memory, system, etc.)
-    const feedEventTypes = ["agent_message", "memory", "system", "day_start", "day_complete", "day_error"];
+    const feedEventTypes = [
+      "agent_message", "memory", "system",
+      "day_start", "day_complete", "day_error",
+      "phase_start", "phase_end", "trade_executed", "settlement"
+    ];
     if (!feedEventTypes.includes(evt.type)) {
       return null;
     }

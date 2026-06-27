@@ -133,20 +133,52 @@ export default function LiveTradingApp() {
 
         // 逐条回放：按时间间隔把事件喂给 processFeedEvent，营造"会议消息一条条出现"的效果，
         // 而非一次性全渲染。结构事件(day_start/conference_start/end)与发言共用同一节奏。
+        // 按事件类型给不同停留时间：发言停久（够读完），结构事件快速带过
+        const delayFor = (evt) => {
+          switch (evt.type) {
+            case 'agent_message':       return 3400;  // 分析师/PM 发言：留足阅读时间
+            case 'conference_message':  return 3000;  // 会议发言
+            case 'trade_executed':      return 1800;  // 成交动画
+            case 'settlement':          return 2200;  // 结算
+            case 'phase_start':         return 900;   // 让 Phase 横幅先亮一下
+            case 'day_start':           return 700;
+            default:                    return 250;   // phase_end / conference_start/end / day_complete
+          }
+        };
+
         let i = 0;
-        const STEP_MS = 350;
-        replayTimer = setInterval(() => {
+        const playNext = () => {
           if (cancelled || liveFeedLoadedRef.current || i >= events.length) {
-            clearInterval(replayTimer);
             replayTimer = null;
             if (!cancelled && !liveFeedLoadedRef.current) {
               setSystemStatus('completed');
             }
             return;
           }
-          processFeedEvent(events[i]);
+          const evt = events[i];
+          // 跟踪当前交易日（供顶部日期横幅）
+          if (evt.type === 'day_start' && evt.date) {
+            setCurrentDate(evt.date);
+          }
+          // 发言事件驱动底部字幕条（一次只一个发言者，用交易日时间戳便于推断日期）
+          if (evt.type === 'agent_message' || evt.type === 'conference_message') {
+            const agent = AGENTS.find(a => a.id === evt.agentId);
+            setBubbles({
+              [evt.agentId]: {
+                text: evt.content,
+                ts: evt.timestamp || Date.now(),
+                timestamp: evt.timestamp,
+                phase: evt.phase,
+                agentName: agent?.name || evt.agentName || evt.agentId
+              }
+            });
+          }
+          processFeedEvent(evt);
+          const d = delayFor(evt);
           i += 1;
-        }, STEP_MS);
+          replayTimer = setTimeout(playNext, d);
+        };
+        replayTimer = setTimeout(playNext, 400);
 
         console.log(`▶️ Replaying ${events.length} offline feed events one-by-one`);
       })
@@ -195,7 +227,7 @@ export default function LiveTradingApp() {
     return () => {
       cancelled = true;
       if (replayTimer) {
-        clearInterval(replayTimer);
+        clearTimeout(replayTimer);
       }
     };
   }, [processFeedEvent]);
@@ -1089,6 +1121,7 @@ export default function LiveTradingApp() {
                       leaderboard={leaderboard}
                       feed={feed}
                       onJumpToMessage={handleJumpToMessage}
+                      currentDate={currentDate}
                     />
                   </div>
 

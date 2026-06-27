@@ -651,6 +651,141 @@ export default function GlobalStyles() {
         position: relative;
       }
 
+      /* 顶部日期横幅 */
+      .room-date-banner {
+        position: absolute;
+        top: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 30;
+        background: rgba(20, 22, 28, 0.85);
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        padding: 6px 18px;
+        border-radius: 999px;
+        backdrop-filter: blur(6px);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.18);
+      }
+
+      /* 底部字幕条 */
+      .room-subtitle-bar {
+        position: absolute;
+        bottom: 24px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 30;
+        width: min(760px, 90%);
+        display: flex;
+        gap: 14px;
+        align-items: flex-start;
+        background: rgba(20, 22, 28, 0.92);
+        color: #f5f5f7;
+        padding: 14px 18px;
+        border-radius: 14px;
+        box-shadow: 0 6px 24px rgba(0,0,0,0.28);
+        cursor: pointer;
+        animation: subtitleIn 0.3s ease-out;
+      }
+      @keyframes subtitleIn {
+        from { opacity: 0; transform: translate(-50%, 12px); }
+        to   { opacity: 1; transform: translate(-50%, 0); }
+      }
+      .room-subtitle-avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 10px;
+        object-fit: cover;
+        flex-shrink: 0;
+        border: 2px solid rgba(255,255,255,0.25);
+      }
+      .room-subtitle-body { flex: 1; min-width: 0; }
+      .room-subtitle-head {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 4px;
+      }
+      .room-subtitle-model {
+        width: 18px; height: 18px; border-radius: 50%;
+        object-fit: contain; background: #fff; padding: 1px;
+      }
+      .room-subtitle-name {
+        font-weight: 700;
+        font-size: 14px;
+        color: #fff;
+      }
+      .room-subtitle-date {
+        font-size: 12px;
+        color: #aab;
+        background: rgba(255,255,255,0.08);
+        padding: 1px 8px;
+        border-radius: 999px;
+      }
+      .room-subtitle-text {
+        font-size: 14px;
+        line-height: 1.55;
+        color: #e8e8ec;
+        max-height: 110px;
+        overflow-y: auto;
+        white-space: pre-wrap;
+        word-break: break-word;
+      }
+
+      /* PM 决策：字幕条高亮 + 举手特效 */
+      .room-subtitle-bar.deciding {
+        background: linear-gradient(135deg, rgba(40,32,16,0.95), rgba(60,44,18,0.95));
+        box-shadow: 0 0 0 2px rgba(255,193,71,0.55), 0 6px 28px rgba(0,0,0,0.32);
+      }
+      .pm-decide-badge {
+        position: absolute;
+        top: -34px;
+        left: 18px;
+        background: #ffc147;
+        color: #2a2208;
+        font-weight: 700;
+        font-size: 13px;
+        padding: 5px 14px;
+        border-radius: 999px;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.28);
+        animation: raiseHandIn 0.35s ease-out;
+      }
+      @keyframes raiseHandIn {
+        from { opacity: 0; transform: translateY(10px) scale(0.9); }
+        to   { opacity: 1; transform: translateY(0) scale(1); }
+      }
+
+      /* PM 手部：前臂+手 裁剪块，绕手肘（左下）轻摆，模拟手在动 */
+      .pm-hand {
+        position: absolute;
+        z-index: 23;
+        pointer-events: none;
+        transform-origin: 5% 50%;    /* 支点在最左（手腕侧）：左边几乎不动，右边的手在摆 */
+        animation: handSwing 1.1s ease-in-out infinite;
+        will-change: transform;
+      }
+      @keyframes handSwing {
+        0%   { transform: rotate(0deg); }
+        50%  { transform: rotate(5deg); }
+        100% { transform: rotate(0deg); }
+      }
+
+      /* 房间里当前发言者头顶的讨论气泡 💬 */
+      .seat-gesture {
+        position: absolute;
+        transform: translateX(-50%);
+        font-size: 26px;
+        z-index: 25;
+        pointer-events: none;
+        filter: drop-shadow(0 2px 3px rgba(0,0,0,0.35));
+        animation: gestureBob 1s ease-in-out infinite;
+      }
+      @keyframes gestureBob {
+        0%, 100% { transform: translateX(-50%) translateY(0); }
+        50%      { transform: translateX(-50%) translateY(-7px); }
+      }
+
       .room-scene {
         position: relative;
         display: flex;
@@ -814,9 +949,8 @@ export default function GlobalStyles() {
       /* Replay Button Container */
       .replay-button-container {
         position: absolute;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
+        bottom: 12px;
+        right: 16px;
         z-index: 100;
       }
 

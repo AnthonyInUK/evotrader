@@ -54,12 +54,12 @@ export const SCENE_NATIVE = { width: 1248, height: 832 };
 // Agent seat positions (percentage relative to image, origin at bottom-left)
 // Format: { x: horizontal %, y: vertical % from bottom }
 export const AGENT_SEATS = [
-  { x: 0.44, y: 0.58 },  // portfolio_manager
-  { x: 0.55, y: 0.58 },  // risk_manager
-  { x: 0.33, y: 0.52 },  // valuation_analyst
-  { x: 0.42, y: 0.42 },  // sentiment_analyst
-  { x: 0.56, y: 0.42 },  // fundamentals_analyst
-  { x: 0.61, y: 0.49 },  // technical_analyst
+  { x: 0.44, y: 0.40 },  // portfolio_manager  — 后排左（打手势者）
+  { x: 0.56, y: 0.40 },  // risk_manager       — 后排右
+  { x: 0.37, y: 0.31 },  // valuation_analyst  — 左侧
+  { x: 0.44, y: 0.23 },  // sentiment_analyst  — 前排左
+  { x: 0.55, y: 0.20 },  // fundamentals_analyst — 前排右
+  { x: 0.63, y: 0.30 },  // technical_analyst  — 右侧
 ];
 
 // Agent definitions with subtle color schemes (very light backgrounds)

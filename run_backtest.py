@@ -58,6 +58,7 @@ from backend.config.env_config import get_env_float, get_env_list, get_env_int
 from backend.llm.models import get_agent_formatter, get_agent_model
 from backend.utils.settlement import SettlementCoordinator
 from backend.services.storage import StorageService
+from backend.core.state_sync import StateSync
 from backend.main import create_local_toolkit
 
 logging.basicConfig(level=logging.WARNING)
@@ -303,6 +304,7 @@ async def run(
     # --reset: 清除所有磁盘状态，从全新组合开始
     if reset:
         storage.save_internal_state({})  # 清空 settlement 的持久化状态
+        storage.save_file("trades", [])  # 清空成交记录，避免重复跑累积
     else:
         portfolio_state = storage.load_portfolio_state()
         pm.load_portfolio_state(portfolio_state)
@@ -320,10 +322,20 @@ async def run(
         await _ltm_stack.enter_async_context(_ltm)
     # ──────────────────────────────────────────────────────────────────────────
 
+    # StateSync: 把每个 agent 的完整推理文字保存到 state/server_state.json
+    # broadcast_fn=None 表示只写文件、不推 WebSocket（回测模式不需要实时推送）
+    state_sync = StateSync(storage=storage, broadcast_fn=None)
+    state_sync.load_state()
+    if reset:
+        # --reset 时清空旧 feed_history，避免重复跑累积上次的脏数据
+        state_sync.update_state("feed_history", [])
+        state_sync.save_state()
+
     pipeline = TradingPipeline(
         analysts=analysts,
         risk_manager=risk_manager,
         portfolio_manager=pm,
+        state_sync=state_sync,
         settlement_coordinator=settlement,
         max_comm_cycles=get_env_int("MAX_COMM_CYCLES", 1),
         config_name=config_name,
@@ -410,12 +422,18 @@ async def run(
         print(f"\n📅 {date}")
         print(f"   开盘: {_format_price_map(open_prices)}")
 
+        # 标记当日开始：设置 simulation_date（让 feed 时间戳=交易日）+ 发出 day_start
+        await state_sync.on_cycle_start(date)
+
         result = await pipeline.run_cycle(
             tickers=valid_tickers,
             date=date,
             prices=open_prices,
             close_prices=close_prices,
         )
+
+        # 标记当日结束：发出 day_complete，供 demo 按天分组
+        await state_sync.on_cycle_end(date)
 
         # 打印 PM 决策（今日操作）+ 实际持仓
         decisions = result.get("pm_decisions", {})
@@ -437,6 +455,28 @@ async def run(
         trades = result.get("executed_trades", [])
         if trades:
             print(f"   💰 执行: {[(t['ticker'], t['action'], t['quantity']) for t in trades]}")
+            # 累积写入 trades.json（带交易日 + 当日收盘价算的 P&L），供 demo 展示成交动画
+            _existing_trades = storage.load_file("trades") or []
+            for _t in trades:
+                _tk = _t["ticker"]
+                _entry = _t["price"]
+                _exit = close_prices.get(_tk, _entry)
+                _qty = _t["quantity"]
+                if _t["action"] == "long":
+                    _pnl = (_exit - _entry) * _qty
+                elif _t["action"] == "short":
+                    _pnl = (_entry - _exit) * _qty
+                else:
+                    _pnl = 0.0
+                _existing_trades.append({
+                    "date": date,
+                    "ticker": _tk,
+                    "action": _t["action"],
+                    "quantity": _qty,
+                    "price": _entry,
+                    "pnl": round(_pnl, 2),
+                })
+            storage.save_file("trades", _existing_trades)
 
         # 打印当日结束后的组合状态
         portfolio = result.get("portfolio", {})

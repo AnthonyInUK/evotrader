@@ -41,13 +41,33 @@ function getRankMedal(rank) {
   return null;
 }
 
+// PM（打手势者，index 0）前臂+手 区域——锚定到座位[0]（跨缩放稳定）：
+//   dx：框左边相对座位x的水平偏移（手在头右侧）；dyPx：框底相对座位点的像素偏移；w/h：框宽高（场景比例）
+const PM_HAND = { dx: 0.022, dyPx: 58, w: 0.042, h: 0.065 };
+
+/**
+ * 从气泡的时间戳推断交易日（demo 的时间戳是交易日的毫秒数）。
+ */
+function deriveDate(bubble) {
+  if (!bubble) return null;
+  if (bubble.date) return bubble.date;
+  const ts = bubble.timestamp ?? bubble.ts;
+  if (typeof ts === 'number' && ts > 1e9) {
+    return new Date(ts).toISOString().slice(0, 10);
+  }
+  if (typeof ts === 'string' && ts.length >= 10) {
+    return ts.slice(0, 10);
+  }
+  return null;
+}
+
 /**
  * Room View Component
  * Displays the conference room with agents, speech bubbles, and agent cards
  * Supports click and hover (1.5s) to show agent performance cards
  * Supports replay mode - completely independent from live mode
  */
-export default function RoomView({ bubbles, bubbleFor, leaderboard, feed, onJumpToMessage }) {
+export default function RoomView({ bubbles, bubbleFor, leaderboard, feed, onJumpToMessage, currentDate }) {
   const canvasRef = useRef(null);
   const containerRef = useRef(null);
 
@@ -364,8 +384,8 @@ export default function RoomView({ bubbles, bubbleFor, leaderboard, feed, onJump
     const msg = messages[currentIndex];
     const bubbleId = `replay_${msg.agentId}_${currentIndex}`;
 
-    setReplayBubbles(prev => ({
-      ...prev,
+    // 字幕条模式：一次只保留一个发言者，避免重叠
+    setReplayBubbles({
       [bubbleId]: {
         id: bubbleId,
         feedItemId: msg.feedItemId,
@@ -373,19 +393,10 @@ export default function RoomView({ bubbles, bubbleFor, leaderboard, feed, onJump
         agentName: msg.agentName,
         text: msg.content,
         timestamp: msg.timestamp,
-        ts: msg.timestamp
+        ts: msg.timestamp,
+        date: deriveDate({ timestamp: msg.timestamp })
       }
-    }));
-
-    // Remove bubble after 10 seconds (previously 5s) to keep replay text visible longer
-    const hideTimeout = setTimeout(() => {
-      setReplayBubbles(prev => {
-        const newBubbles = { ...prev };
-        delete newBubbles[bubbleId];
-        return newBubbles;
-      });
-    }, 10000);
-    replayTimeoutsRef.current.push(hideTimeout);
+    });
 
     // Schedule next message
     replayStateRef.current.currentIndex = currentIndex + 1;
@@ -481,6 +492,28 @@ export default function RoomView({ bubbles, bubbleFor, leaderboard, feed, onJump
     }
   }, [isReplaying, replayBubbles, bubbleFor]);
 
+  // 字幕条：在所有 agent 里挑出"最新发言者"，一次只显示一个，彻底避免重叠
+  const activeSpeaker = useMemo(() => {
+    let best = null;
+    for (const agent of AGENTS) {
+      const bubble = getBubbleForAgent(agent.name);
+      if (!bubble) continue;
+      const ts = bubble.ts ?? bubble.timestamp ?? 0;
+      if (!best || ts >= best.ts) {
+        best = { agent, bubble, ts };
+      }
+    }
+    return best;
+  }, [getBubbleForAgent, bubbles, replayBubbles, isReplaying]);
+
+  // 顶部横幅日期：优先用当前发言气泡推断的交易日，回退到外部 currentDate
+  const bannerDate = (activeSpeaker && deriveDate(activeSpeaker.bubble)) || currentDate || null;
+
+  // PM 正在 Phase 3 拍板决策 → 触发"举手"动画
+  const pmDeciding =
+    activeSpeaker?.agent?.id === 'portfolio_manager' &&
+    activeSpeaker?.bubble?.phase === 'p3';
+
   return (
     <div className="room-view">
       {/* Agents Indicator Bar */}
@@ -557,113 +590,89 @@ export default function RoomView({ bubbles, bubbleFor, leaderboard, feed, onJump
 
       {/* Room Canvas */}
       <div className="room-canvas-container" ref={containerRef}>
+        {/* 顶部日期横幅：始终显示当前交易日 */}
+        {bannerDate && (
+          <div className="room-date-banner">
+            📅 交易日 {bannerDate}
+          </div>
+        )}
+
         <div className="room-scene">
           <div className="room-scene-wrapper" style={{ width: Math.round(SCENE_NATIVE.width * scale), height: Math.round(SCENE_NATIVE.height * scale) }}>
             <canvas ref={canvasRef} className="room-canvas" />
 
-            {/* Speech Bubbles */}
-            {AGENTS.map((agent, idx) => {
-              const bubble = getBubbleForAgent(agent.name);
-              if (!bubble) return null;
-
-              const bubbleKey = `${agent.id}_${bubble.timestamp || bubble.id || bubble.ts}`;
-
-              // Check if bubble is hidden
-              if (hiddenBubbles[bubbleKey]) return null;
-
-              const pos = AGENT_SEATS[idx];
-              const scaledWidth = SCENE_NATIVE.width * scale;
-              const scaledHeight = SCENE_NATIVE.height * scale;
-
-              // Bubble left-bottom corner aligns to agent position
-              const left = Math.round(pos.x * scaledWidth);
-              const bottom = Math.round(pos.y * scaledHeight);
-
-              // Get agent data for model info
-              const agentData = getAgentData(agent.id);
-              const modelInfo = getModelIcon(agentData?.modelName, agentData?.modelProvider);
-
-              // Truncate long text - 200 collapsed, 500 expanded max
-              const maxLength = 200;
-              const maxExpandedLength = 500;
-              const isTruncated = bubble.text.length > maxLength;
-              const isExpanded = expandedBubbles[bubbleKey];
-              const displayText = (!isExpanded && isTruncated)
-                ? bubble.text.substring(0, maxLength) + '...'
-                : (isExpanded && bubble.text.length > maxExpandedLength)
-                  ? bubble.text.substring(0, maxExpandedLength) + '...'
-                  : bubble.text;
-
-              const toggleExpand = (e) => {
-                e.stopPropagation();
-                setExpandedBubbles(prev => ({
-                  ...prev,
-                  [bubbleKey]: !prev[bubbleKey]
-                }));
-              };
-
-              const handleJumpToFeed = (e) => {
-                e.stopPropagation();
-                if (onJumpToMessage) {
-                  onJumpToMessage(bubble);
-                }
-              };
-
+            {/* PM 手部摆动：把 PM 前臂+手 这一小块裁出来，绕手腕轻摆，逼近"手在动" */}
+            {activeSpeaker?.agent?.id === 'portfolio_manager' && roomBgSrc && AGENT_SEATS[0] && (() => {
+              const seat0 = AGENT_SEATS[0];
+              const sw = SCENE_NATIVE.width * scale;
+              const sh = SCENE_NATIVE.height * scale;
+              const left = Math.round((seat0.x + PM_HAND.dx) * sw);
+              const bottom = Math.round(seat0.y * sh + PM_HAND.dyPx);
+              const width = Math.round(PM_HAND.w * sw);
+              const height = Math.round(PM_HAND.h * sh);
+              const topFromTop = sh - bottom - height;
               return (
                 <div
-                  key={agent.id}
-                  className="room-bubble"
-                  style={{ left, bottom }}
-                >
-                  {/* Action buttons */}
-                  <div className="bubble-action-buttons">
-                    <button
-                      className="bubble-jump-btn"
-                      onClick={handleJumpToFeed}
-                      title="Jump to message in feed"
-                    >
-                      ↗
-                    </button>
-                    <button
-                      className="bubble-close-btn"
-                      onClick={(e) => handleCloseBubble(agent.id, bubbleKey, e)}
-                      title="Close bubble"
-                    >
-                      ×
-                    </button>
-                  </div>
+                  className="pm-hand"
+                  style={{
+                    left, bottom, width, height,
+                    backgroundImage: `url(${roomBgSrc})`,
+                    backgroundSize: `${Math.round(sw)}px ${Math.round(sh)}px`,
+                    backgroundPosition: `${-left}px ${-Math.round(topFromTop)}px`,
+                    backgroundRepeat: 'no-repeat',
+                  }}
+                />
+              );
+            })()}
 
-                  {/* Agent header with model icon */}
-                  <div className="room-bubble-header">
-                    {modelInfo.logoPath && (
-                      <img
-                        src={modelInfo.logoPath}
-                        alt={modelInfo.provider}
-                        className="bubble-model-icon"
-                      />
-                    )}
-                    <div className="room-bubble-name">{bubble.agentName || agent.name}</div>
-                  </div>
-
-                  <div className="room-bubble-divider"></div>
-
-                  {/* Message content */}
-                  <div className="room-bubble-content">
-                    {displayText}
-                    {isTruncated && (
-                      <button
-                        className="bubble-expand-btn"
-                        onClick={toggleExpand}
-                      >
-                        {isExpanded ? ' ↑' : ' ↓'}
-                      </button>
-                    )}
-                  </div>
+            {/* 当前发言者头顶：讨论气泡 💬 */}
+            {activeSpeaker && (() => {
+              const idx = AGENTS.findIndex(a => a.id === activeSpeaker.agent.id);
+              if (idx < 0 || !AGENT_SEATS[idx]) return null;
+              const seat = AGENT_SEATS[idx];
+              const scaledWidth = SCENE_NATIVE.width * scale;
+              const scaledHeight = SCENE_NATIVE.height * scale;
+              const left = Math.round(seat.x * scaledWidth);
+              const bottom = Math.round(seat.y * scaledHeight) + 118; // 抬到头顶上方（避免挡脸）
+              return (
+                <div className="seat-gesture" style={{ left, bottom }}>
+                  💬
                 </div>
               );
-            })}
+            })()}
           </div>
         </div>
+
+        {/* 底部字幕条：一次只显示当前发言者（头像 + 姓名 + 中文重点 + 日期） */}
+        {activeSpeaker && (() => {
+          const { agent, bubble } = activeSpeaker;
+          const agentData = getAgentData(agent.id);
+          const modelInfo = getModelIcon(agentData?.modelName, agentData?.modelProvider);
+          const speakerDate = deriveDate(bubble);
+          return (
+            <div
+              className={`room-subtitle-bar${pmDeciding ? ' deciding' : ''}`}
+              onClick={() => onJumpToMessage && onJumpToMessage(bubble)}
+              title="点击跳转到消息"
+            >
+              {/* PM 决策时刻：文字徽标（去掉 ✋ 举手 icon） */}
+              {pmDeciding && (
+                <div className="pm-decide-badge" aria-hidden="true">组合经理 · 拍板决策</div>
+              )}
+              <img src={agent.avatar} alt={agent.name} className="room-subtitle-avatar" />
+              <div className="room-subtitle-body">
+                <div className="room-subtitle-head">
+                  {modelInfo.logoPath && (
+                    <img src={modelInfo.logoPath} alt={modelInfo.provider} className="room-subtitle-model" />
+                  )}
+                  <span className="room-subtitle-name">{bubble.agentName || agent.name}</span>
+                  {speakerDate && <span className="room-subtitle-date">{speakerDate}</span>}
+                </div>
+                <div className="room-subtitle-text">{bubble.text}</div>
+              </div>
+            </div>
+          );
+        })()}
 
         {/* Agent Card - Dropdown style below indicator bar */}
         {selectedAgent && (

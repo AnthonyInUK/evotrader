@@ -76,4 +76,4 @@ backend/data/__MACOSX/
 *.sqlite3
 
 *.ipynb
-*.log
+*.logevo_smoke/
