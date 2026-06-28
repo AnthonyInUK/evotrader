@@ -1,0 +1,29 @@
+# 域名 + HTTPS 部署 override（与 docker-compose.yml 叠加使用）
+#
+# 前提：
+#   - 域名已解析到本服务器（anthonyai.cn → 服务器IP）
+#   - 安全组放行 80 和 443
+#   - .env 里设置 WEB_PORT=8080（让前端让出 80 端口给 Caddy 占用）
+#
+# 启动：
+#   docker compose -f docker-compose.yml -f docker-compose.domain.yml up -d
+#
+# Caddy 会自动为 Caddyfile 里的域名申请并续期 Let's Encrypt 证书，
+# 并把 HTTP 自动跳转到 HTTPS。前端经内部网络 frontend:80 反代，无需公开 8080。
+services:
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    depends_on:
+      - frontend
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  caddy_data:
+  caddy_config:
