@@ -17,7 +17,7 @@ dist-ssr
 *.local
 
 # Lock files
-package-lock.json
+# package-lock.json — tracked for reproducible Docker builds
 yarn.lock
 pnpm-lock.yaml
 
