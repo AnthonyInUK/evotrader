@@ -1,6 +1,6 @@
 # EvoTraders 域名 + 自动 HTTPS
 # Caddy 自动为下列域名向 Let's Encrypt 申请证书并自动续期；HTTP 自动跳转 HTTPS。
-anthonyai.cn, www.anthonyai.cn {
+evo.anthonyai.cn {
 	# 反代到前端 nginx 容器；它再处理静态资源 + /api + /ws（WebSocket 由 Caddy 透明升级）
 	reverse_proxy frontend:80
 }
