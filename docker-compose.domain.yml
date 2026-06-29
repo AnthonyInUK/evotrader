@@ -22,6 +22,9 @@ services:
     dns:
       - 8.8.8.8
       - 1.1.1.1
+    # 让容器内可用 host.docker.internal 访问宿主机端口（电商 Agent 的 18080 在另一套 compose）
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
       - caddy_data:/data

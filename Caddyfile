@@ -4,3 +4,11 @@ evo.anthonyai.cn {
 	# 反代到前端 nginx 容器；它再处理静态资源 + /api + /ws（WebSocket 由 Caddy 透明升级）
 	reverse_proxy frontend:80
 }
+
+# 电商运营 Agent —— 复用这同一个 Caddy（80/443 全服务器只能有一个）。
+# 电商是另一套 docker compose，把 18080 暴露在宿主机；Caddy 经 host.docker.internal 反代过去。
+ecommerceoperations.anthonyai.cn {
+	# 根路径跳到控制台首页，省得用户手敲 /agent-console/index.html
+	redir / /agent-console/index.html
+	reverse_proxy host.docker.internal:18080
+}
