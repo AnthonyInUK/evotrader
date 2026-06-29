@@ -1,0 +1,20 @@
+# 共享门卫模式 override —— 替代 docker-compose.domain.yml。
+#
+# 不再自带 Caddy。前端 nginx 容器加入共享的外部网络 edge，
+# 由独立的 edge-proxy（专门的 Caddy）按容器别名 evo-frontend 反代并负责 HTTPS。
+#
+# 前提：先创建共享网络  ->  docker network create edge
+# 启动：docker compose -f docker-compose.yml -f docker-compose.edge.yml up -d
+#
+# 这样 evo 仓库只认识一张通用的 edge 网，不引用电商/合规等任何其它项目。
+services:
+  frontend:
+    networks:
+      default: {}            # 保留默认网，前端 nginx 仍能内部访问 api:8000 / gateway:8765
+      edge:
+        aliases:
+          - evo-frontend     # 门卫 Caddy 用这个名字反代
+
+networks:
+  edge:
+    external: true
